@@ -1,0 +1,5 @@
+site,center,pocket_residues,msa_sasa_a2,msa_common_sasa_a2,fold_distance_a,priority,pocket_file
+site_1,39,18,122.89,83.89,11.82,122.89,/media/yjz/htr/synuclein/results/site_1_pocket.json
+site_2,80,15,100.98,89.32,13.69,100.98,/media/yjz/htr/synuclein/results/site_2_pocket.json
+site_3,66,14,95.55,95.55,21.32,95.55,/media/yjz/htr/synuclein/results/site_3_pocket.json
+site_4,50,16,86.41,86.41,18.04,86.41,/media/yjz/htr/synuclein/results/site_4_pocket.json

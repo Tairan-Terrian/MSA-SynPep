@@ -1,0 +1,38 @@
+[
+  {
+    "site": "site_1",
+    "center": 39,
+    "pocket_residues": 18,
+    "msa_sasa_a2": 122.89,
+    "fold_distance_a": 11.82,
+    "priority": 122.89,
+    "pocket_file": "/media/yjz/htr/synuclein/results/site_1_pocket.json"
+  },
+  {
+    "site": "site_2",
+    "center": 80,
+    "pocket_residues": 15,
+    "msa_sasa_a2": 100.98,
+    "fold_distance_a": 13.69,
+    "priority": 100.98,
+    "pocket_file": "/media/yjz/htr/synuclein/results/site_2_pocket.json"
+  },
+  {
+    "site": "site_3",
+    "center": 74,
+    "pocket_residues": 16,
+    "msa_sasa_a2": 95.58,
+    "fold_distance_a": 15.54,
+    "priority": 95.58,
+    "pocket_file": "/media/yjz/htr/synuclein/results/site_3_pocket.json"
+  },
+  {
+    "site": "site_4",
+    "center": 66,
+    "pocket_residues": 14,
+    "msa_sasa_a2": 95.55,
+    "fold_distance_a": 21.32,
+    "priority": 95.55,
+    "pocket_file": "/media/yjz/htr/synuclein/results/site_4_pocket.json"
+  }
+]

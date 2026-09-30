@@ -1,0 +1,40 @@
+{
+  "generated": 120,
+  "geometry_valid": 78,
+  "tier_a": 3,
+  "shortlisted": 24,
+  "shortlist_tier_a": 3,
+  "sites": {
+    "site_1": 8,
+    "site_2": 8,
+    "site_3": 4,
+    "site_4": 4
+  },
+  "top": [
+    {
+      "id": "site_2_020",
+      "sequence": "SAPYGMLRLEYS",
+      "rank_score": 8.75
+    },
+    {
+      "id": "site_1_022",
+      "sequence": "AMKKTYQVEVTV",
+      "rank_score": 2.25
+    },
+    {
+      "id": "site_1_021",
+      "sequence": "SIEDDNLWRAFPLDNIQVLHNQRR",
+      "rank_score": 1.541
+    },
+    {
+      "id": "site_4_027",
+      "sequence": "VNGASDPLNDVKEVGYKSRELRAR",
+      "rank_score": 5.917
+    },
+    {
+      "id": "site_2_003",
+      "sequence": "VPRERNQWCGKWQV",
+      "rank_score": 5.571
+    }
+  ]
+}

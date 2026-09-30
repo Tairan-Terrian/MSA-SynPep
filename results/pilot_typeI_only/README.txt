@@ -1,0 +1,1 @@
+The first run selected site_3 at residue 74 using MSA Type I accessibility only. That surface is poorly exposed in MSA Type II. The final run replaces it with a surface that is exposed across all three MSA structures. The complete original generated and relaxed structures, scores, and logs are archived here.

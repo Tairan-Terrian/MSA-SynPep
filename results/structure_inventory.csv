@@ -1,0 +1,62 @@
+pdb,disease,fold,chain,residue_start,residue_end,residue_count,assembly_note,source
+6XYO,MSA,Type I,A,14,94,81,"A,C,E,G,I / B,D,F,H,J",https://www.rcsb.org/structure/6XYO
+6XYO,MSA,Type I,B,21,99,79,"A,C,E,G,I / B,D,F,H,J",https://www.rcsb.org/structure/6XYO
+6XYO,MSA,Type I,C,14,94,81,"A,C,E,G,I / B,D,F,H,J",https://www.rcsb.org/structure/6XYO
+6XYO,MSA,Type I,D,21,99,79,"A,C,E,G,I / B,D,F,H,J",https://www.rcsb.org/structure/6XYO
+6XYO,MSA,Type I,E,14,94,81,"A,C,E,G,I / B,D,F,H,J",https://www.rcsb.org/structure/6XYO
+6XYO,MSA,Type I,F,21,99,79,"A,C,E,G,I / B,D,F,H,J",https://www.rcsb.org/structure/6XYO
+6XYO,MSA,Type I,G,14,94,81,"A,C,E,G,I / B,D,F,H,J",https://www.rcsb.org/structure/6XYO
+6XYO,MSA,Type I,H,21,99,79,"A,C,E,G,I / B,D,F,H,J",https://www.rcsb.org/structure/6XYO
+6XYO,MSA,Type I,I,14,94,81,"A,C,E,G,I / B,D,F,H,J",https://www.rcsb.org/structure/6XYO
+6XYO,MSA,Type I,J,21,99,79,"A,C,E,G,I / B,D,F,H,J",https://www.rcsb.org/structure/6XYO
+6XYP,MSA,Type II-1,A,14,94,81,"A,C,E,G,I / B,D,F,H,J",https://www.rcsb.org/structure/6XYP
+6XYP,MSA,Type II-1,B,36,99,64,"A,C,E,G,I / B,D,F,H,J",https://www.rcsb.org/structure/6XYP
+6XYP,MSA,Type II-1,C,14,94,81,"A,C,E,G,I / B,D,F,H,J",https://www.rcsb.org/structure/6XYP
+6XYP,MSA,Type II-1,D,36,99,64,"A,C,E,G,I / B,D,F,H,J",https://www.rcsb.org/structure/6XYP
+6XYP,MSA,Type II-1,E,14,94,81,"A,C,E,G,I / B,D,F,H,J",https://www.rcsb.org/structure/6XYP
+6XYP,MSA,Type II-1,F,36,99,64,"A,C,E,G,I / B,D,F,H,J",https://www.rcsb.org/structure/6XYP
+6XYP,MSA,Type II-1,G,14,94,81,"A,C,E,G,I / B,D,F,H,J",https://www.rcsb.org/structure/6XYP
+6XYP,MSA,Type II-1,H,36,99,64,"A,C,E,G,I / B,D,F,H,J",https://www.rcsb.org/structure/6XYP
+6XYP,MSA,Type II-1,I,14,94,81,"A,C,E,G,I / B,D,F,H,J",https://www.rcsb.org/structure/6XYP
+6XYP,MSA,Type II-1,J,36,99,64,"A,C,E,G,I / B,D,F,H,J",https://www.rcsb.org/structure/6XYP
+6XYQ,MSA,Type II-2,A,14,94,81,"A,C,E,G,I / B,D,F,H,J",https://www.rcsb.org/structure/6XYQ
+6XYQ,MSA,Type II-2,B,36,99,64,"A,C,E,G,I / B,D,F,H,J",https://www.rcsb.org/structure/6XYQ
+6XYQ,MSA,Type II-2,C,14,94,81,"A,C,E,G,I / B,D,F,H,J",https://www.rcsb.org/structure/6XYQ
+6XYQ,MSA,Type II-2,D,36,99,64,"A,C,E,G,I / B,D,F,H,J",https://www.rcsb.org/structure/6XYQ
+6XYQ,MSA,Type II-2,E,14,94,81,"A,C,E,G,I / B,D,F,H,J",https://www.rcsb.org/structure/6XYQ
+6XYQ,MSA,Type II-2,F,36,99,64,"A,C,E,G,I / B,D,F,H,J",https://www.rcsb.org/structure/6XYQ
+6XYQ,MSA,Type II-2,G,14,94,81,"A,C,E,G,I / B,D,F,H,J",https://www.rcsb.org/structure/6XYQ
+6XYQ,MSA,Type II-2,H,36,99,64,"A,C,E,G,I / B,D,F,H,J",https://www.rcsb.org/structure/6XYQ
+6XYQ,MSA,Type II-2,I,14,94,81,"A,C,E,G,I / B,D,F,H,J",https://www.rcsb.org/structure/6XYQ
+6XYQ,MSA,Type II-2,J,36,99,64,"A,C,E,G,I / B,D,F,H,J",https://www.rcsb.org/structure/6XYQ
+8A9L,PD/PDD/DLB,Lewy fold,A,31,100,70,A,https://www.rcsb.org/structure/8A9L
+8A9L,PD/PDD/DLB,Lewy fold,B,1,9,9,A,https://www.rcsb.org/structure/8A9L
+8A9L,PD/PDD/DLB,Lewy fold,C,1,7,7,A,https://www.rcsb.org/structure/8A9L
+6CU7,in-vitro alpha-synuclein,rod polymorph,E,38,97,60,ten chains,https://www.rcsb.org/structure/6CU7
+6CU7,in-vitro alpha-synuclein,rod polymorph,A,38,97,60,ten chains,https://www.rcsb.org/structure/6CU7
+6CU7,in-vitro alpha-synuclein,rod polymorph,B,38,97,60,ten chains,https://www.rcsb.org/structure/6CU7
+6CU7,in-vitro alpha-synuclein,rod polymorph,C,38,97,60,ten chains,https://www.rcsb.org/structure/6CU7
+6CU7,in-vitro alpha-synuclein,rod polymorph,D,38,97,60,ten chains,https://www.rcsb.org/structure/6CU7
+6CU7,in-vitro alpha-synuclein,rod polymorph,F,38,97,60,ten chains,https://www.rcsb.org/structure/6CU7
+6CU7,in-vitro alpha-synuclein,rod polymorph,G,38,97,60,ten chains,https://www.rcsb.org/structure/6CU7
+6CU7,in-vitro alpha-synuclein,rod polymorph,H,38,97,60,ten chains,https://www.rcsb.org/structure/6CU7
+6CU7,in-vitro alpha-synuclein,rod polymorph,I,38,97,60,ten chains,https://www.rcsb.org/structure/6CU7
+6CU7,in-vitro alpha-synuclein,rod polymorph,J,38,97,60,ten chains,https://www.rcsb.org/structure/6CU7
+8Q2L,tau control,AD tau filament,A,307,378,72,six chains,https://www.rcsb.org/structure/8Q2L
+8Q2L,tau control,AD tau filament,D,307,378,72,six chains,https://www.rcsb.org/structure/8Q2L
+8Q2L,tau control,AD tau filament,C,307,378,72,six chains,https://www.rcsb.org/structure/8Q2L
+8Q2L,tau control,AD tau filament,B,307,378,72,six chains,https://www.rcsb.org/structure/8Q2L
+8Q2L,tau control,AD tau filament,E,307,378,72,six chains,https://www.rcsb.org/structure/8Q2L
+8Q2L,tau control,AD tau filament,F,307,378,72,six chains,https://www.rcsb.org/structure/8Q2L
+6SHS,amyloid-beta control,Abeta morphology I,A,1,40,40,twelve chains,https://www.rcsb.org/structure/6SHS
+6SHS,amyloid-beta control,Abeta morphology I,B,1,40,40,twelve chains,https://www.rcsb.org/structure/6SHS
+6SHS,amyloid-beta control,Abeta morphology I,C,1,40,40,twelve chains,https://www.rcsb.org/structure/6SHS
+6SHS,amyloid-beta control,Abeta morphology I,H,1,40,40,twelve chains,https://www.rcsb.org/structure/6SHS
+6SHS,amyloid-beta control,Abeta morphology I,D,1,40,40,twelve chains,https://www.rcsb.org/structure/6SHS
+6SHS,amyloid-beta control,Abeta morphology I,I,1,40,40,twelve chains,https://www.rcsb.org/structure/6SHS
+6SHS,amyloid-beta control,Abeta morphology I,E,1,40,40,twelve chains,https://www.rcsb.org/structure/6SHS
+6SHS,amyloid-beta control,Abeta morphology I,J,1,40,40,twelve chains,https://www.rcsb.org/structure/6SHS
+6SHS,amyloid-beta control,Abeta morphology I,F,1,40,40,twelve chains,https://www.rcsb.org/structure/6SHS
+6SHS,amyloid-beta control,Abeta morphology I,K,1,40,40,twelve chains,https://www.rcsb.org/structure/6SHS
+6SHS,amyloid-beta control,Abeta morphology I,G,1,40,40,twelve chains,https://www.rcsb.org/structure/6SHS
+6SHS,amyloid-beta control,Abeta morphology I,L,1,40,40,twelve chains,https://www.rcsb.org/structure/6SHS

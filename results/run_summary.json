@@ -1,0 +1,43 @@
+{
+  "generated": 120,
+  "geometry_valid": 76,
+  "msa_all_compatible": 19,
+  "comparison_reliable": 36,
+  "tier_a": 2,
+  "shortlisted": 24,
+  "priority_candidates": 18,
+  "shortlist_tier_a": 2,
+  "sites": {
+    "site_1": 8,
+    "site_2": 8,
+    "site_3": 4,
+    "site_4": 4
+  },
+  "top": [
+    {
+      "id": "site_1_022",
+      "sequence": "AMKKTYQVEVTV",
+      "rank_score": 2.25
+    },
+    {
+      "id": "site_1_021",
+      "sequence": "SIEDDNLWRAFPLDNIQVLHNQRR",
+      "rank_score": 1.541
+    },
+    {
+      "id": "site_1_024",
+      "sequence": "QYMEEIWRTSF",
+      "rank_score": 1.091
+    },
+    {
+      "id": "site_1_005",
+      "sequence": "PAHNPIPPYEM",
+      "rank_score": 0.546
+    },
+    {
+      "id": "site_1_002",
+      "sequence": "ILRYTRGEKRNEYDDLRPH",
+      "rank_score": 0.474
+    }
+  ]
+}
