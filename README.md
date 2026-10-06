@@ -1,41 +1,55 @@
-# MSA-SynPep Phase 1 计算流程
+# MSA-SynPep：闭源 LLM 候选生成与排序
 
-本项目用公开的 α-synuclein 纤维结构建立构象对照，选择 MSA 纤维表位，用 PepGLAD 预训练模型生成 10–25 aa 短肽，并用 GPU 能量最小化与构象姿态转移指标排序。`results/` 保存全部实验输出。
+当前流程用闭源 LLM 分两轮生成 120 条 10–25 aa 短肽，再依据五种 α-synuclein 构象的实测计算证据进行 LLM 排序，选出 24 条优先候选。MSA 指多系统萎缩。研究目标是提出偏好 MSA 纤维构象的短肽假设，用于后续结合实验。
 
-## 目录
+## 本轮流程
 
-- `data/pdb/`：RCSB 原始坐标，包括 MSA 6XYO/6XYP/6XYQ、PD/PDD/DLB 8A9L、体外 α-syn 纤维 6CU7、tau 8Q2L、Aβ 6SHS。
-- `vendor/PepGLAD/`：上游模型源码及官方 `codesign.ckpt` 权重。
-- `prepare.py`：结构清单、三种 MSA 构象共同暴露面积、局部折叠差异和表位定义。
-- `generate.py`：PepGLAD GPU 批量生成肽序列与全原子构象。
-- `minimize.py`：OpenMM OpenCL GPU 优化复合物，固定纤维骨架并允许肽调整。
-- `score.py`：MSA 三类构象和两类同蛋白对照的姿态转移筛选、几何质量及候选分层。
-- `results/REPORT.md`：研究背景、参数、结果、解释边界和湿实验衔接。
-- `results/pilot_typeI_only/`：初次只按 Type I 表面选择表位的完整归档；后续检查发现残基 74 在 Type II 中被遮挡，最终表位改为残基 50。
+1. 读取公开结构及四个任务表位，构造同源残基的构象上下文。
+2. LLM 每个表位提出 15 条肽，共 60 条；GPU 计算其五构象姿势和局部几何证据。LLM 读取第一轮反馈，再提出 60 条。
+3. LLM 对这 120 条新序列做跨构象排序。反转输入顺序重复排序，取两次名次的均值，选择 Top24。
+4. Top24 在五种构象上各增加一个独立姿势，LLM 读取两次观测，完成 24 条内部精排。
 
-## 运行环境
+全部候选序列由 LLM 提出。PepGLAD 官方 `fixseq.ckpt` 保持序列固定，提供三维姿势；OpenMM 在 GPU 上按收敛设置优化，距离计算使用 CUDA。三层蛋白环境体现纤维的相邻层约束。Lewy 三层 α-syn 蛋白结构由原始 PDB 的 BIOMT 操作重建。
 
-服务器 Python 3.8.5、PyTorch 1.13.0+cu117、NumPy 1.23.5、SciPy 1.10.1、Biopython 1.80、FreeSASA 2.2.1、torch-scatter 2.1.2、OpenMM 8.1.1、PDBFixer 1.9.0。OpenMM 经 NVIDIA OpenCL 设备运行；PepGLAD 经 CUDA 运行。模型使用上游 [PepGLAD](https://github.com/THUNLP-MT/PepGLAD) 发布的权重。
+排序输入含接触、碰撞、肽键失真、目标结构位移及序列化学性质。LLM 为每条候选给出 0–100 的实验优先级，程序按数值排列，同分按固定随机编号排列。这些值是综合判断，真实亲和力和选择性由结合实验确定。仅 MSA 信息消融也使用相同的 120 条新序列。
 
-仓库包含模型权重、输入结构和实验结果。`.venv/` 是服务器本地的 Python 运行环境，需按上述版本在目标机器上重新创建；`__pycache__/` 是 Python 运行时缓存。上游 PepGLAD 的源码、许可证及权重保存在 `vendor/PepGLAD/`。
+## 代码与输入
 
-## 复现命令
+- `llm_design.py`：构象上下文、两轮 API 序列提案、完整候选评价及排序。
+- `llm_evaluate.py`：固定序列姿势采样、GPU 优化、计算证据卡。
+- `llm_run.py`：两块 GPU 并行调度和阶段续跑。
+- `llm_report.py`：排序汇总、Top24 复采样精排、CSV/FASTA 和 Markdown 报告。
+- `data/pdb/`：公开原始结构。MSA 为 6XYO/6XYP/6XYQ，对照为 8A9L/6CU7。
+- `results/selected_epitopes.csv`、`results/site_*_pocket.json`：任务表位定义，中心残基 39、80、66、50。
+- `vendor/PepGLAD/`：上游代码、许可证及官方预训练权重，来源为 [PepGLAD](https://github.com/THUNLP-MT/PepGLAD)。
 
-在 `/media/yjz/htr/synuclein` 下运行：
+## 运行
+
+服务器根目录为 `/media/yjz/htr/synuclein`，使用两块 RTX 3090。已配置 Python 3.8.5、PyTorch 1.13.0+cu117、NumPy 1.23.5、SciPy 1.10.1、Biopython 1.80、FreeSASA 2.2.1、torch-scatter 2.1.2、OpenMM 8.1.1、PDBFixer 1.9.0。PepGLAD 及几何计算用 CUDA，OpenMM 用 NVIDIA OpenCL。
 
 ```bash
-.venv/bin/python prepare.py
-.venv/bin/python generate.py --site site_1 --samples 30 --gpu 0 --batch-size 2
-.venv/bin/python generate.py --site site_2 --samples 30 --gpu 1 --batch-size 2
-.venv/bin/python generate.py --site site_3 --samples 30 --gpu 0 --batch-size 2
-.venv/bin/python generate.py --site site_4 --samples 30 --gpu 1 --batch-size 2
-.venv/bin/python minimize.py --gpu 0 --sites site_1 site_3
-.venv/bin/python minimize.py --gpu 1 --sites site_2 site_4
-.venv/bin/python score.py
+cd /media/yjz/htr/synuclein
+export SYNPep_API_KEY='<在运行环境配置你的密钥>'
+.venv/bin/python llm_design.py prepare --run results/llm_20261006
+.venv/bin/python llm_design.py generate --run results/llm_20261006 --round 1 --resume-api
+.venv/bin/python llm_run.py --run results/llm_20261006 --start round1_eval
 ```
 
-生成时每个位点使用种子 `20260930`。四个位点各生成 30 条，总计 120 条。最小化采用 OpenMM CHARMM36、非周期 1.2 nm 截断、蛋白骨架约束 1000 kJ mol⁻¹ nm⁻²、肽约束 20 kJ mol⁻¹ nm⁻²、最多 300 次迭代。表位筛选、结合姿态转移和候选排序采用本项目脚本给出的确定规则。
+`--api-base` 默认 `https://api.chatanywhere.tech/v1`，`--model` 默认用户指定的 `gpt-6.1-sol`。密钥从环境变量读取。`--resume-api` 复用同一目录的已完成响应；更换实验输入或模型时创建新的结果目录。
 
-## 结果说明
+`llm_run.py --start` 从指定阶段继续。`--start reoptimize` 使用保存的原始姿势重新优化 120 条新候选，随后继续排名、复采样和报告。新实验从 `round1_eval` 开始即可。
 
-`candidate_scores.csv` 提供每条肽的接触、冲突、局部对齐 RMSD、构象偏好代理指标、化学性质和质量等级。`priority_candidates.csv` 与 `.fasta` 汇集三种 MSA 结构兼容性得分均为正的候选；`shortlist_24.csv` 与 `.fasta` 是包含探索候选的 24 条实验筛选面板。`experimental_binding_matrix_template.csv` 是后续湿实验录入模板；每个结合信号字段由实验测量填入。计算代理指标描述结构兼容性，真实 MSA 选择性由结合实验判定。
+## 实验输出
+
+本轮正式结果目录为 `results/llm_20261006/`：
+
+- `REPORT.md`：完整实验汇报、设计依据、实际结果和解释。
+- `round1_candidates.jsonl`、`round2_candidates.jsonl`：两轮各 60 条 LLM 序列与提案理由。
+- `all_evidence.jsonl`、`candidate_scores.csv`：120 条候选的五构象证据。
+- `consensus_ranking.jsonl`：两次跨构象排序的平均名次。
+- `shortlist_24.csv`、`shortlist_24.fasta`：最终实验优先名单及 LLM 的支持和限制。
+- `poses/`、`*_poses.jsonl`：600 个初筛姿势及 120 个 Top24 第二次姿势的原始坐标、优化坐标和指标。
+- `api/`：实际 API 请求、响应和供应商返回的 token 用量；费用按供应商账单结算。
+- `experimental_binding_matrix_template.csv`：后续湿实验录入模板，结合信号字段留待实验测量。
+
+报告明确区分参考工作的通用思路与 MSA 场景的具体设计。当前结果是可复现的计算假设，后续贡献评估围绕真实 MSA 选择性命中率展开。

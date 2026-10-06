@@ -1,0 +1,90 @@
+{
+  "id": "chatcmpl-EVuSxGjf4GbaFf9tBJxy1HRpUkRQM",
+  "choices": [
+    {
+      "message": {
+        "role": "assistant",
+        "content": "{\"evaluations\":{\"C000\":{\"priority\":47.2},\"C001\":{\"priority\":82.4},\"C002\":{\"priority\":15.2},\"C003\":{\"priority\":83.1},\"C004\":{\"priority\":71.2},\"C005\":{\"priority\":52.8},\"C006\":{\"priority\":5.8},\"C007\":{\"priority\":32.4},\"C008\":{\"priority\":61.3},\"C009\":{\"priority\":18.6},\"C010\":{\"priority\":17.4},\"C011\":{\"priority\":27.8},\"C012\":{\"priority\":48.1},\"C013\":{\"priority\":2.7},\"C014\":{\"priority\":46.8},\"C015\":{\"priority\":14.3},\"C016\":{\"priority\":43.6},\"C017\":{\"priority\":80.6},\"C018\":{\"priority\":66.8},\"C019\":{\"priority\":33.7},\"C020\":{\"priority\":94.2},\"C021\":{\"priority\":20.8},\"C022\":{\"priority\":79.5},\"C023\":{\"priority\":89.4},\"C024\":{\"priority\":88.1},\"C025\":{\"priority\":89.1},\"C026\":{\"priority\":19.7},\"C027\":{\"priority\":74.8},\"C028\":{\"priority\":39.2},\"C029\":{\"priority\":34.8},\"C030\":{\"priority\":64.7},\"C031\":{\"priority\":38.4},\"C032\":{\"priority\":53.1},\"C033\":{\"priority\":8.4},\"C034\":{\"priority\":31.6},\"C035\":{\"priority\":3.1},\"C036\":{\"priority\":29.3},\"C037\":{\"priority\":7.8},\"C038\":{\"priority\":16.1},\"C039\":{\"priority\":23.6},\"C040\":{\"priority\":21.5},\"C041\":{\"priority\":54.9},\"C042\":{\"priority\":50.7},\"C043\":{\"priority\":13.4},\"C044\":{\"priority\":16.7},\"C045\":{\"priority\":17.9},\"C046\":{\"priority\":68.9},\"C047\":{\"priority\":35.9},\"C048\":{\"priority\":76.3},\"C049\":{\"priority\":26.4},\"C050\":{\"priority\":72.1},\"C051\":{\"priority\":29.8},\"C052\":{\"priority\":12.6},\"C053\":{\"priority\":10.1},\"C054\":{\"priority\":11.7},\"C055\":{\"priority\":84.7},\"C056\":{\"priority\":2.1},\"C057\":{\"priority\":30.4},\"C058\":{\"priority\":4.9},\"C059\":{\"priority\":15.8},\"C060\":{\"priority\":49.3},\"C061\":{\"priority\":65.9},\"C062\":{\"priority\":25.2},\"C063\":{\"priority\":24.7},\"C064\":{\"priority\":70.4},\"C065\":{\"priority\":25.8},\"C066\":{\"priority\":63.4},\"C067\":{\"priority\":78.2},\"C068\":{\"priority\":79.1},\"C069\":{\"priority\":44.2},\"C070\":{\"priority\":2.4},\"C071\":{\"priority\":34.1},\"C072\":{\"priority\":77.1},\"C073\":{\"priority\":4.4},\"C074\":{\"priority\":62.6},\"C075\":{\"priority\":86.7},\"C076\":{\"priority\":22.1},\"C077\":{\"priority\":28.7},\"C078\":{\"priority\":3.8},\"C079\":{\"priority\":48.7},\"C080\":{\"priority\":81.8},\"C081\":{\"priority\":19.1},\"C082\":{\"priority\":95.3},\"C083\":{\"priority\":6.7},\"C084\":{\"priority\":1.3},\"C085\":{\"priority\":28.1},\"C086\":{\"priority\":20.2},\"C087\":{\"priority\":18.2},\"C088\":{\"priority\":58.4},\"C089\":{\"priority\":17.1},\"C090\":{\"priority\":18.9},\"C091\":{\"priority\":36.8},\"C092\":{\"priority\":23.1},\"C093\":{\"priority\":22.7},\"C094\":{\"priority\":28.4},\"C095\":{\"priority\":26.9},\"C096\":{\"priority\":30.9},\"C097\":{\"priority\":42.3},\"C098\":{\"priority\":20.5},\"C099\":{\"priority\":27.3},\"C100\":{\"priority\":4.1},\"C101\":{\"priority\":85.6},\"C102\":{\"priority\":87.3},\"C103\":{\"priority\":35.3},\"C104\":{\"priority\":40.8},\"C105\":{\"priority\":3.5},\"C106\":{\"priority\":12.1},\"C107\":{\"priority\":15.5},\"C108\":{\"priority\":41.6},\"C109\":{\"priority\":45.4},\"C110\":{\"priority\":24.1},\"C111\":{\"priority\":92.1},\"C112\":{\"priority\":14.8},\"C113\":{\"priority\":90.2},\"C114\":{\"priority\":33.2},\"C115\":{\"priority\":32.8},\"C116\":{\"priority\":59.7},\"C117\":{\"priority\":37.6},\"C118\":{\"priority\":1.8},\"C119\":{\"priority\":13.1}},\"decision_logic\":\"选择分数最高的24条，70.4分为本轮入选线。优先考虑三个构象中最弱的接触密度、整体装配中的原子冲突、肽键完整性和受体变形；极性与异号电荷邻近仅作辅助，不等于氢键或结合力。C082三构象接触为1.000/1.333/1.083，装配冲突均为0，肽键偏差最高0.028埃；C020接触为1.000/0.917/0.917且装配冲突均为0，几何一致性较好。为避免只选相近序列，保留不同长度、序列骨架及site_3候选：C023接触0.571—0.857，C024为0.636—1.455，两者装配冲突均为0，但后者构象差异较大。入选包含site_2十二条、site_3十条，以及site_1的C004和site_4的C064各一条探索代表。后两条不能视为兼容性已通过：C004装配冲突0.818—2.818，C064为3.900—5.300，需先重新建模检查邻层空间，覆盖位点不抵消这些缺陷。严重肽键畸变者大幅降级，不能用高接触补偿。所有候选每构象都只有一个姿势，重复范围端点相同不是重复验证；跨独立采样的可重复性未知，没有可引用的复测候选。对照、选择性差值、真实亲和力与实测溶解度均未知。低疏水性仅辅助安排实验；分数为本批次含探索价值的优先级，不是结合概率。\"}",
+        "refusal": null,
+        "annotations": []
+      },
+      "finish_reason": "stop",
+      "content_filter_results": {
+        "hate": {
+          "filtered": false,
+          "severity": "safe"
+        },
+        "protected_material_code": {
+          "detected": false,
+          "filtered": false
+        },
+        "protected_material_text": {
+          "detected": false,
+          "filtered": false
+        },
+        "self_harm": {
+          "filtered": false,
+          "severity": "safe"
+        },
+        "sexual": {
+          "filtered": false,
+          "severity": "safe"
+        },
+        "violence": {
+          "filtered": false,
+          "severity": "safe"
+        }
+      },
+      "index": 0,
+      "logprobs": null
+    }
+  ],
+  "created": 1791273931,
+  "model": "gpt-6.1-sol-2026-09-29",
+  "object": "chat.completion",
+  "usage": {
+    "prompt_tokens": 22317,
+    "completion_tokens": 1663,
+    "total_tokens": 23980,
+    "completion_tokens_details": {
+      "audio_tokens": 0,
+      "reasoning_tokens": 142
+    },
+    "prompt_tokens_details": {
+      "audio_tokens": 0,
+      "cache_write_tokens": 22314,
+      "cached_tokens": 0
+    }
+  },
+  "routing": {
+    "serving_pipereplica": "d20260929014647-f3a90410-prefill-r22-dp0-prefill"
+  },
+  "prompt_filter_results": [
+    {
+      "prompt_index": 0,
+      "content_filter_results": {
+        "hate": {
+          "filtered": false,
+          "severity": "safe"
+        },
+        "jailbreak": {
+          "detected": false,
+          "filtered": false
+        },
+        "self_harm": {
+          "filtered": false,
+          "severity": "safe"
+        },
+        "sexual": {
+          "filtered": false,
+          "severity": "safe"
+        },
+        "violence": {
+          "filtered": false,
+          "severity": "safe"
+        }
+      }
+    }
+  ],
+  "service_tier": "default"
+}

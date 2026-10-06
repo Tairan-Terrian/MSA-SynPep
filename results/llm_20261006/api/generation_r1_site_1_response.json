@@ -1,0 +1,90 @@
+{
+  "id": "chatcmpl-EVtCkFiDYLCD0eCX72WYxwCWqpH98",
+  "choices": [
+    {
+      "message": {
+        "role": "assistant",
+        "content": "{\"candidates\":[{\"sequence\":\"QWNGPSEDTK\",\"hypothesis\":\"Shape-led: W may contact Y39, GP may support a compact turn, and E may engage K43. A 10-aa exploratory hypothesis, not measured binding.\",\"expected_discrimination\":\"Targets the MSA Y39–S42 spacing of 5.7–5.8 Å rather than 8.4 Å in 8A9L or 7.5 Å in 6CU7.\"},{\"sequence\":\"SWQPGNDTESK\",\"hypothesis\":\"Shape-led: a QPG turn presents aromatic and polar contacts toward Y39/S42, with D/E available for K43.\",\"expected_discrimination\":\"Tests recognition of the compact Y39–S42 geometry shared by all three MSA conformers; both controls have larger separation.\"},{\"sequence\":\"NFWSPGQETSDK\",\"hypothesis\":\"Shape-led: adjacent aromatics explore Y39 packing; PG limits backbone freedom and polar flanks temper hydrophobicity.\",\"expected_discrimination\":\"Multi-point docking should favor MSA L38–S42 spacing of 9.3–9.4 Å over 12.2 Å in 8A9L and 4.5 Å in 6CU7; aromatic nonspecificity is a risk.\"},{\"sequence\":\"QSYNGPTEQDSNKG\",\"hypothesis\":\"Shape-led: Y provides a conservative aromatic anchor, with GP and distributed polar groups exploring the shared bent patch.\",\"expected_discrimination\":\"Tests simultaneous accommodation of MSA Y39–S42 at 5.7–5.8 Å and L38–S42 at 9.3–9.4 Å, unlike either control.\"},{\"sequence\":\"GSQWNPGETSNQDKSG\",\"hypothesis\":\"Shape-led: a longer soluble scaffold explores an NP-constrained aromatic-to-acidic contact arrangement without requiring deeply exposed V40.\",\"expected_discrimination\":\"Targets shared MSA patch geometry; the expanded 8A9L and locally collapsed 6CU7 arrangements may frustrate simultaneous contacts.\"},{\"sequence\":\"KWQSDNQETK\",\"hypothesis\":\"Charge-led: W supplies a Y39 anchor while separated D/E groups explore K43 engagement; lysines moderate net negative charge.\",\"expected_discrimination\":\"Charge alone cannot reject highly exposed K43 in 8A9L; selectivity must additionally match MSA Y39–S42 geometry, also distinct from 6CU7.\"},{\"sequence\":\"QWSDQNETSKNQ\",\"hypothesis\":\"Charge-led: a polar aromatic scaffold samples alternative acidic contacts with consistently accessible MSA K43.\",\"expected_discrimination\":\"Predicted discrimination requires geometric cooperation, not K43 accessibility: Y39–S42 is 5.7–5.8 Å in MSA versus 8.4/7.5 Å in the controls.\"},{\"sequence\":\"KQYSEGNDTQESK\",\"hypothesis\":\"Charge-led: Y and three distributed acidic residues test multiple K43-facing registers while polar residues limit hydrophobic aggregation.\",\"expected_discrimination\":\"Tests whether an acidic contact can be retained alongside MSA-specific L38–S42 spacing; either control disrupts that spacing.\"},{\"sequence\":\"SQWQDEGNSKTQENKG\",\"hypothesis\":\"Charge-led: a DE pair explores localized K43 capture, while glycine and polar flanks permit adjustment across the three MSA conformers.\",\"expected_discrimination\":\"Could fit MSA Y39–K43 distances of 8.3–8.7 Å versus 9.5 Å in 8A9L and 10.5 Å in 6CU7; the modest difference demands validation.\"},{\"sequence\":\"KNSYQEGTNDQSKETNQG\",\"hypothesis\":\"Charge-led: an extended, charge-balanced scaffold tests distributed acidic anchoring rather than a strongly anionic peptide.\",\"expected_discrimination\":\"Requires combined Y39/K43/S42 contacts matching MSA distances; higher control exposure alone is not evidence of weaker binding.\"},{\"sequence\":\"NYSQNTEDSK\",\"hypothesis\":\"Polar-led: Y supplies an aromatic contact while N/S/Q/T explore hydrogen bonding near S42/T44; E/D may assist K43 engagement.\",\"expected_discrimination\":\"Targets MSA L38–S42 geometry; 8A9L is more extended and 6CU7 more collapsed. Side-chain hydrogen-bond geometry remains unprovided.\"},{\"sequence\":\"QHNSYTGQEDTK\",\"hypothesis\":\"Polar-led: histidine and tyrosine diversify polar/aromatic recognition, with a glycine hinge for the conserved MSA bend.\",\"expected_discrimination\":\"Tests the MSA Y39–S42 spacing against both larger control values; any histidine-mediated advantage may depend on assay pH.\"},{\"sequence\":\"SNYQTNGEQSTDKQ\",\"hypothesis\":\"Polar-led: a low-hydrophobicity scaffold explores cooperative S42/T44 contacts, with Y39 and K43 as secondary anchors.\",\"expected_discrimination\":\"T44 is accessible in all MSA assemblies but less exposed in 6CU7; rejection of 8A9L must come from its different geometry, not SASA.\"},{\"sequence\":\"GQNSYTSNQGEDTKNSQ\",\"hypothesis\":\"Polar-led: a flexible polar scaffold tests whether adaptable hydrogen-bond contacts accommodate all MSA conformers without a proline-enforced turn.\",\"expected_discrimination\":\"Targets shared MSA Y39–S42 and L38–S42 distances; flexibility could also accommodate controls, making this a useful specificity-risk alternative.\"},{\"sequence\":\"KQSNHYTQNGSEQTNDKSGQTN\",\"hypothesis\":\"Polar-led: a 22-aa soluble alternative explores a broader contact footprint using H/Y, polar residues and modest acidity. All proposals are cysteine-free; no first-round feedback was supplied.\",\"expected_discrimination\":\"Tests cooperative recognition of the MSA 38–44 arrangement rather than exposure alone; longer-scaffold flexibility may weaken discrimination against both controls.\"}]}",
+        "refusal": null,
+        "annotations": []
+      },
+      "finish_reason": "stop",
+      "content_filter_results": {
+        "hate": {
+          "filtered": false,
+          "severity": "safe"
+        },
+        "protected_material_code": {
+          "detected": false,
+          "filtered": false
+        },
+        "protected_material_text": {
+          "detected": false,
+          "filtered": false
+        },
+        "self_harm": {
+          "filtered": false,
+          "severity": "safe"
+        },
+        "sexual": {
+          "filtered": false,
+          "severity": "safe"
+        },
+        "violence": {
+          "filtered": false,
+          "severity": "safe"
+        }
+      },
+      "index": 0,
+      "logprobs": null
+    }
+  ],
+  "created": 1791269082,
+  "model": "gpt-6.1-sol-2026-09-29",
+  "object": "chat.completion",
+  "usage": {
+    "prompt_tokens": 1677,
+    "completion_tokens": 1404,
+    "total_tokens": 3081,
+    "completion_tokens_details": {
+      "audio_tokens": 0,
+      "reasoning_tokens": 144
+    },
+    "prompt_tokens_details": {
+      "audio_tokens": 0,
+      "cache_write_tokens": 1674,
+      "cached_tokens": 0
+    }
+  },
+  "routing": {
+    "serving_pipereplica": "d20260929014647-f3a90410-prefill-r22-dp0-prefill"
+  },
+  "prompt_filter_results": [
+    {
+      "prompt_index": 0,
+      "content_filter_results": {
+        "hate": {
+          "filtered": false,
+          "severity": "safe"
+        },
+        "jailbreak": {
+          "detected": false,
+          "filtered": false
+        },
+        "self_harm": {
+          "filtered": false,
+          "severity": "safe"
+        },
+        "sexual": {
+          "filtered": false,
+          "severity": "safe"
+        },
+        "violence": {
+          "filtered": false,
+          "severity": "safe"
+        }
+      }
+    }
+  ],
+  "service_tier": "default"
+}

@@ -1,0 +1,90 @@
+{
+  "id": "chatcmpl-EVuSUlbh0OQ8Jf24ViJiBQPOYKvTe",
+  "choices": [
+    {
+      "message": {
+        "role": "assistant",
+        "content": "{\"evaluations\":{\"C000\":{\"priority\":23.1},\"C001\":{\"priority\":26.2},\"C002\":{\"priority\":9.4},\"C003\":{\"priority\":46.3},\"C004\":{\"priority\":41.5},\"C005\":{\"priority\":28.7},\"C006\":{\"priority\":5.8},\"C007\":{\"priority\":30.6},\"C008\":{\"priority\":61.4},\"C009\":{\"priority\":40.3},\"C010\":{\"priority\":10.6},\"C011\":{\"priority\":12.3},\"C012\":{\"priority\":20.8},\"C013\":{\"priority\":3.6},\"C014\":{\"priority\":25.7},\"C015\":{\"priority\":8.1},\"C016\":{\"priority\":29.4},\"C017\":{\"priority\":53.2},\"C018\":{\"priority\":32.3},\"C019\":{\"priority\":18.1},\"C020\":{\"priority\":54.1},\"C021\":{\"priority\":16.8},\"C022\":{\"priority\":55.8},\"C023\":{\"priority\":52.4},\"C024\":{\"priority\":45.2},\"C025\":{\"priority\":36.4},\"C026\":{\"priority\":15.3},\"C027\":{\"priority\":30.1},\"C028\":{\"priority\":24.6},\"C029\":{\"priority\":19.3},\"C030\":{\"priority\":28.1},\"C031\":{\"priority\":17.4},\"C032\":{\"priority\":57.3},\"C033\":{\"priority\":11.8},\"C034\":{\"priority\":49.8},\"C035\":{\"priority\":6.3},\"C036\":{\"priority\":14.1},\"C037\":{\"priority\":4.7},\"C038\":{\"priority\":10.2},\"C039\":{\"priority\":45.8},\"C040\":{\"priority\":16.2},\"C041\":{\"priority\":31.2},\"C042\":{\"priority\":33.6},\"C043\":{\"priority\":15.8},\"C044\":{\"priority\":7.7},\"C045\":{\"priority\":11.2},\"C046\":{\"priority\":33.1},\"C047\":{\"priority\":25.2},\"C048\":{\"priority\":43.6},\"C049\":{\"priority\":44.9},\"C050\":{\"priority\":23.6},\"C051\":{\"priority\":20.2},\"C052\":{\"priority\":14.7},\"C053\":{\"priority\":6.9},\"C054\":{\"priority\":9.8},\"C055\":{\"priority\":59.2},\"C056\":{\"priority\":7.1},\"C057\":{\"priority\":21.4},\"C058\":{\"priority\":4.2},\"C059\":{\"priority\":8.6},\"C060\":{\"priority\":19.8},\"C061\":{\"priority\":48.7},\"C062\":{\"priority\":21.9},\"C063\":{\"priority\":17.8},\"C064\":{\"priority\":40.8},\"C065\":{\"priority\":9.1},\"C066\":{\"priority\":22.6},\"C067\":{\"priority\":24.1},\"C068\":{\"priority\":42.7},\"C069\":{\"priority\":22.2},\"C070\":{\"priority\":3.9},\"C071\":{\"priority\":25.9},\"C072\":{\"priority\":18.7},\"C073\":{\"priority\":14.4},\"C074\":{\"priority\":31.7},\"C075\":{\"priority\":47.6},\"C076\":{\"priority\":10.9},\"C077\":{\"priority\":20.5},\"C078\":{\"priority\":8.9},\"C079\":{\"priority\":24.9},\"C080\":{\"priority\":29.1},\"C081\":{\"priority\":12.8},\"C082\":{\"priority\":56.5},\"C083\":{\"priority\":7.4},\"C084\":{\"priority\":5.2},\"C085\":{\"priority\":23.9},\"C086\":{\"priority\":13.4},\"C087\":{\"priority\":16.5},\"C088\":{\"priority\":44.2},\"C089\":{\"priority\":8.4},\"C090\":{\"priority\":15.1},\"C091\":{\"priority\":35.1},\"C092\":{\"priority\":18.4},\"C093\":{\"priority\":6.6},\"C094\":{\"priority\":13.1},\"C095\":{\"priority\":5.5},\"C096\":{\"priority\":27.4},\"C097\":{\"priority\":42.1},\"C098\":{\"priority\":10.4},\"C099\":{\"priority\":22.9},\"C100\":{\"priority\":6.1},\"C101\":{\"priority\":47.1},\"C102\":{\"priority\":34.2},\"C103\":{\"priority\":15.5},\"C104\":{\"priority\":32.7},\"C105\":{\"priority\":5.0},\"C106\":{\"priority\":11.5},\"C107\":{\"priority\":7.9},\"C108\":{\"priority\":16.0},\"C109\":{\"priority\":21.1},\"C110\":{\"priority\":19.1},\"C111\":{\"priority\":35.8},\"C112\":{\"priority\":7.0},\"C113\":{\"priority\":51.6},\"C114\":{\"priority\":9.6},\"C115\":{\"priority\":17.1},\"C116\":{\"priority\":27.8},\"C117\":{\"priority\":26.8},\"C118\":{\"priority\":4.4},\"C119\":{\"priority\":7.2}},\"decision_logic\":\"选择分数最高的24条：C008、C055、C032、C082、C022、C020、C017、C023、C113、C034、C061、C075、C101、C003、C039、C024、C049、C088、C048、C068、C097、C004、C064、C009；site_2/site_1/site_3/site_4分别12/5/5/2条。分数是本批实验顺序，不是结合概率。先检查肽链完整性、中央链及整个组装体碰撞，再看三种MSA中最弱的接触，并认真考虑8A9L和6CU7两个对照；不直接按contrast排序。所有构象都只采样1次，重复性未知，没有可引用的重复采样候选；全部入选者均属探索性候选，不能宣称选择性。C008三种MSA接触0.417–1.083，两个对照0.833/0.750，肽键偏差均≤0.045 Å：几何较可靠，但区分弱。C055的MSA接触0.526–0.947、组装碰撞均0，对照0.789/0.842；6CU7组装碰撞3.579使该对照证据不充分，并非不结合。C032两个对照接触0.476/0.238，但最弱MSA仅0.333，且6XYQ受体位移0.426 Å。C082三种MSA接触1.000–1.333且无组装碰撞，但6CU7接触1.750，不能忽略其相容性。C022的MSA接触0.833–2.333，对照6CU7达到2.000，支持接触而不支持选择性。C020三种MSA接触0.917–1.000、肽键偏差≤0.034 Å；8A9L接触0.583，而6CU7偏差3.564 Å，该对照结论未知，因此只作探索。site_1保留不同长度和序列：C034最弱MSA接触0.333、最强对照0.750，且部分MSA组装碰撞约4；C039/C049在6XYP接触仅0.167/0.077并有高组装碰撞，不能称跨构象稳定。site_3优先C023和C075，MSA接触分别0.571–0.857和0.583–0.833，几何完整，但最强对照仍为1.714和2.167。site_4整体证据差，仅为覆盖保留C064/C009：最弱MSA接触0.400/0.118，MSA组装碰撞分别3.9–5.3/1.647–7.294，必须重建姿势后再解释实验。严重断裂的MSA姿势显著降级；断裂或碰撞的对照不能作为选择性加分依据。亲水性和长度用于序列多样性及实验可操作性，不替代物理证据。接触和极性邻近只是几何代理，真实亲和力、氢键及选择性仍需实验。\"}",
+        "refusal": null,
+        "annotations": []
+      },
+      "finish_reason": "stop",
+      "content_filter_results": {
+        "hate": {
+          "filtered": false,
+          "severity": "safe"
+        },
+        "protected_material_code": {
+          "detected": false,
+          "filtered": false
+        },
+        "protected_material_text": {
+          "detected": false,
+          "filtered": false
+        },
+        "self_harm": {
+          "filtered": false,
+          "severity": "safe"
+        },
+        "sexual": {
+          "filtered": false,
+          "severity": "safe"
+        },
+        "violence": {
+          "filtered": false,
+          "severity": "safe"
+        }
+      },
+      "index": 0,
+      "logprobs": null
+    }
+  ],
+  "created": 1791273902,
+  "model": "gpt-6.1-sol-2026-09-29",
+  "object": "chat.completion",
+  "usage": {
+    "prompt_tokens": 33472,
+    "completion_tokens": 1979,
+    "total_tokens": 35451,
+    "completion_tokens_details": {
+      "audio_tokens": 0,
+      "reasoning_tokens": 131
+    },
+    "prompt_tokens_details": {
+      "audio_tokens": 0,
+      "cache_write_tokens": 33469,
+      "cached_tokens": 0
+    }
+  },
+  "routing": {
+    "serving_pipereplica": "d20260929065756-d3dd44a8-prefill-r28-dp0-prefill"
+  },
+  "prompt_filter_results": [
+    {
+      "prompt_index": 0,
+      "content_filter_results": {
+        "hate": {
+          "filtered": false,
+          "severity": "safe"
+        },
+        "jailbreak": {
+          "detected": false,
+          "filtered": false
+        },
+        "self_harm": {
+          "filtered": false,
+          "severity": "safe"
+        },
+        "sexual": {
+          "filtered": false,
+          "severity": "safe"
+        },
+        "violence": {
+          "filtered": false,
+          "severity": "safe"
+        }
+      }
+    }
+  ],
+  "service_tier": "default"
+}
