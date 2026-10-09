@@ -1,0 +1,487 @@
+{
+  "evaluations": {
+    "llm_r2_site_3_001": {
+      "priority": 51
+    },
+    "llm_r2_site_3_000": {
+      "priority": 36
+    },
+    "llm_r1_site_4_014": {
+      "priority": 5
+    },
+    "llm_r1_site_2_002": {
+      "priority": 43
+    },
+    "llm_r2_site_1_006": {
+      "priority": 9
+    },
+    "llm_r1_site_3_002": {
+      "priority": 32
+    },
+    "llm_r2_site_4_001": {
+      "priority": 4
+    },
+    "llm_r1_site_1_014": {
+      "priority": 7
+    },
+    "llm_r2_site_2_007": {
+      "priority": 57
+    },
+    "llm_r1_site_4_004": {
+      "priority": 5
+    },
+    "llm_r2_site_4_002": {
+      "priority": 5
+    },
+    "llm_r1_site_1_000": {
+      "priority": 27
+    },
+    "llm_r1_site_3_013": {
+      "priority": 31
+    },
+    "llm_r1_site_4_002": {
+      "priority": 2
+    },
+    "llm_r2_site_3_007": {
+      "priority": 23
+    },
+    "llm_r1_site_4_006": {
+      "priority": 3
+    },
+    "llm_r2_site_1_004": {
+      "priority": 7
+    },
+    "llm_r2_site_2_009": {
+      "priority": 34
+    },
+    "llm_r1_site_2_008": {
+      "priority": 30
+    },
+    "llm_r2_site_3_012": {
+      "priority": 48
+    },
+    "llm_r2_site_2_003": {
+      "priority": 46
+    },
+    "llm_r1_site_1_011": {
+      "priority": 6
+    },
+    "llm_r1_site_2_005": {
+      "priority": 44
+    },
+    "llm_r1_site_3_007": {
+      "priority": 53
+    },
+    "llm_r1_site_3_001": {
+      "priority": 45
+    },
+    "llm_r1_site_2_003": {
+      "priority": 47
+    },
+    "llm_r2_site_4_004": {
+      "priority": 4
+    },
+    "llm_r2_site_3_005": {
+      "priority": 33
+    },
+    "llm_r1_site_1_004": {
+      "priority": 8
+    },
+    "llm_r2_site_3_008": {
+      "priority": 21
+    },
+    "llm_r1_site_2_011": {
+      "priority": 77
+    },
+    "llm_r2_site_3_010": {
+      "priority": 24
+    },
+    "llm_r2_site_2_014": {
+      "priority": 20
+    },
+    "llm_r2_site_2_012": {
+      "priority": 50
+    },
+    "llm_r2_site_1_014": {
+      "priority": 18
+    },
+    "llm_r2_site_4_009": {
+      "priority": 2
+    },
+    "llm_r1_site_4_013": {
+      "priority": 5
+    },
+    "llm_r1_site_3_005": {
+      "priority": 32
+    },
+    "llm_r1_site_4_012": {
+      "priority": 4
+    },
+    "llm_r2_site_1_007": {
+      "priority": 6
+    },
+    "llm_r2_site_3_014": {
+      "priority": 25
+    },
+    "llm_r2_site_3_002": {
+      "priority": 41
+    },
+    "llm_r2_site_2_004": {
+      "priority": 29
+    },
+    "llm_r2_site_4_008": {
+      "priority": 4
+    },
+    "llm_r2_site_4_005": {
+      "priority": 4
+    },
+    "llm_r1_site_1_005": {
+      "priority": 5
+    },
+    "llm_r1_site_2_000": {
+      "priority": 63
+    },
+    "llm_r2_site_1_001": {
+      "priority": 9
+    },
+    "llm_r1_site_3_014": {
+      "priority": 65
+    },
+    "llm_r1_site_1_007": {
+      "priority": 7
+    },
+    "llm_r1_site_3_010": {
+      "priority": 52
+    },
+    "llm_r2_site_3_004": {
+      "priority": 28
+    },
+    "llm_r1_site_4_008": {
+      "priority": 3
+    },
+    "llm_r2_site_1_012": {
+      "priority": 3
+    },
+    "llm_r1_site_1_003": {
+      "priority": 3
+    },
+    "llm_r1_site_2_004": {
+      "priority": 60
+    },
+    "llm_r1_site_3_008": {
+      "priority": 17
+    },
+    "llm_r1_site_1_006": {
+      "priority": 19
+    },
+    "llm_r2_site_4_010": {
+      "priority": 1
+    },
+    "llm_r2_site_4_011": {
+      "priority": 1
+    },
+    "llm_r1_site_2_007": {
+      "priority": 70
+    },
+    "llm_r1_site_2_001": {
+      "priority": 64
+    },
+    "llm_r1_site_3_004": {
+      "priority": 37
+    },
+    "llm_r1_site_4_007": {
+      "priority": 5
+    },
+    "llm_r1_site_4_010": {
+      "priority": 5
+    },
+    "llm_r1_site_4_003": {
+      "priority": 2
+    },
+    "llm_r2_site_2_008": {
+      "priority": 59
+    },
+    "llm_r1_site_3_012": {
+      "priority": 29
+    },
+    "llm_r1_site_3_011": {
+      "priority": 72
+    },
+    "llm_r1_site_3_006": {
+      "priority": 30
+    },
+    "llm_r1_site_4_001": {
+      "priority": 3
+    },
+    "llm_r1_site_1_001": {
+      "priority": 10
+    },
+    "llm_r1_site_3_000": {
+      "priority": 35
+    },
+    "llm_r2_site_2_001": {
+      "priority": 39
+    },
+    "llm_r1_site_2_010": {
+      "priority": 40
+    },
+    "llm_r2_site_3_003": {
+      "priority": 42
+    },
+    "llm_r2_site_4_014": {
+      "priority": 3
+    },
+    "llm_r1_site_1_013": {
+      "priority": 10
+    },
+    "llm_r2_site_2_010": {
+      "priority": 26
+    },
+    "llm_r2_site_2_011": {
+      "priority": 34
+    },
+    "llm_r2_site_2_005": {
+      "priority": 38
+    },
+    "llm_r2_site_1_003": {
+      "priority": 4
+    },
+    "llm_r2_site_2_006": {
+      "priority": 54
+    },
+    "llm_r1_site_3_003": {
+      "priority": 56
+    },
+    "llm_r2_site_1_009": {
+      "priority": 2
+    },
+    "llm_r2_site_1_008": {
+      "priority": 4
+    },
+    "llm_r2_site_1_005": {
+      "priority": 16
+    },
+    "llm_r1_site_4_011": {
+      "priority": 4
+    },
+    "llm_r1_site_2_009": {
+      "priority": 38
+    },
+    "llm_r2_site_4_006": {
+      "priority": 5
+    },
+    "llm_r2_site_1_011": {
+      "priority": 7
+    },
+    "llm_r1_site_2_014": {
+      "priority": 49
+    },
+    "llm_r2_site_4_007": {
+      "priority": 4
+    },
+    "llm_r1_site_1_010": {
+      "priority": 6
+    },
+    "llm_r2_site_1_000": {
+      "priority": 24
+    },
+    "llm_r1_site_4_005": {
+      "priority": 5
+    },
+    "llm_r1_site_1_009": {
+      "priority": 35
+    },
+    "llm_r2_site_1_002": {
+      "priority": 8
+    },
+    "llm_r1_site_4_009": {
+      "priority": 2
+    },
+    "llm_r1_site_1_008": {
+      "priority": 4
+    },
+    "llm_r1_site_1_002": {
+      "priority": 4
+    },
+    "llm_r1_site_2_006": {
+      "priority": 78
+    },
+    "llm_r2_site_2_013": {
+      "priority": 58
+    },
+    "llm_r1_site_3_009": {
+      "priority": 50
+    },
+    "llm_r2_site_3_013": {
+      "priority": 27
+    },
+    "llm_r1_site_4_000": {
+      "priority": 6
+    },
+    "llm_r1_site_1_012": {
+      "priority": 3
+    },
+    "llm_r2_site_4_012": {
+      "priority": 3
+    },
+    "llm_r2_site_3_006": {
+      "priority": 39
+    },
+    "llm_r2_site_3_011": {
+      "priority": 36
+    },
+    "llm_r2_site_1_013": {
+      "priority": 9
+    },
+    "llm_r2_site_2_000": {
+      "priority": 37
+    },
+    "llm_r2_site_4_013": {
+      "priority": 3
+    },
+    "llm_r2_site_2_002": {
+      "priority": 22
+    },
+    "llm_r2_site_1_010": {
+      "priority": 7
+    },
+    "llm_r2_site_3_009": {
+      "priority": 31
+    },
+    "llm_r1_site_2_012": {
+      "priority": 61
+    },
+    "llm_r1_site_2_013": {
+      "priority": 12
+    },
+    "llm_r2_site_4_003": {
+      "priority": 4
+    },
+    "llm_r2_site_4_000": {
+      "priority": 4
+    }
+  },
+  "decision_logic": "分数是相对实验优先级，不是结合或疾病选择性概率。先综合全部姿势的中央及组装碰撞、肽键几何、接触密度和受体位移，再比较三个MSA构象与两个对照的complex_nll及context_gain；任一可信的兼容对照均降低鉴别支持。对照几何不合格导致的null视为未知，而非不结合。所有候选每个构象仅有一个姿势，不能证明独立重复稳定性，因此最高分限制在78。优先组合建议llm_r1_site_2_006、llm_r1_site_2_011、llm_r1_site_3_011、llm_r1_site_2_007、llm_r1_site_3_014，兼顾site_2/site_3与序列、长度差异。llm_r1_site_2_006三个MSA的NLL为3.113–3.327，对照为3.425和3.601；MSA增益为−0.140至0.078，对照为−0.590和−0.463，受体位移仅0.193–0.205 Å，提供较完整但不强的局部鉴别证据。llm_r1_site_2_011三个MSA均几何合格，NLL为2.744–3.074，对照为3.180和3.674，但MSA增益仍为−0.222至−0.034，不能据此声称靶环境促进结合。llm_r1_site_3_011覆盖三个MSA，NLL为3.190–3.442，两个对照为3.867和3.953；其MSA增益全部为负，且对照位移0.395/0.476 Å高于MSA的0.220–0.265 Å，差距可能部分来自对照结构扰动。llm_r1_site_3_014作为19残基site_3多样性候选，MSA NLL为2.905–3.125，但6CU7增益−0.080与MSA的−0.177至−0.078重叠，选择性支持有限。llm_r1_site_2_001局部兼容较好，但8A9L NLL为2.681，与6XYP的2.663近似，明显压低优先级；llm_r2_site_2_002的8A9L NLL为2.836，优于所有MSA的3.175–3.379，故不因6CU7较差而提升。llm_r2_site_2_008在6XYP/6XYQ增益0.186/0.282，但6XYO为−0.340且8A9L未知，只作为探索候选。llm_r1_site_1_009保留低比例site_1探索价值：仅6XYQ合格，接触2.056/残基、NLL 3.061、增益−0.393，不能代表广谱MSA支持。site_4全部缺少合格MSA姿势，不为表位多样性强行加分；例如llm_r1_site_4_014的MSA组装碰撞为1.864–13.091/残基。小差距需结合解码波动审视，例如llm_r1_site_2_000的MSA NLL 2.816–2.989与8A9L的2.864重叠，标准差约0.027–0.051。总体支持的是可检验的局部序列—结构兼容假设，而非已验证的疾病选择性；需补充独立姿势、低扰动双对照及实测亲和力/选择性。",
+  "ordered_ids": [
+    "llm_r1_site_2_006",
+    "llm_r1_site_2_011",
+    "llm_r1_site_3_011",
+    "llm_r1_site_2_007",
+    "llm_r1_site_3_014",
+    "llm_r1_site_2_001",
+    "llm_r1_site_2_000",
+    "llm_r1_site_2_012",
+    "llm_r1_site_2_004",
+    "llm_r2_site_2_008",
+    "llm_r2_site_2_013",
+    "llm_r2_site_2_007",
+    "llm_r1_site_3_003",
+    "llm_r2_site_2_006",
+    "llm_r1_site_3_007",
+    "llm_r1_site_3_010",
+    "llm_r2_site_3_001",
+    "llm_r2_site_2_012",
+    "llm_r1_site_3_009",
+    "llm_r1_site_2_014",
+    "llm_r2_site_3_012",
+    "llm_r1_site_2_003",
+    "llm_r2_site_2_003",
+    "llm_r1_site_3_001",
+    "llm_r1_site_2_005",
+    "llm_r1_site_2_002",
+    "llm_r2_site_3_003",
+    "llm_r2_site_3_002",
+    "llm_r1_site_2_010",
+    "llm_r2_site_2_001",
+    "llm_r2_site_3_006",
+    "llm_r2_site_2_005",
+    "llm_r1_site_2_009",
+    "llm_r1_site_3_004",
+    "llm_r2_site_2_000",
+    "llm_r2_site_3_000",
+    "llm_r2_site_3_011",
+    "llm_r1_site_3_000",
+    "llm_r1_site_1_009",
+    "llm_r2_site_2_009",
+    "llm_r2_site_2_011",
+    "llm_r2_site_3_005",
+    "llm_r1_site_3_002",
+    "llm_r1_site_3_005",
+    "llm_r1_site_3_013",
+    "llm_r2_site_3_009",
+    "llm_r1_site_2_008",
+    "llm_r1_site_3_006",
+    "llm_r2_site_2_004",
+    "llm_r1_site_3_012",
+    "llm_r2_site_3_004",
+    "llm_r1_site_1_000",
+    "llm_r2_site_3_013",
+    "llm_r2_site_2_010",
+    "llm_r2_site_3_014",
+    "llm_r2_site_3_010",
+    "llm_r2_site_1_000",
+    "llm_r2_site_3_007",
+    "llm_r2_site_2_002",
+    "llm_r2_site_3_008",
+    "llm_r2_site_2_014",
+    "llm_r1_site_1_006",
+    "llm_r2_site_1_014",
+    "llm_r1_site_3_008",
+    "llm_r2_site_1_005",
+    "llm_r1_site_2_013",
+    "llm_r1_site_1_001",
+    "llm_r1_site_1_013",
+    "llm_r2_site_1_006",
+    "llm_r2_site_1_001",
+    "llm_r2_site_1_013",
+    "llm_r1_site_1_004",
+    "llm_r2_site_1_002",
+    "llm_r1_site_1_014",
+    "llm_r2_site_1_004",
+    "llm_r1_site_1_007",
+    "llm_r2_site_1_011",
+    "llm_r2_site_1_010",
+    "llm_r1_site_1_011",
+    "llm_r2_site_1_007",
+    "llm_r1_site_1_010",
+    "llm_r1_site_4_000",
+    "llm_r1_site_4_014",
+    "llm_r1_site_4_004",
+    "llm_r2_site_4_002",
+    "llm_r1_site_4_013",
+    "llm_r1_site_1_005",
+    "llm_r1_site_4_007",
+    "llm_r1_site_4_010",
+    "llm_r2_site_4_006",
+    "llm_r1_site_4_005",
+    "llm_r2_site_4_001",
+    "llm_r2_site_4_004",
+    "llm_r1_site_4_012",
+    "llm_r2_site_4_008",
+    "llm_r2_site_4_005",
+    "llm_r2_site_1_003",
+    "llm_r2_site_1_008",
+    "llm_r1_site_4_011",
+    "llm_r2_site_4_007",
+    "llm_r1_site_1_008",
+    "llm_r1_site_1_002",
+    "llm_r2_site_4_003",
+    "llm_r2_site_4_000",
+    "llm_r1_site_4_006",
+    "llm_r1_site_4_008",
+    "llm_r2_site_1_012",
+    "llm_r1_site_1_003",
+    "llm_r1_site_4_001",
+    "llm_r2_site_4_014",
+    "llm_r1_site_1_012",
+    "llm_r2_site_4_012",
+    "llm_r2_site_4_013",
+    "llm_r1_site_4_002",
+    "llm_r2_site_4_009",
+    "llm_r1_site_4_003",
+    "llm_r2_site_1_009",
+    "llm_r1_site_4_009",
+    "llm_r2_site_4_010",
+    "llm_r2_site_4_011"
+  ]
+}

@@ -1,0 +1,62 @@
+{
+  "groups": {
+    "全部120条，初次姿势": {
+      "candidates": 120,
+      "all_msa_have_eligible_pose": 30,
+      "all_msa_sampled_poses_eligible": 30,
+      "all_five_have_eligible_pose": 19,
+      "positive_nll_contrast": 11,
+      "positive_context_gain_contrast": 9,
+      "eligible_poses": 320
+    },
+    "去逆折叠信息 Top24，初次姿势": {
+      "candidates": 24,
+      "all_msa_have_eligible_pose": 20,
+      "all_msa_sampled_poses_eligible": 20,
+      "all_five_have_eligible_pose": 11,
+      "positive_nll_contrast": 5,
+      "positive_context_gain_contrast": 6,
+      "eligible_poses": 105
+    },
+    "完整证据 Top24，初次姿势": {
+      "candidates": 24,
+      "all_msa_have_eligible_pose": 18,
+      "all_msa_sampled_poses_eligible": 18,
+      "all_five_have_eligible_pose": 13,
+      "positive_nll_contrast": 10,
+      "positive_context_gain_contrast": 9,
+      "eligible_poses": 108
+    },
+    "完整证据 Top24，两次姿势": {
+      "candidates": 24,
+      "all_msa_have_eligible_pose": 24,
+      "all_msa_sampled_poses_eligible": 7,
+      "all_five_have_eligible_pose": 21,
+      "positive_nll_contrast": 12,
+      "positive_context_gain_contrast": 10,
+      "eligible_poses": 197
+    }
+  },
+  "unique_candidates": 120,
+  "pose_count": 720,
+  "decoding_orders_per_context": 8,
+  "model_evaluations": 11520,
+  "inverse_ablation_top24_overlap": 14,
+  "input_order_top24_overlap": 21,
+  "mean_absolute_order_change": 5.87,
+  "api_calls": 4,
+  "tokens": {
+    "prompt_tokens": 122269,
+    "completion_tokens": 8814,
+    "total_tokens": 131083
+  },
+  "returned_models": [
+    "gpt-6.1-sol-2026-09-29"
+  ],
+  "finalist_sites": {
+    "site_2": 14,
+    "site_3": 10
+  },
+  "geometry_ineligible_poses": 311,
+  "new_second_poses": 65
+}

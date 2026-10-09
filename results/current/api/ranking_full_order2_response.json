@@ -1,0 +1,37 @@
+{
+  "id": "chatcmpl-EWxqWQywVGkLtUHqJ7QmPGDcYNpeg",
+  "choices": [
+    {
+      "message": {
+        "role": "assistant",
+        "content": "{\"evaluations\":{\"C000\":{\"priority\":76},\"C001\":{\"priority\":42},\"C002\":{\"priority\":4},\"C003\":{\"priority\":45},\"C004\":{\"priority\":10},\"C005\":{\"priority\":39},\"C006\":{\"priority\":7},\"C007\":{\"priority\":9},\"C008\":{\"priority\":62},\"C009\":{\"priority\":6},\"C010\":{\"priority\":8},\"C011\":{\"priority\":43},\"C012\":{\"priority\":40},\"C013\":{\"priority\":2},\"C014\":{\"priority\":28},\"C015\":{\"priority\":3},\"C016\":{\"priority\":8},\"C017\":{\"priority\":35},\"C018\":{\"priority\":38},\"C019\":{\"priority\":64},\"C020\":{\"priority\":49},\"C021\":{\"priority\":9},\"C022\":{\"priority\":57},\"C023\":{\"priority\":58},\"C024\":{\"priority\":61},\"C025\":{\"priority\":44},\"C026\":{\"priority\":5},\"C027\":{\"priority\":54},\"C028\":{\"priority\":11},\"C029\":{\"priority\":23},\"C030\":{\"priority\":82},\"C031\":{\"priority\":30},\"C032\":{\"priority\":25},\"C033\":{\"priority\":60},\"C034\":{\"priority\":24},\"C035\":{\"priority\":2},\"C036\":{\"priority\":6},\"C037\":{\"priority\":37},\"C038\":{\"priority\":5},\"C039\":{\"priority\":10},\"C040\":{\"priority\":36},\"C041\":{\"priority\":56},\"C042\":{\"priority\":29},\"C043\":{\"priority\":4},\"C044\":{\"priority\":6},\"C045\":{\"priority\":7},\"C046\":{\"priority\":53},\"C047\":{\"priority\":10},\"C048\":{\"priority\":80},\"C049\":{\"priority\":8},\"C050\":{\"priority\":65},\"C051\":{\"priority\":32},\"C052\":{\"priority\":3},\"C053\":{\"priority\":2},\"C054\":{\"priority\":3},\"C055\":{\"priority\":71},\"C056\":{\"priority\":22},\"C057\":{\"priority\":20},\"C058\":{\"priority\":0.5},\"C059\":{\"priority\":1},\"C060\":{\"priority\":78},\"C061\":{\"priority\":52},\"C062\":{\"priority\":41},\"C063\":{\"priority\":5},\"C064\":{\"priority\":6},\"C065\":{\"priority\":1.5},\"C066\":{\"priority\":59},\"C067\":{\"priority\":34},\"C068\":{\"priority\":75},\"C069\":{\"priority\":33},\"C070\":{\"priority\":2},\"C071\":{\"priority\":11},\"C072\":{\"priority\":31},\"C073\":{\"priority\":39.5},\"C074\":{\"priority\":44.5},\"C075\":{\"priority\":47},\"C076\":{\"priority\":3.5},\"C077\":{\"priority\":9},\"C078\":{\"priority\":26},\"C079\":{\"priority\":46},\"C080\":{\"priority\":40.5},\"C081\":{\"priority\":4},\"C082\":{\"priority\":63},\"C083\":{\"priority\":66},\"C084\":{\"priority\":1},\"C085\":{\"priority\":4},\"C086\":{\"priority\":21},\"C087\":{\"priority\":4},\"C088\":{\"priority\":43.5},\"C089\":{\"priority\":4},\"C090\":{\"priority\":8},\"C091\":{\"priority\":48},\"C092\":{\"priority\":2},\"C093\":{\"priority\":7},\"C094\":{\"priority\":27},\"C095\":{\"priority\":5},\"C096\":{\"priority\":45.5},\"C097\":{\"priority\":10},\"C098\":{\"priority\":2.5},\"C099\":{\"priority\":2},\"C100\":{\"priority\":2},\"C101\":{\"priority\":77},\"C102\":{\"priority\":67},\"C103\":{\"priority\":69},\"C104\":{\"priority\":35.5},\"C105\":{\"priority\":1},\"C106\":{\"priority\":2},\"C107\":{\"priority\":3},\"C108\":{\"priority\":46.5},\"C109\":{\"priority\":50},\"C110\":{\"priority\":4},\"C111\":{\"priority\":51},\"C112\":{\"priority\":2},\"C113\":{\"priority\":37.5},\"C114\":{\"priority\":6},\"C115\":{\"priority\":28.5},\"C116\":{\"priority\":55},\"C117\":{\"priority\":12},\"C118\":{\"priority\":1},\"C119\":{\"priority\":2}},\"decision_logic\":\"分数为相对实验优先级，不是结合概率或疾病选择性概率。综合全部姿势，优先三种MSA均无中央及组装碰撞、肽链几何正常、受体位移小且有实际接触的候选；再比较complex_nll与context_gain，并同时考察8A9L和6CU7。控制中可信的低nll会削弱区分支持；不合格控制的null仅代表未知，不能视为不结合。所有候选均只有单姿势，缺少独立重复，因此最高分限制为82。首批保留site_2的C030、C060、C101及site_3的C048、C000、C068，兼顾序列和表位多样性，不为多样性强行提升缺乏支持的site_4。C030三种MSA的nll为2.846/3.074/2.744，两控制为3.180/3.674，且MSA受体RMSD为0.192–0.228 Å；但MSA增益均为负（−0.222至−0.034），主要支持局部相容性。C048三种MSA的nll为2.905–3.125，两控制为3.625/3.370，但接触仅0.263–0.579/残基，增益−0.177至−0.078，环境驱动证据有限。C101的MSA nll为3.113–3.327，两控制3.425/3.601，增益−0.140至0.078，具有较平衡但不强的区分线索。C000两控制nll为3.466/4.000，但MSA nll跨构象从2.677到3.299，且接触从0.182到2.182，提示构象敏感性。C055虽MSA nll为2.673–3.059，6CU7组装碰撞3.579/残基使其控制相容性未知，故低于完整证据首选。C003和C025局部相容性较好，却分别有8A9L nll 2.652和2.633，比各自全部MSA更低，不能作为强MSA偏好证据。C103虽MSA nll 3.092–3.169低于两控制3.782/3.571，但接触仅0.067–0.533且增益全负，避免仅凭nll差过度提升。site_1仅C011、C096等适合作探索备选；site_4全部MSA姿势不合格，整体降至末位。解码标准差常约0.02–0.07，小差距不作确定结论；姿势及构象差异、受体变形和模型共享偏差仍需考虑。最终支持是局部序列—结构相容性及有限构象区分线索，非已证实疾病选择性；实验需对三种MSA与两个控制平行测量，并补充独立姿势采样。\"}",
+        "refusal": null,
+        "annotations": []
+      },
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null
+    }
+  ],
+  "created": 1791525252,
+  "model": "gpt-6.1-sol-2026-09-29",
+  "object": "chat.completion",
+  "usage": {
+    "prompt_tokens": 38751,
+    "completion_tokens": 1640,
+    "total_tokens": 40391,
+    "completion_tokens_details": {
+      "audio_tokens": 0,
+      "reasoning_tokens": 47
+    },
+    "prompt_tokens_details": {
+      "audio_tokens": 0,
+      "cache_write_tokens": 38748,
+      "cached_tokens": 0
+    }
+  },
+  "routing": {
+    "serving_pipereplica": "d20261002051216-3a5609c8-prefill-r6-dp0-prefill"
+  },
+  "service_tier": "default"
+}

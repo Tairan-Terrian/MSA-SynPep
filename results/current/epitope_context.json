@@ -1,0 +1,1595 @@
+[
+  {
+    "site": "site_1",
+    "center": 39,
+    "common_anchor_residues": [
+      38,
+      39,
+      40,
+      41,
+      42,
+      43,
+      44
+    ],
+    "conformers": [
+      {
+        "conformer": "6XYO",
+        "class": "MSA",
+        "residues": [
+          {
+            "number": 38,
+            "aa": "L",
+            "sasa_in_deposited_assembly_a2": 63.9
+          },
+          {
+            "number": 39,
+            "aa": "Y",
+            "sasa_in_deposited_assembly_a2": 122.9
+          },
+          {
+            "number": 40,
+            "aa": "V",
+            "sasa_in_deposited_assembly_a2": 45.3
+          },
+          {
+            "number": 41,
+            "aa": "G",
+            "sasa_in_deposited_assembly_a2": 63.2
+          },
+          {
+            "number": 42,
+            "aa": "S",
+            "sasa_in_deposited_assembly_a2": 31.3
+          },
+          {
+            "number": 43,
+            "aa": "K",
+            "sasa_in_deposited_assembly_a2": 116.6
+          },
+          {
+            "number": 44,
+            "aa": "T",
+            "sasa_in_deposited_assembly_a2": 65.3
+          }
+        ],
+        "ca_distances_upper_triangle_a": [
+          3.8,
+          6.3,
+          9.8,
+          9.4,
+          11.9,
+          12.4,
+          3.8,
+          6.5,
+          5.7,
+          8.3,
+          9.3,
+          3.8,
+          5.4,
+          8.9,
+          11.2,
+          3.8,
+          7.0,
+          10.3,
+          3.8,
+          6.8,
+          3.8
+        ]
+      },
+      {
+        "conformer": "6XYP",
+        "class": "MSA",
+        "residues": [
+          {
+            "number": 38,
+            "aa": "L",
+            "sasa_in_deposited_assembly_a2": 49.2
+          },
+          {
+            "number": 39,
+            "aa": "Y",
+            "sasa_in_deposited_assembly_a2": 83.9
+          },
+          {
+            "number": 40,
+            "aa": "V",
+            "sasa_in_deposited_assembly_a2": 19.3
+          },
+          {
+            "number": 41,
+            "aa": "G",
+            "sasa_in_deposited_assembly_a2": 34.3
+          },
+          {
+            "number": 42,
+            "aa": "S",
+            "sasa_in_deposited_assembly_a2": 40.9
+          },
+          {
+            "number": 43,
+            "aa": "K",
+            "sasa_in_deposited_assembly_a2": 107.1
+          },
+          {
+            "number": 44,
+            "aa": "T",
+            "sasa_in_deposited_assembly_a2": 58.1
+          }
+        ],
+        "ca_distances_upper_triangle_a": [
+          3.8,
+          6.1,
+          9.5,
+          9.3,
+          12.4,
+          13.8,
+          3.8,
+          6.4,
+          5.7,
+          8.7,
+          10.4,
+          3.8,
+          5.4,
+          8.9,
+          11.8,
+          3.8,
+          6.6,
+          10.1,
+          3.8,
+          6.8,
+          3.8
+        ]
+      },
+      {
+        "conformer": "6XYQ",
+        "class": "MSA",
+        "residues": [
+          {
+            "number": 38,
+            "aa": "L",
+            "sasa_in_deposited_assembly_a2": 46.2
+          },
+          {
+            "number": 39,
+            "aa": "Y",
+            "sasa_in_deposited_assembly_a2": 90.0
+          },
+          {
+            "number": 40,
+            "aa": "V",
+            "sasa_in_deposited_assembly_a2": 21.3
+          },
+          {
+            "number": 41,
+            "aa": "G",
+            "sasa_in_deposited_assembly_a2": 31.8
+          },
+          {
+            "number": 42,
+            "aa": "S",
+            "sasa_in_deposited_assembly_a2": 39.8
+          },
+          {
+            "number": 43,
+            "aa": "K",
+            "sasa_in_deposited_assembly_a2": 109.8
+          },
+          {
+            "number": 44,
+            "aa": "T",
+            "sasa_in_deposited_assembly_a2": 59.3
+          }
+        ],
+        "ca_distances_upper_triangle_a": [
+          3.8,
+          6.0,
+          9.5,
+          9.4,
+          12.4,
+          14.1,
+          3.8,
+          6.4,
+          5.8,
+          8.7,
+          10.6,
+          3.8,
+          5.4,
+          9.0,
+          12.0,
+          3.8,
+          6.8,
+          10.3,
+          3.8,
+          7.0,
+          3.8
+        ]
+      },
+      {
+        "conformer": "8A9L",
+        "class": "control",
+        "residues": [
+          {
+            "number": 38,
+            "aa": "L",
+            "sasa_in_deposited_assembly_a2": 146.6
+          },
+          {
+            "number": 39,
+            "aa": "Y",
+            "sasa_in_deposited_assembly_a2": 156.1
+          },
+          {
+            "number": 40,
+            "aa": "V",
+            "sasa_in_deposited_assembly_a2": 116.6
+          },
+          {
+            "number": 41,
+            "aa": "G",
+            "sasa_in_deposited_assembly_a2": 48.4
+          },
+          {
+            "number": 42,
+            "aa": "S",
+            "sasa_in_deposited_assembly_a2": 91.3
+          },
+          {
+            "number": 43,
+            "aa": "K",
+            "sasa_in_deposited_assembly_a2": 195.6
+          },
+          {
+            "number": 44,
+            "aa": "T",
+            "sasa_in_deposited_assembly_a2": 120.5
+          }
+        ],
+        "ca_distances_upper_triangle_a": [
+          3.8,
+          6.7,
+          10.2,
+          12.2,
+          13.2,
+          17.0,
+          3.8,
+          6.7,
+          8.4,
+          9.5,
+          13.4,
+          3.8,
+          6.8,
+          9.4,
+          13.0,
+          3.8,
+          7.2,
+          10.4,
+          3.8,
+          6.6,
+          3.8
+        ]
+      },
+      {
+        "conformer": "6CU7",
+        "class": "control",
+        "residues": [
+          {
+            "number": 38,
+            "aa": "L",
+            "sasa_in_deposited_assembly_a2": 55.9
+          },
+          {
+            "number": 39,
+            "aa": "Y",
+            "sasa_in_deposited_assembly_a2": 90.9
+          },
+          {
+            "number": 40,
+            "aa": "V",
+            "sasa_in_deposited_assembly_a2": 63.6
+          },
+          {
+            "number": 41,
+            "aa": "G",
+            "sasa_in_deposited_assembly_a2": 0.0
+          },
+          {
+            "number": 42,
+            "aa": "S",
+            "sasa_in_deposited_assembly_a2": 28.8
+          },
+          {
+            "number": 43,
+            "aa": "K",
+            "sasa_in_deposited_assembly_a2": 74.2
+          },
+          {
+            "number": 44,
+            "aa": "T",
+            "sasa_in_deposited_assembly_a2": 9.0
+          }
+        ],
+        "ca_distances_upper_triangle_a": [
+          3.8,
+          5.7,
+          4.4,
+          4.5,
+          8.0,
+          9.5,
+          3.8,
+          5.4,
+          7.5,
+          10.5,
+          10.7,
+          3.8,
+          7.1,
+          8.9,
+          8.0,
+          3.8,
+          5.4,
+          5.5,
+          3.8,
+          6.3,
+          3.8
+        ]
+      }
+    ],
+    "scope": "homologous central-chain patches; assembly SASA has different layer counts"
+  },
+  {
+    "site": "site_2",
+    "center": 80,
+    "common_anchor_residues": [
+      46,
+      48,
+      78,
+      79,
+      80,
+      81,
+      82,
+      83,
+      84
+    ],
+    "conformers": [
+      {
+        "conformer": "6XYO",
+        "class": "MSA",
+        "residues": [
+          {
+            "number": 46,
+            "aa": "E",
+            "sasa_in_deposited_assembly_a2": 51.8
+          },
+          {
+            "number": 48,
+            "aa": "V",
+            "sasa_in_deposited_assembly_a2": 43.4
+          },
+          {
+            "number": 78,
+            "aa": "A",
+            "sasa_in_deposited_assembly_a2": 60.8
+          },
+          {
+            "number": 79,
+            "aa": "Q",
+            "sasa_in_deposited_assembly_a2": 41.0
+          },
+          {
+            "number": 80,
+            "aa": "K",
+            "sasa_in_deposited_assembly_a2": 101.0
+          },
+          {
+            "number": 81,
+            "aa": "T",
+            "sasa_in_deposited_assembly_a2": 32.6
+          },
+          {
+            "number": 82,
+            "aa": "V",
+            "sasa_in_deposited_assembly_a2": 80.6
+          },
+          {
+            "number": 83,
+            "aa": "E",
+            "sasa_in_deposited_assembly_a2": 139.4
+          },
+          {
+            "number": 84,
+            "aa": "G",
+            "sasa_in_deposited_assembly_a2": 28.9
+          }
+        ],
+        "ca_distances_upper_triangle_a": [
+          5.8,
+          8.8,
+          8.4,
+          6.8,
+          10.0,
+          11.1,
+          14.7,
+          15.8,
+          5.4,
+          7.6,
+          8.7,
+          12.4,
+          14.8,
+          18.2,
+          18.3,
+          3.8,
+          7.0,
+          10.0,
+          13.3,
+          16.2,
+          15.2,
+          3.8,
+          6.2,
+          9.7,
+          12.4,
+          11.5,
+          3.8,
+          6.5,
+          9.8,
+          9.9,
+          3.8,
+          6.2,
+          6.1,
+          3.8,
+          6.0,
+          3.8
+        ]
+      },
+      {
+        "conformer": "6XYP",
+        "class": "MSA",
+        "residues": [
+          {
+            "number": 46,
+            "aa": "E",
+            "sasa_in_deposited_assembly_a2": 89.0
+          },
+          {
+            "number": 48,
+            "aa": "V",
+            "sasa_in_deposited_assembly_a2": 39.5
+          },
+          {
+            "number": 78,
+            "aa": "A",
+            "sasa_in_deposited_assembly_a2": 10.5
+          },
+          {
+            "number": 79,
+            "aa": "Q",
+            "sasa_in_deposited_assembly_a2": 49.3
+          },
+          {
+            "number": 80,
+            "aa": "K",
+            "sasa_in_deposited_assembly_a2": 98.3
+          },
+          {
+            "number": 81,
+            "aa": "T",
+            "sasa_in_deposited_assembly_a2": 37.9
+          },
+          {
+            "number": 82,
+            "aa": "V",
+            "sasa_in_deposited_assembly_a2": 119.7
+          },
+          {
+            "number": 83,
+            "aa": "E",
+            "sasa_in_deposited_assembly_a2": 124.4
+          },
+          {
+            "number": 84,
+            "aa": "G",
+            "sasa_in_deposited_assembly_a2": 27.9
+          }
+        ],
+        "ca_distances_upper_triangle_a": [
+          5.8,
+          6.4,
+          9.3,
+          11.1,
+          14.8,
+          17.5,
+          20.5,
+          19.9,
+          8.1,
+          11.8,
+          14.8,
+          18.2,
+          21.5,
+          24.1,
+          22.7,
+          3.8,
+          7.0,
+          10.2,
+          13.6,
+          16.1,
+          14.9,
+          3.8,
+          6.5,
+          10.1,
+          12.4,
+          11.2,
+          3.8,
+          6.7,
+          9.7,
+          9.5,
+          3.8,
+          6.0,
+          5.8,
+          3.8,
+          6.1,
+          3.8
+        ]
+      },
+      {
+        "conformer": "6XYQ",
+        "class": "MSA",
+        "residues": [
+          {
+            "number": 46,
+            "aa": "E",
+            "sasa_in_deposited_assembly_a2": 87.6
+          },
+          {
+            "number": 48,
+            "aa": "V",
+            "sasa_in_deposited_assembly_a2": 41.8
+          },
+          {
+            "number": 78,
+            "aa": "A",
+            "sasa_in_deposited_assembly_a2": 9.1
+          },
+          {
+            "number": 79,
+            "aa": "Q",
+            "sasa_in_deposited_assembly_a2": 46.3
+          },
+          {
+            "number": 80,
+            "aa": "K",
+            "sasa_in_deposited_assembly_a2": 89.3
+          },
+          {
+            "number": 81,
+            "aa": "T",
+            "sasa_in_deposited_assembly_a2": 39.7
+          },
+          {
+            "number": 82,
+            "aa": "V",
+            "sasa_in_deposited_assembly_a2": 113.1
+          },
+          {
+            "number": 83,
+            "aa": "E",
+            "sasa_in_deposited_assembly_a2": 122.8
+          },
+          {
+            "number": 84,
+            "aa": "G",
+            "sasa_in_deposited_assembly_a2": 33.0
+          }
+        ],
+        "ca_distances_upper_triangle_a": [
+          5.8,
+          6.3,
+          9.4,
+          11.0,
+          14.6,
+          17.3,
+          20.6,
+          20.1,
+          8.2,
+          11.8,
+          14.7,
+          18.0,
+          21.3,
+          24.2,
+          22.9,
+          3.8,
+          6.8,
+          10.0,
+          13.4,
+          16.2,
+          15.2,
+          3.8,
+          6.4,
+          10.0,
+          12.6,
+          11.4,
+          3.8,
+          6.6,
+          9.8,
+          9.8,
+          3.8,
+          6.2,
+          6.0,
+          3.8,
+          6.0,
+          3.8
+        ]
+      },
+      {
+        "conformer": "8A9L",
+        "class": "control",
+        "residues": [
+          {
+            "number": 46,
+            "aa": "E",
+            "sasa_in_deposited_assembly_a2": 163.4
+          },
+          {
+            "number": 48,
+            "aa": "V",
+            "sasa_in_deposited_assembly_a2": 141.5
+          },
+          {
+            "number": 78,
+            "aa": "A",
+            "sasa_in_deposited_assembly_a2": 98.1
+          },
+          {
+            "number": 79,
+            "aa": "Q",
+            "sasa_in_deposited_assembly_a2": 109.0
+          },
+          {
+            "number": 80,
+            "aa": "K",
+            "sasa_in_deposited_assembly_a2": 173.0
+          },
+          {
+            "number": 81,
+            "aa": "T",
+            "sasa_in_deposited_assembly_a2": 57.8
+          },
+          {
+            "number": 82,
+            "aa": "V",
+            "sasa_in_deposited_assembly_a2": 102.2
+          },
+          {
+            "number": 83,
+            "aa": "E",
+            "sasa_in_deposited_assembly_a2": 184.9
+          },
+          {
+            "number": 84,
+            "aa": "G",
+            "sasa_in_deposited_assembly_a2": 47.4
+          }
+        ],
+        "ca_distances_upper_triangle_a": [
+          7.0,
+          29.5,
+          32.4,
+          33.7,
+          37.3,
+          39.1,
+          42.8,
+          42.5,
+          32.9,
+          36.2,
+          37.9,
+          41.6,
+          43.8,
+          47.6,
+          47.0,
+          3.8,
+          7.1,
+          10.4,
+          13.8,
+          17.1,
+          15.6,
+          3.8,
+          6.7,
+          10.2,
+          13.4,
+          11.9,
+          3.8,
+          6.8,
+          10.3,
+          9.6,
+          3.8,
+          6.7,
+          5.9,
+          3.8,
+          5.2,
+          3.8
+        ]
+      },
+      {
+        "conformer": "6CU7",
+        "class": "control",
+        "residues": [
+          {
+            "number": 46,
+            "aa": "E",
+            "sasa_in_deposited_assembly_a2": 8.2
+          },
+          {
+            "number": 48,
+            "aa": "V",
+            "sasa_in_deposited_assembly_a2": 0.0
+          },
+          {
+            "number": 78,
+            "aa": "A",
+            "sasa_in_deposited_assembly_a2": 0.0
+          },
+          {
+            "number": 79,
+            "aa": "Q",
+            "sasa_in_deposited_assembly_a2": 0.0
+          },
+          {
+            "number": 80,
+            "aa": "K",
+            "sasa_in_deposited_assembly_a2": 21.2
+          },
+          {
+            "number": 81,
+            "aa": "T",
+            "sasa_in_deposited_assembly_a2": 0.0
+          },
+          {
+            "number": 82,
+            "aa": "V",
+            "sasa_in_deposited_assembly_a2": 35.1
+          },
+          {
+            "number": 83,
+            "aa": "E",
+            "sasa_in_deposited_assembly_a2": 87.8
+          },
+          {
+            "number": 84,
+            "aa": "G",
+            "sasa_in_deposited_assembly_a2": 5.2
+          }
+        ],
+        "ca_distances_upper_triangle_a": [
+          6.1,
+          8.7,
+          8.1,
+          6.6,
+          9.7,
+          10.7,
+          14.5,
+          15.5,
+          6.1,
+          8.1,
+          9.4,
+          13.2,
+          15.4,
+          18.8,
+          18.9,
+          3.8,
+          7.1,
+          10.4,
+          13.7,
+          16.4,
+          15.4,
+          3.8,
+          6.7,
+          10.2,
+          12.6,
+          11.6,
+          3.8,
+          6.6,
+          9.6,
+          9.6,
+          3.8,
+          6.0,
+          5.9,
+          3.8,
+          6.1,
+          3.8
+        ]
+      }
+    ],
+    "scope": "homologous central-chain patches; assembly SASA has different layer counts"
+  },
+  {
+    "site": "site_3",
+    "center": 66,
+    "common_anchor_residues": [
+      63,
+      64,
+      65,
+      66,
+      67,
+      68,
+      69,
+      70
+    ],
+    "conformers": [
+      {
+        "conformer": "6XYO",
+        "class": "MSA",
+        "residues": [
+          {
+            "number": 63,
+            "aa": "V",
+            "sasa_in_deposited_assembly_a2": 65.4
+          },
+          {
+            "number": 64,
+            "aa": "T",
+            "sasa_in_deposited_assembly_a2": 76.5
+          },
+          {
+            "number": 65,
+            "aa": "N",
+            "sasa_in_deposited_assembly_a2": 64.6
+          },
+          {
+            "number": 66,
+            "aa": "V",
+            "sasa_in_deposited_assembly_a2": 95.5
+          },
+          {
+            "number": 67,
+            "aa": "G",
+            "sasa_in_deposited_assembly_a2": 77.4
+          },
+          {
+            "number": 68,
+            "aa": "G",
+            "sasa_in_deposited_assembly_a2": 17.5
+          },
+          {
+            "number": 69,
+            "aa": "A",
+            "sasa_in_deposited_assembly_a2": 23.4
+          },
+          {
+            "number": 70,
+            "aa": "V",
+            "sasa_in_deposited_assembly_a2": 34.6
+          }
+        ],
+        "ca_distances_upper_triangle_a": [
+          3.8,
+          6.1,
+          9.9,
+          12.4,
+          11.0,
+          10.4,
+          7.7,
+          3.8,
+          6.9,
+          10.1,
+          9.7,
+          10.5,
+          9.1,
+          3.8,
+          6.4,
+          6.0,
+          7.4,
+          7.2,
+          3.8,
+          5.5,
+          8.5,
+          9.8,
+          3.8,
+          7.2,
+          9.9,
+          3.8,
+          6.6,
+          3.8
+        ]
+      },
+      {
+        "conformer": "6XYP",
+        "class": "MSA",
+        "residues": [
+          {
+            "number": 63,
+            "aa": "V",
+            "sasa_in_deposited_assembly_a2": 26.5
+          },
+          {
+            "number": 64,
+            "aa": "T",
+            "sasa_in_deposited_assembly_a2": 90.0
+          },
+          {
+            "number": 65,
+            "aa": "N",
+            "sasa_in_deposited_assembly_a2": 8.6
+          },
+          {
+            "number": 66,
+            "aa": "V",
+            "sasa_in_deposited_assembly_a2": 109.7
+          },
+          {
+            "number": 67,
+            "aa": "G",
+            "sasa_in_deposited_assembly_a2": 47.8
+          },
+          {
+            "number": 68,
+            "aa": "G",
+            "sasa_in_deposited_assembly_a2": 15.1
+          },
+          {
+            "number": 69,
+            "aa": "A",
+            "sasa_in_deposited_assembly_a2": 24.8
+          },
+          {
+            "number": 70,
+            "aa": "V",
+            "sasa_in_deposited_assembly_a2": 40.8
+          }
+        ],
+        "ca_distances_upper_triangle_a": [
+          3.8,
+          6.1,
+          9.8,
+          12.6,
+          11.4,
+          10.9,
+          8.1,
+          3.8,
+          6.7,
+          10.1,
+          9.8,
+          10.6,
+          9.0,
+          3.8,
+          6.5,
+          6.1,
+          7.3,
+          6.8,
+          3.8,
+          5.5,
+          8.4,
+          9.5,
+          3.8,
+          7.2,
+          9.8,
+          3.8,
+          6.6,
+          3.8
+        ]
+      },
+      {
+        "conformer": "6XYQ",
+        "class": "MSA",
+        "residues": [
+          {
+            "number": 63,
+            "aa": "V",
+            "sasa_in_deposited_assembly_a2": 23.3
+          },
+          {
+            "number": 64,
+            "aa": "T",
+            "sasa_in_deposited_assembly_a2": 91.8
+          },
+          {
+            "number": 65,
+            "aa": "N",
+            "sasa_in_deposited_assembly_a2": 9.7
+          },
+          {
+            "number": 66,
+            "aa": "V",
+            "sasa_in_deposited_assembly_a2": 109.2
+          },
+          {
+            "number": 67,
+            "aa": "G",
+            "sasa_in_deposited_assembly_a2": 46.1
+          },
+          {
+            "number": 68,
+            "aa": "G",
+            "sasa_in_deposited_assembly_a2": 15.1
+          },
+          {
+            "number": 69,
+            "aa": "A",
+            "sasa_in_deposited_assembly_a2": 24.4
+          },
+          {
+            "number": 70,
+            "aa": "V",
+            "sasa_in_deposited_assembly_a2": 38.5
+          }
+        ],
+        "ca_distances_upper_triangle_a": [
+          3.8,
+          6.2,
+          9.8,
+          12.6,
+          11.3,
+          10.8,
+          8.1,
+          3.8,
+          6.7,
+          10.0,
+          9.7,
+          10.4,
+          9.0,
+          3.8,
+          6.5,
+          6.0,
+          7.1,
+          6.8,
+          3.8,
+          5.5,
+          8.3,
+          9.5,
+          3.8,
+          7.2,
+          9.8,
+          3.8,
+          6.7,
+          3.8
+        ]
+      },
+      {
+        "conformer": "8A9L",
+        "class": "control",
+        "residues": [
+          {
+            "number": 63,
+            "aa": "V",
+            "sasa_in_deposited_assembly_a2": 89.8
+          },
+          {
+            "number": 64,
+            "aa": "T",
+            "sasa_in_deposited_assembly_a2": 66.5
+          },
+          {
+            "number": 65,
+            "aa": "N",
+            "sasa_in_deposited_assembly_a2": 74.3
+          },
+          {
+            "number": 66,
+            "aa": "V",
+            "sasa_in_deposited_assembly_a2": 80.9
+          },
+          {
+            "number": 67,
+            "aa": "G",
+            "sasa_in_deposited_assembly_a2": 81.8
+          },
+          {
+            "number": 68,
+            "aa": "G",
+            "sasa_in_deposited_assembly_a2": 36.1
+          },
+          {
+            "number": 69,
+            "aa": "A",
+            "sasa_in_deposited_assembly_a2": 52.5
+          },
+          {
+            "number": 70,
+            "aa": "V",
+            "sasa_in_deposited_assembly_a2": 95.2
+          }
+        ],
+        "ca_distances_upper_triangle_a": [
+          3.9,
+          6.2,
+          10.0,
+          12.8,
+          11.0,
+          11.1,
+          8.6,
+          3.8,
+          6.8,
+          10.2,
+          9.3,
+          10.7,
+          9.5,
+          3.8,
+          6.6,
+          5.6,
+          7.4,
+          7.3,
+          3.8,
+          5.2,
+          8.4,
+          9.9,
+          3.9,
+          7.1,
+          10.0,
+          3.8,
+          6.5,
+          3.8
+        ]
+      },
+      {
+        "conformer": "6CU7",
+        "class": "control",
+        "residues": [
+          {
+            "number": 63,
+            "aa": "V",
+            "sasa_in_deposited_assembly_a2": 2.2
+          },
+          {
+            "number": 64,
+            "aa": "T",
+            "sasa_in_deposited_assembly_a2": 56.0
+          },
+          {
+            "number": 65,
+            "aa": "N",
+            "sasa_in_deposited_assembly_a2": 0.6
+          },
+          {
+            "number": 66,
+            "aa": "V",
+            "sasa_in_deposited_assembly_a2": 70.4
+          },
+          {
+            "number": 67,
+            "aa": "G",
+            "sasa_in_deposited_assembly_a2": 18.0
+          },
+          {
+            "number": 68,
+            "aa": "G",
+            "sasa_in_deposited_assembly_a2": 0.0
+          },
+          {
+            "number": 69,
+            "aa": "A",
+            "sasa_in_deposited_assembly_a2": 5.7
+          },
+          {
+            "number": 70,
+            "aa": "V",
+            "sasa_in_deposited_assembly_a2": 3.3
+          }
+        ],
+        "ca_distances_upper_triangle_a": [
+          3.8,
+          6.8,
+          10.5,
+          12.8,
+          11.4,
+          10.6,
+          8.3,
+          3.8,
+          7.0,
+          9.9,
+          9.5,
+          9.8,
+          8.8,
+          3.8,
+          6.2,
+          5.9,
+          7.2,
+          7.7,
+          3.8,
+          5.9,
+          8.5,
+          10.4,
+          3.8,
+          7.0,
+          10.0,
+          3.8,
+          6.9,
+          3.8
+        ]
+      }
+    ],
+    "scope": "homologous central-chain patches; assembly SASA has different layer counts"
+  },
+  {
+    "site": "site_4",
+    "center": 50,
+    "common_anchor_residues": [
+      48,
+      49,
+      50,
+      51,
+      52,
+      53,
+      76,
+      78
+    ],
+    "conformers": [
+      {
+        "conformer": "6XYO",
+        "class": "MSA",
+        "residues": [
+          {
+            "number": 48,
+            "aa": "V",
+            "sasa_in_deposited_assembly_a2": 43.4
+          },
+          {
+            "number": 49,
+            "aa": "V",
+            "sasa_in_deposited_assembly_a2": 35.3
+          },
+          {
+            "number": 50,
+            "aa": "H",
+            "sasa_in_deposited_assembly_a2": 86.4
+          },
+          {
+            "number": 51,
+            "aa": "G",
+            "sasa_in_deposited_assembly_a2": 48.5
+          },
+          {
+            "number": 52,
+            "aa": "V",
+            "sasa_in_deposited_assembly_a2": 44.5
+          },
+          {
+            "number": 53,
+            "aa": "A",
+            "sasa_in_deposited_assembly_a2": 17.2
+          },
+          {
+            "number": 76,
+            "aa": "A",
+            "sasa_in_deposited_assembly_a2": 68.8
+          },
+          {
+            "number": 78,
+            "aa": "A",
+            "sasa_in_deposited_assembly_a2": 60.8
+          }
+        ],
+        "ca_distances_upper_triangle_a": [
+          3.8,
+          6.2,
+          9.9,
+          11.1,
+          14.8,
+          9.8,
+          5.4,
+          3.8,
+          6.8,
+          7.4,
+          11.1,
+          7.0,
+          5.8,
+          3.8,
+          6.2,
+          9.7,
+          9.4,
+          9.4,
+          3.8,
+          6.5,
+          9.9,
+          12.2,
+          3.8,
+          7.7,
+          11.9,
+          9.9,
+          15.2,
+          6.8
+        ]
+      },
+      {
+        "conformer": "6XYP",
+        "class": "MSA",
+        "residues": [
+          {
+            "number": 48,
+            "aa": "V",
+            "sasa_in_deposited_assembly_a2": 39.5
+          },
+          {
+            "number": 49,
+            "aa": "V",
+            "sasa_in_deposited_assembly_a2": 37.7
+          },
+          {
+            "number": 50,
+            "aa": "H",
+            "sasa_in_deposited_assembly_a2": 92.4
+          },
+          {
+            "number": 51,
+            "aa": "G",
+            "sasa_in_deposited_assembly_a2": 49.4
+          },
+          {
+            "number": 52,
+            "aa": "V",
+            "sasa_in_deposited_assembly_a2": 54.0
+          },
+          {
+            "number": 53,
+            "aa": "A",
+            "sasa_in_deposited_assembly_a2": 81.1
+          },
+          {
+            "number": 76,
+            "aa": "A",
+            "sasa_in_deposited_assembly_a2": 3.9
+          },
+          {
+            "number": 78,
+            "aa": "A",
+            "sasa_in_deposited_assembly_a2": 10.5
+          }
+        ],
+        "ca_distances_upper_triangle_a": [
+          3.8,
+          6.2,
+          10.0,
+          11.2,
+          15.0,
+          5.3,
+          8.1,
+          3.8,
+          7.0,
+          7.6,
+          11.3,
+          5.9,
+          11.1,
+          3.8,
+          6.1,
+          9.5,
+          9.4,
+          14.2,
+          3.8,
+          6.2,
+          12.5,
+          17.8,
+          3.8,
+          12.3,
+          18.5,
+          15.9,
+          22.2,
+          6.8
+        ]
+      },
+      {
+        "conformer": "6XYQ",
+        "class": "MSA",
+        "residues": [
+          {
+            "number": 48,
+            "aa": "V",
+            "sasa_in_deposited_assembly_a2": 41.8
+          },
+          {
+            "number": 49,
+            "aa": "V",
+            "sasa_in_deposited_assembly_a2": 38.6
+          },
+          {
+            "number": 50,
+            "aa": "H",
+            "sasa_in_deposited_assembly_a2": 87.6
+          },
+          {
+            "number": 51,
+            "aa": "G",
+            "sasa_in_deposited_assembly_a2": 49.5
+          },
+          {
+            "number": 52,
+            "aa": "V",
+            "sasa_in_deposited_assembly_a2": 57.2
+          },
+          {
+            "number": 53,
+            "aa": "A",
+            "sasa_in_deposited_assembly_a2": 83.6
+          },
+          {
+            "number": 76,
+            "aa": "A",
+            "sasa_in_deposited_assembly_a2": 4.2
+          },
+          {
+            "number": 78,
+            "aa": "A",
+            "sasa_in_deposited_assembly_a2": 9.1
+          }
+        ],
+        "ca_distances_upper_triangle_a": [
+          3.8,
+          6.5,
+          10.2,
+          11.3,
+          15.0,
+          5.4,
+          8.2,
+          3.8,
+          7.0,
+          7.5,
+          11.3,
+          6.2,
+          11.3,
+          3.8,
+          6.0,
+          9.3,
+          9.7,
+          14.5,
+          3.8,
+          6.0,
+          12.6,
+          18.1,
+          3.8,
+          12.2,
+          18.5,
+          15.8,
+          22.2,
+          6.9
+        ]
+      },
+      {
+        "conformer": "8A9L",
+        "class": "control",
+        "residues": [
+          {
+            "number": 48,
+            "aa": "V",
+            "sasa_in_deposited_assembly_a2": 141.5
+          },
+          {
+            "number": 49,
+            "aa": "V",
+            "sasa_in_deposited_assembly_a2": 90.9
+          },
+          {
+            "number": 50,
+            "aa": "H",
+            "sasa_in_deposited_assembly_a2": 158.1
+          },
+          {
+            "number": 51,
+            "aa": "G",
+            "sasa_in_deposited_assembly_a2": 51.5
+          },
+          {
+            "number": 52,
+            "aa": "V",
+            "sasa_in_deposited_assembly_a2": 77.3
+          },
+          {
+            "number": 53,
+            "aa": "A",
+            "sasa_in_deposited_assembly_a2": 65.3
+          },
+          {
+            "number": 76,
+            "aa": "A",
+            "sasa_in_deposited_assembly_a2": 88.8
+          },
+          {
+            "number": 78,
+            "aa": "A",
+            "sasa_in_deposited_assembly_a2": 98.1
+          }
+        ],
+        "ca_distances_upper_triangle_a": [
+          3.8,
+          6.4,
+          9.7,
+          11.4,
+          15.1,
+          30.4,
+          32.9,
+          3.8,
+          6.3,
+          7.6,
+          11.3,
+          30.1,
+          33.4,
+          3.8,
+          6.8,
+          9.9,
+          33.6,
+          37.0,
+          3.8,
+          6.3,
+          33.7,
+          37.8,
+          3.8,
+          31.1,
+          35.6,
+          33.0,
+          38.0,
+          6.8
+        ]
+      },
+      {
+        "conformer": "6CU7",
+        "class": "control",
+        "residues": [
+          {
+            "number": 48,
+            "aa": "V",
+            "sasa_in_deposited_assembly_a2": 0.0
+          },
+          {
+            "number": 49,
+            "aa": "V",
+            "sasa_in_deposited_assembly_a2": 0.0
+          },
+          {
+            "number": 50,
+            "aa": "H",
+            "sasa_in_deposited_assembly_a2": 14.7
+          },
+          {
+            "number": 51,
+            "aa": "G",
+            "sasa_in_deposited_assembly_a2": 0.0
+          },
+          {
+            "number": 52,
+            "aa": "V",
+            "sasa_in_deposited_assembly_a2": 0.5
+          },
+          {
+            "number": 53,
+            "aa": "A",
+            "sasa_in_deposited_assembly_a2": 0.0
+          },
+          {
+            "number": 76,
+            "aa": "A",
+            "sasa_in_deposited_assembly_a2": 0.9
+          },
+          {
+            "number": 78,
+            "aa": "A",
+            "sasa_in_deposited_assembly_a2": 0.0
+          }
+        ],
+        "ca_distances_upper_triangle_a": [
+          3.8,
+          6.3,
+          9.7,
+          11.7,
+          15.4,
+          10.2,
+          6.1,
+          3.8,
+          6.3,
+          7.9,
+          11.7,
+          8.1,
+          7.0,
+          3.8,
+          7.0,
+          10.5,
+          10.1,
+          10.4,
+          3.8,
+          7.0,
+          9.9,
+          12.5,
+          3.8,
+          8.4,
+          12.9,
+          10.4,
+          16.1,
+          7.1
+        ]
+      }
+    ],
+    "scope": "homologous central-chain patches; assembly SASA has different layer counts"
+  }
+]
