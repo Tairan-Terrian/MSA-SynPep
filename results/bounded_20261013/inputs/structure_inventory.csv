@@ -1,0 +1,46 @@
+target,class,chain,start,end,resolved_residues
+6XYO,MSA target,A,14,94,81
+6XYO,MSA target,B,21,99,79
+6XYO,MSA target,C,14,94,81
+6XYO,MSA target,D,21,99,79
+6XYO,MSA target,E,14,94,81
+6XYO,MSA target,F,21,99,79
+6XYO,MSA target,G,14,94,81
+6XYO,MSA target,H,21,99,79
+6XYO,MSA target,I,14,94,81
+6XYO,MSA target,J,21,99,79
+6XYP,MSA target,A,14,94,81
+6XYP,MSA target,B,36,99,64
+6XYP,MSA target,C,14,94,81
+6XYP,MSA target,D,36,99,64
+6XYP,MSA target,E,14,94,81
+6XYP,MSA target,F,36,99,64
+6XYP,MSA target,G,14,94,81
+6XYP,MSA target,H,36,99,64
+6XYP,MSA target,I,14,94,81
+6XYP,MSA target,J,36,99,64
+6XYQ,MSA target,A,14,94,81
+6XYQ,MSA target,B,36,99,64
+6XYQ,MSA target,C,14,94,81
+6XYQ,MSA target,D,36,99,64
+6XYQ,MSA target,E,14,94,81
+6XYQ,MSA target,F,36,99,64
+6XYQ,MSA target,G,14,94,81
+6XYQ,MSA target,H,36,99,64
+6XYQ,MSA target,I,14,94,81
+6XYQ,MSA target,J,36,99,64
+8A9L,same-protein structural control,A,31,100,70
+8A9L,same-protein structural control,B,31,100,70
+8A9L,same-protein structural control,C,31,100,70
+8A9L,same-protein structural control,D,31,100,70
+8A9L,same-protein structural control,E,31,100,70
+6CU7,same-protein structural control,E,38,97,60
+6CU7,same-protein structural control,A,38,97,60
+6CU7,same-protein structural control,B,38,97,60
+6CU7,same-protein structural control,C,38,97,60
+6CU7,same-protein structural control,D,38,97,60
+6CU7,same-protein structural control,F,38,97,60
+6CU7,same-protein structural control,G,38,97,60
+6CU7,same-protein structural control,H,38,97,60
+6CU7,same-protein structural control,I,38,97,60
+6CU7,same-protein structural control,J,38,97,60

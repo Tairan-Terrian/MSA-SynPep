@@ -1,0 +1,140 @@
+{
+  "reason": "central rung selection and protofilament grouping root-cause correction",
+  "completed_usage_records": [
+    {
+      "call": "lir_generation",
+      "requested_model": "gpt-6.1-sol",
+      "returned_model": "gpt-6.1-sol-2026-09-29",
+      "usage": {
+        "prompt_tokens": 1961,
+        "completion_tokens": 9000,
+        "total_tokens": 10961,
+        "completion_tokens_details": {
+          "audio_tokens": 0,
+          "reasoning_tokens": 9000
+        },
+        "prompt_tokens_details": {
+          "audio_tokens": 0,
+          "cache_write_tokens": 1958,
+          "cached_tokens": 0
+        }
+      },
+      "elapsed_seconds": 165.47
+    }
+  ],
+  "aborted_requests": [
+    "lir_generation_request.json",
+    "binder_generation_round1_request.json"
+  ],
+  "completion_usage": "unknown: processes stopped before responses were saved",
+  "token_exhaustion_attempt": {
+    "reason": "binder response length limit; all 15000 completion tokens were reasoning; no answer content",
+    "completed_usage_records": [
+      {
+        "call": "lir_generation",
+        "requested_model": "gpt-6.1-sol",
+        "returned_model": "gpt-6.1-sol-2026-09-29",
+        "usage": {
+          "prompt_tokens": 1961,
+          "completion_tokens": 7185,
+          "total_tokens": 9146,
+          "completion_tokens_details": {
+            "audio_tokens": 0,
+            "reasoning_tokens": 366
+          },
+          "prompt_tokens_details": {
+            "audio_tokens": 0,
+            "cache_write_tokens": 0,
+            "cached_tokens": 1958
+          }
+        },
+        "elapsed_seconds": 147.83
+      },
+      {
+        "call": "binder_generation_round1",
+        "requested_model": "gpt-6.1-sol",
+        "returned_model": "gpt-6.1-sol-2026-09-29",
+        "usage": {
+          "prompt_tokens": 42647,
+          "completion_tokens": 15000,
+          "total_tokens": 57647,
+          "completion_tokens_details": {
+            "audio_tokens": 0,
+            "reasoning_tokens": 15000
+          },
+          "prompt_tokens_details": {
+            "audio_tokens": 0,
+            "cache_write_tokens": 42644,
+            "cached_tokens": 0
+          }
+        },
+        "elapsed_seconds": 310.16
+      }
+    ]
+  },
+  "hydrogen_preparation_attempt": {
+    "reason": "Force-field-assisted hydrogen placement created a polar-contact collapse; direct geometric hydrogen placement resolves L021 without changing the AMBER minimization objective",
+    "completed_usage_records": [
+      {
+        "call": "lir_generation",
+        "requested_model": "gpt-6.1-sol",
+        "returned_model": "gpt-6.1-sol-2026-09-29",
+        "usage": {
+          "prompt_tokens": 2052,
+          "completion_tokens": 7213,
+          "total_tokens": 9265,
+          "completion_tokens_details": {
+            "audio_tokens": 0,
+            "reasoning_tokens": 277
+          },
+          "prompt_tokens_details": {
+            "audio_tokens": 0,
+            "cache_write_tokens": 2049,
+            "cached_tokens": 0
+          }
+        },
+        "elapsed_seconds": 159.54
+      },
+      {
+        "call": "binder_generation_round1",
+        "requested_model": "gpt-6.1-sol",
+        "returned_model": "gpt-6.1-sol-2026-09-29",
+        "usage": {
+          "prompt_tokens": 8257,
+          "completion_tokens": 14451,
+          "total_tokens": 22708,
+          "completion_tokens_details": {
+            "audio_tokens": 0,
+            "reasoning_tokens": 422
+          },
+          "prompt_tokens_details": {
+            "audio_tokens": 0,
+            "cache_write_tokens": 8254,
+            "cached_tokens": 0
+          }
+        },
+        "elapsed_seconds": 323.85
+      },
+      {
+        "call": "binder_generation_round2",
+        "requested_model": "gpt-6.1-sol",
+        "returned_model": "gpt-6.1-sol-2026-09-29",
+        "usage": {
+          "prompt_tokens": 8928,
+          "completion_tokens": 14605,
+          "total_tokens": 23533,
+          "completion_tokens_details": {
+            "audio_tokens": 0,
+            "reasoning_tokens": 167
+          },
+          "prompt_tokens_details": {
+            "audio_tokens": 0,
+            "cache_write_tokens": 8925,
+            "cached_tokens": 0
+          }
+        },
+        "elapsed_seconds": 338.78
+      }
+    ]
+  }
+}

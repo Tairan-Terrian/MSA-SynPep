@@ -1,0 +1,19 @@
+{
+  "simulation_target": "6XYP",
+  "qualified_pair_count": 40,
+  "selected_ids": [
+    "F02_09",
+    "F01_02",
+    "F02_03",
+    "F01_05",
+    "F02_04",
+    "F01_08",
+    "F05_04",
+    "F05_01",
+    "F05_05",
+    "F10_05",
+    "F10_06",
+    "F10_09"
+  ],
+  "rule": "Common MSA target with most joint-qualified models, then cross-MSA coverage and feasible fraction; at most three occurrences of either source module in the review pool."
+}

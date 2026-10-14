@@ -1,0 +1,381 @@
+INFERENCE 6XYO GPU 1 batch 4 seconds 3.69
+POSES module1 initial GPU 1 B002 6XYO count 1 eligible False seconds 6.0
+POSES module1 initial GPU 1 B004 6XYO count 2 eligible False seconds 8.1
+POSES module1 initial GPU 1 B006 6XYO count 3 eligible False seconds 10.3
+POSES module1 initial GPU 1 B008 6XYO count 4 eligible False seconds 12.4
+INFERENCE 6XYO GPU 1 batch 4 seconds 2.81
+POSES module1 initial GPU 1 B010 6XYO count 5 eligible False seconds 17.8
+POSES module1 initial GPU 1 B012 6XYO count 6 eligible False seconds 20.4
+POSES module1 initial GPU 1 B014 6XYO count 7 eligible False seconds 23.2
+POSES module1 initial GPU 1 B016 6XYO count 8 eligible False seconds 24.9
+INFERENCE 6XYO GPU 1 batch 4 seconds 2.8
+POSES module1 initial GPU 1 B018 6XYO count 9 eligible False seconds 29.6
+POSES module1 initial GPU 1 B020 6XYO count 10 eligible False seconds 31.7
+POSES module1 initial GPU 1 B022 6XYO count 11 eligible False seconds 34.0
+POSES module1 initial GPU 1 B024 6XYO count 12 eligible False seconds 36.3
+INFERENCE 6XYO GPU 1 batch 4 seconds 3.12
+POSES module1 initial GPU 1 B026 6XYO count 13 eligible False seconds 41.9
+POSES module1 initial GPU 1 B028 6XYO count 14 eligible False seconds 44.4
+POSES module1 initial GPU 1 B030 6XYO count 15 eligible False seconds 47.3
+POSES module1 initial GPU 1 B032 6XYO count 16 eligible False seconds 49.2
+INFERENCE 6XYO GPU 1 batch 4 seconds 2.11
+POSES module1 initial GPU 1 B034 6XYO count 17 eligible False seconds 53.4
+POSES module1 initial GPU 1 B036 6XYO count 18 eligible False seconds 55.5
+POSES module1 initial GPU 1 B038 6XYO count 19 eligible False seconds 57.7
+POSES module1 initial GPU 1 B040 6XYO count 20 eligible False seconds 60.2
+INFERENCE 6XYO GPU 1 batch 4 seconds 3.03
+POSES module1 initial GPU 1 B042 6XYO count 21 eligible False seconds 65.8
+POSES module1 initial GPU 1 B044 6XYO count 22 eligible False seconds 68.6
+POSES module1 initial GPU 1 B046 6XYO count 23 eligible False seconds 70.2
+POSES module1 initial GPU 1 B048 6XYO count 24 eligible False seconds 72.1
+INFERENCE 6XYO GPU 1 batch 4 seconds 2.97
+POSES module1 initial GPU 1 B050 6XYO count 25 eligible False seconds 77.0
+POSES module1 initial GPU 1 B052 6XYO count 26 eligible False seconds 79.1
+POSES module1 initial GPU 1 B054 6XYO count 27 eligible False seconds 81.2
+POSES module1 initial GPU 1 B056 6XYO count 28 eligible False seconds 83.7
+INFERENCE 6XYO GPU 1 batch 4 seconds 3.3
+POSES module1 initial GPU 1 B058 6XYO count 29 eligible False seconds 89.8
+POSES module1 initial GPU 1 B060 6XYO count 30 eligible False seconds 92.7
+POSES module1 initial GPU 1 B062 6XYO count 31 eligible False seconds 94.5
+POSES module1 initial GPU 1 B064 6XYO count 32 eligible False seconds 96.5
+INFERENCE 6XYO GPU 1 batch 4 seconds 3.24
+POSES module1 initial GPU 1 B066 6XYO count 33 eligible False seconds 101.9
+POSES module1 initial GPU 1 B068 6XYO count 34 eligible False seconds 104.3
+POSES module1 initial GPU 1 B070 6XYO count 35 eligible False seconds 106.7
+POSES module1 initial GPU 1 B072 6XYO count 36 eligible False seconds 109.4
+INFERENCE 6XYO GPU 1 batch 4 seconds 3.03
+POSES module1 initial GPU 1 B074 6XYO count 37 eligible False seconds 115.3
+POSES module1 initial GPU 1 B076 6XYO count 38 eligible False seconds 117.0
+POSES module1 initial GPU 1 B078 6XYO count 39 eligible False seconds 118.8
+POSES module1 initial GPU 1 B080 6XYO count 40 eligible False seconds 120.7
+INFERENCE 6XYO GPU 1 batch 4 seconds 3.36
+POSES module1 initial GPU 1 B082 6XYO count 41 eligible False seconds 126.3
+POSES module1 initial GPU 1 B084 6XYO count 42 eligible False seconds 128.6
+POSES module1 initial GPU 1 B086 6XYO count 43 eligible False seconds 131.1
+POSES module1 initial GPU 1 B088 6XYO count 44 eligible False seconds 133.7
+INFERENCE 6XYO GPU 1 batch 4 seconds 2.98
+POSES module1 initial GPU 1 B090 6XYO count 45 eligible False seconds 139.7
+POSES module1 initial GPU 1 B092 6XYO count 46 eligible False seconds 141.6
+POSES module1 initial GPU 1 B094 6XYO count 47 eligible False seconds 143.6
+POSES module1 initial GPU 1 B096 6XYO count 48 eligible False seconds 145.6
+INFERENCE 6XYO GPU 1 batch 4 seconds 2.54
+POSES module1 initial GPU 1 B098 6XYO count 49 eligible False seconds 150.5
+POSES module1 initial GPU 1 B100 6XYO count 50 eligible False seconds 152.9
+POSES module1 initial GPU 1 B102 6XYO count 51 eligible False seconds 155.4
+POSES module1 initial GPU 1 B104 6XYO count 52 eligible False seconds 158.3
+INFERENCE 6XYO GPU 1 batch 4 seconds 3.39
+POSES module1 initial GPU 1 B106 6XYO count 53 eligible False seconds 163.3
+POSES module1 initial GPU 1 B108 6XYO count 54 eligible False seconds 165.3
+POSES module1 initial GPU 1 B110 6XYO count 55 eligible False seconds 167.4
+POSES module1 initial GPU 1 B112 6XYO count 56 eligible False seconds 169.6
+INFERENCE 6XYO GPU 1 batch 4 seconds 3.82
+POSES module1 initial GPU 1 B114 6XYO count 57 eligible False seconds 175.8
+POSES module1 initial GPU 1 B116 6XYO count 58 eligible False seconds 178.2
+POSES module1 initial GPU 1 B118 6XYO count 59 eligible False seconds 180.8
+POSES module1 initial GPU 1 B120 6XYO count 60 eligible False seconds 183.7
+INFERENCE 6XYP GPU 1 batch 4 seconds 2.83
+POSES module1 initial GPU 1 B002 6XYP count 61 eligible False seconds 188.5
+POSES module1 initial GPU 1 B004 6XYP count 62 eligible False seconds 190.4
+POSES module1 initial GPU 1 B006 6XYP count 63 eligible False seconds 192.3
+POSES module1 initial GPU 1 B008 6XYP count 64 eligible False seconds 194.3
+INFERENCE 6XYP GPU 1 batch 4 seconds 2.53
+POSES module1 initial GPU 1 B010 6XYP count 65 eligible False seconds 199.1
+POSES module1 initial GPU 1 B012 6XYP count 66 eligible False seconds 201.6
+POSES module1 initial GPU 1 B014 6XYP count 67 eligible False seconds 204.4
+POSES module1 initial GPU 1 B016 6XYP count 68 eligible False seconds 206.0
+INFERENCE 6XYP GPU 1 batch 4 seconds 3.36
+POSES module1 initial GPU 1 B018 6XYP count 69 eligible False seconds 211.3
+POSES module1 initial GPU 1 B020 6XYP count 70 eligible False seconds 213.2
+POSES module1 initial GPU 1 B022 6XYP count 71 eligible False seconds 215.3
+POSES module1 initial GPU 1 B024 6XYP count 72 eligible False seconds 217.5
+INFERENCE 6XYP GPU 1 batch 4 seconds 2.71
+POSES module1 initial GPU 1 B026 6XYP count 73 eligible False seconds 222.7
+POSES module1 initial GPU 1 B028 6XYP count 74 eligible False seconds 225.3
+POSES module1 initial GPU 1 B030 6XYP count 75 eligible False seconds 227.9
+POSES module1 initial GPU 1 B032 6XYP count 76 eligible False seconds 229.7
+INFERENCE 6XYP GPU 1 batch 4 seconds 2.46
+POSES module1 initial GPU 1 B034 6XYP count 77 eligible False seconds 234.3
+POSES module1 initial GPU 1 B036 6XYP count 78 eligible False seconds 236.2
+POSES module1 initial GPU 1 B038 6XYP count 79 eligible False seconds 238.5
+POSES module1 initial GPU 1 B040 6XYP count 80 eligible False seconds 240.9
+INFERENCE 6XYP GPU 1 batch 4 seconds 2.54
+POSES module1 initial GPU 1 B042 6XYP count 81 eligible False seconds 246.0
+POSES module1 initial GPU 1 B044 6XYP count 82 eligible False seconds 248.6
+POSES module1 initial GPU 1 B046 6XYP count 83 eligible False seconds 250.3
+POSES module1 initial GPU 1 B048 6XYP count 84 eligible False seconds 252.3
+INFERENCE 6XYP GPU 1 batch 4 seconds 3.46
+POSES module1 initial GPU 1 B050 6XYP count 85 eligible False seconds 257.6
+POSES module1 initial GPU 1 B052 6XYP count 86 eligible False seconds 259.8
+POSES module1 initial GPU 1 B054 6XYP count 87 eligible False seconds 262.1
+POSES module1 initial GPU 1 B056 6XYP count 88 eligible False seconds 264.5
+INFERENCE 6XYP GPU 1 batch 4 seconds 3.58
+POSES module1 initial GPU 1 B058 6XYP count 89 eligible False seconds 270.5
+POSES module1 initial GPU 1 B060 6XYP count 90 eligible False seconds 273.3
+POSES module1 initial GPU 1 B062 6XYP count 91 eligible False seconds 275.0
+POSES module1 initial GPU 1 B064 6XYP count 92 eligible False seconds 276.8
+INFERENCE 6XYP GPU 1 batch 4 seconds 2.67
+POSES module1 initial GPU 1 B066 6XYP count 93 eligible False seconds 281.6
+POSES module1 initial GPU 1 B068 6XYP count 94 eligible False seconds 283.9
+POSES module1 initial GPU 1 B070 6XYP count 95 eligible False seconds 286.3
+POSES module1 initial GPU 1 B072 6XYP count 96 eligible False seconds 288.7
+INFERENCE 6XYP GPU 1 batch 4 seconds 2.28
+POSES module1 initial GPU 1 B074 6XYP count 97 eligible False seconds 293.8
+POSES module1 initial GPU 1 B076 6XYP count 98 eligible False seconds 295.5
+POSES module1 initial GPU 1 B078 6XYP count 99 eligible False seconds 297.2
+POSES module1 initial GPU 1 B080 6XYP count 100 eligible False seconds 299.2
+INFERENCE 6XYP GPU 1 batch 4 seconds 3.52
+POSES module1 initial GPU 1 B082 6XYP count 101 eligible False seconds 304.9
+POSES module1 initial GPU 1 B084 6XYP count 102 eligible False seconds 307.2
+POSES module1 initial GPU 1 B086 6XYP count 103 eligible False seconds 309.5
+POSES module1 initial GPU 1 B088 6XYP count 104 eligible False seconds 312.1
+INFERENCE 6XYP GPU 1 batch 4 seconds 2.8
+POSES module1 initial GPU 1 B090 6XYP count 105 eligible False seconds 317.7
+POSES module1 initial GPU 1 B092 6XYP count 106 eligible False seconds 319.4
+POSES module1 initial GPU 1 B094 6XYP count 107 eligible False seconds 321.4
+POSES module1 initial GPU 1 B096 6XYP count 108 eligible False seconds 323.5
+INFERENCE 6XYP GPU 1 batch 4 seconds 2.8
+POSES module1 initial GPU 1 B098 6XYP count 109 eligible False seconds 328.5
+POSES module1 initial GPU 1 B100 6XYP count 110 eligible False seconds 330.8
+POSES module1 initial GPU 1 B102 6XYP count 111 eligible False seconds 333.4
+POSES module1 initial GPU 1 B104 6XYP count 112 eligible False seconds 336.2
+INFERENCE 6XYP GPU 1 batch 4 seconds 3.04
+POSES module1 initial GPU 1 B106 6XYP count 113 eligible False seconds 340.8
+POSES module1 initial GPU 1 B108 6XYP count 114 eligible False seconds 342.8
+POSES module1 initial GPU 1 B110 6XYP count 115 eligible False seconds 344.9
+POSES module1 initial GPU 1 B112 6XYP count 116 eligible False seconds 347.0
+INFERENCE 6XYP GPU 1 batch 4 seconds 4.01
+POSES module1 initial GPU 1 B114 6XYP count 117 eligible False seconds 353.3
+POSES module1 initial GPU 1 B116 6XYP count 118 eligible False seconds 355.8
+POSES module1 initial GPU 1 B118 6XYP count 119 eligible False seconds 358.4
+POSES module1 initial GPU 1 B120 6XYP count 120 eligible False seconds 361.2
+INFERENCE 6XYQ GPU 1 batch 4 seconds 3.03
+POSES module1 initial GPU 1 B002 6XYQ count 121 eligible False seconds 366.4
+POSES module1 initial GPU 1 B004 6XYQ count 122 eligible False seconds 368.4
+POSES module1 initial GPU 1 B006 6XYQ count 123 eligible False seconds 370.4
+POSES module1 initial GPU 1 B008 6XYQ count 124 eligible False seconds 372.5
+INFERENCE 6XYQ GPU 1 batch 4 seconds 3.16
+POSES module1 initial GPU 1 B010 6XYQ count 125 eligible False seconds 378.1
+POSES module1 initial GPU 1 B012 6XYQ count 126 eligible False seconds 380.6
+POSES module1 initial GPU 1 B014 6XYQ count 127 eligible False seconds 383.1
+POSES module1 initial GPU 1 B016 6XYQ count 128 eligible False seconds 384.9
+INFERENCE 6XYQ GPU 1 batch 4 seconds 2.91
+POSES module1 initial GPU 1 B018 6XYQ count 129 eligible False seconds 389.7
+POSES module1 initial GPU 1 B020 6XYQ count 130 eligible False seconds 391.6
+POSES module1 initial GPU 1 B022 6XYQ count 131 eligible False seconds 393.8
+POSES module1 initial GPU 1 B024 6XYQ count 132 eligible False seconds 396.1
+INFERENCE 6XYQ GPU 1 batch 4 seconds 2.86
+POSES module1 initial GPU 1 B026 6XYQ count 133 eligible False seconds 401.4
+POSES module1 initial GPU 1 B028 6XYQ count 134 eligible False seconds 403.8
+POSES module1 initial GPU 1 B030 6XYQ count 135 eligible False seconds 406.5
+POSES module1 initial GPU 1 B032 6XYQ count 136 eligible False seconds 408.3
+INFERENCE 6XYQ GPU 1 batch 4 seconds 2.25
+POSES module1 initial GPU 1 B034 6XYQ count 137 eligible False seconds 412.4
+POSES module1 initial GPU 1 B036 6XYQ count 138 eligible False seconds 414.4
+POSES module1 initial GPU 1 B038 6XYQ count 139 eligible False seconds 416.6
+POSES module1 initial GPU 1 B040 6XYQ count 140 eligible False seconds 418.9
+INFERENCE 6XYQ GPU 1 batch 4 seconds 3.26
+POSES module1 initial GPU 1 B042 6XYQ count 141 eligible False seconds 424.5
+POSES module1 initial GPU 1 B044 6XYQ count 142 eligible False seconds 427.1
+POSES module1 initial GPU 1 B046 6XYQ count 143 eligible False seconds 428.8
+POSES module1 initial GPU 1 B048 6XYQ count 144 eligible False seconds 430.6
+INFERENCE 6XYQ GPU 1 batch 4 seconds 3.28
+POSES module1 initial GPU 1 B050 6XYQ count 145 eligible False seconds 435.9
+POSES module1 initial GPU 1 B052 6XYQ count 146 eligible False seconds 438.1
+POSES module1 initial GPU 1 B054 6XYQ count 147 eligible False seconds 440.3
+POSES module1 initial GPU 1 B056 6XYQ count 148 eligible False seconds 442.6
+INFERENCE 6XYQ GPU 1 batch 4 seconds 3.1
+POSES module1 initial GPU 1 B058 6XYQ count 149 eligible False seconds 448.3
+POSES module1 initial GPU 1 B060 6XYQ count 150 eligible False seconds 451.0
+POSES module1 initial GPU 1 B062 6XYQ count 151 eligible False seconds 452.7
+POSES module1 initial GPU 1 B064 6XYQ count 152 eligible False seconds 454.5
+INFERENCE 6XYQ GPU 1 batch 4 seconds 2.94
+POSES module1 initial GPU 1 B066 6XYQ count 153 eligible False seconds 459.6
+POSES module1 initial GPU 1 B068 6XYQ count 154 eligible False seconds 461.7
+POSES module1 initial GPU 1 B070 6XYQ count 155 eligible False seconds 463.9
+POSES module1 initial GPU 1 B072 6XYQ count 156 eligible False seconds 466.3
+INFERENCE 6XYQ GPU 1 batch 4 seconds 2.89
+POSES module1 initial GPU 1 B074 6XYQ count 157 eligible False seconds 472.0
+POSES module1 initial GPU 1 B076 6XYQ count 158 eligible False seconds 473.7
+POSES module1 initial GPU 1 B078 6XYQ count 159 eligible False seconds 475.4
+POSES module1 initial GPU 1 B080 6XYQ count 160 eligible False seconds 477.4
+INFERENCE 6XYQ GPU 1 batch 4 seconds 3.01
+POSES module1 initial GPU 1 B082 6XYQ count 161 eligible False seconds 482.6
+POSES module1 initial GPU 1 B084 6XYQ count 162 eligible False seconds 484.7
+POSES module1 initial GPU 1 B086 6XYQ count 163 eligible False seconds 487.1
+POSES module1 initial GPU 1 B088 6XYQ count 164 eligible False seconds 489.6
+INFERENCE 6XYQ GPU 1 batch 4 seconds 2.77
+POSES module1 initial GPU 1 B090 6XYQ count 165 eligible False seconds 495.3
+POSES module1 initial GPU 1 B092 6XYQ count 166 eligible False seconds 496.9
+POSES module1 initial GPU 1 B094 6XYQ count 167 eligible False seconds 498.9
+POSES module1 initial GPU 1 B096 6XYQ count 168 eligible False seconds 501.0
+INFERENCE 6XYQ GPU 1 batch 4 seconds 2.36
+POSES module1 initial GPU 1 B098 6XYQ count 169 eligible False seconds 505.4
+POSES module1 initial GPU 1 B100 6XYQ count 170 eligible False seconds 507.8
+POSES module1 initial GPU 1 B102 6XYQ count 171 eligible False seconds 510.3
+POSES module1 initial GPU 1 B104 6XYQ count 172 eligible False seconds 513.0
+INFERENCE 6XYQ GPU 1 batch 4 seconds 3.22
+POSES module1 initial GPU 1 B106 6XYQ count 173 eligible False seconds 517.8
+POSES module1 initial GPU 1 B108 6XYQ count 174 eligible False seconds 519.7
+POSES module1 initial GPU 1 B110 6XYQ count 175 eligible False seconds 521.7
+POSES module1 initial GPU 1 B112 6XYQ count 176 eligible False seconds 523.9
+INFERENCE 6XYQ GPU 1 batch 4 seconds 3.35
+POSES module1 initial GPU 1 B114 6XYQ count 177 eligible False seconds 529.3
+POSES module1 initial GPU 1 B116 6XYQ count 178 eligible False seconds 531.7
+POSES module1 initial GPU 1 B118 6XYQ count 179 eligible False seconds 534.3
+POSES module1 initial GPU 1 B120 6XYQ count 180 eligible False seconds 536.9
+INFERENCE 8A9L GPU 1 batch 4 seconds 2.48
+POSES module1 initial GPU 1 B002 8A9L count 181 eligible False seconds 541.0
+POSES module1 initial GPU 1 B004 8A9L count 182 eligible False seconds 542.8
+POSES module1 initial GPU 1 B006 8A9L count 183 eligible False seconds 544.4
+POSES module1 initial GPU 1 B008 8A9L count 184 eligible False seconds 546.1
+INFERENCE 8A9L GPU 1 batch 4 seconds 2.89
+POSES module1 initial GPU 1 B010 8A9L count 185 eligible False seconds 551.0
+POSES module1 initial GPU 1 B012 8A9L count 186 eligible False seconds 553.0
+POSES module1 initial GPU 1 B014 8A9L count 187 eligible False seconds 555.3
+POSES module1 initial GPU 1 B016 8A9L count 188 eligible False seconds 556.6
+INFERENCE 8A9L GPU 1 batch 4 seconds 3.67
+POSES module1 initial GPU 1 B018 8A9L count 189 eligible False seconds 561.9
+POSES module1 initial GPU 1 B020 8A9L count 190 eligible False seconds 563.5
+POSES module1 initial GPU 1 B022 8A9L count 191 eligible False seconds 565.2
+POSES module1 initial GPU 1 B024 8A9L count 192 eligible False seconds 567.1
+INFERENCE 8A9L GPU 1 batch 4 seconds 3.74
+POSES module1 initial GPU 1 B026 8A9L count 193 eligible False seconds 572.8
+POSES module1 initial GPU 1 B028 8A9L count 194 eligible False seconds 575.0
+POSES module1 initial GPU 1 B030 8A9L count 195 eligible False seconds 577.3
+POSES module1 initial GPU 1 B032 8A9L count 196 eligible False seconds 578.8
+INFERENCE 8A9L GPU 1 batch 4 seconds 3.2
+POSES module1 initial GPU 1 B034 8A9L count 197 eligible False seconds 583.6
+POSES module1 initial GPU 1 B036 8A9L count 198 eligible False seconds 585.3
+POSES module1 initial GPU 1 B038 8A9L count 199 eligible False seconds 587.1
+POSES module1 initial GPU 1 B040 8A9L count 200 eligible False seconds 589.0
+INFERENCE 8A9L GPU 1 batch 4 seconds 3.16
+POSES module1 initial GPU 1 B042 8A9L count 201 eligible False seconds 594.3
+POSES module1 initial GPU 1 B044 8A9L count 202 eligible False seconds 596.5
+POSES module1 initial GPU 1 B046 8A9L count 203 eligible False seconds 597.8
+POSES module1 initial GPU 1 B048 8A9L count 204 eligible False seconds 599.4
+INFERENCE 8A9L GPU 1 batch 4 seconds 3.26
+POSES module1 initial GPU 1 B050 8A9L count 205 eligible False seconds 604.2
+POSES module1 initial GPU 1 B052 8A9L count 206 eligible False seconds 606.1
+POSES module1 initial GPU 1 B054 8A9L count 207 eligible False seconds 607.9
+POSES module1 initial GPU 1 B056 8A9L count 208 eligible False seconds 610.1
+INFERENCE 8A9L GPU 1 batch 4 seconds 3.16
+POSES module1 initial GPU 1 B058 8A9L count 209 eligible False seconds 615.5
+POSES module1 initial GPU 1 B060 8A9L count 210 eligible False seconds 617.9
+POSES module1 initial GPU 1 B062 8A9L count 211 eligible False seconds 619.4
+POSES module1 initial GPU 1 B064 8A9L count 212 eligible False seconds 621.0
+INFERENCE 8A9L GPU 1 batch 4 seconds 3.11
+POSES module1 initial GPU 1 B066 8A9L count 213 eligible False seconds 625.9
+POSES module1 initial GPU 1 B068 8A9L count 214 eligible False seconds 627.7
+POSES module1 initial GPU 1 B070 8A9L count 215 eligible False seconds 629.6
+POSES module1 initial GPU 1 B072 8A9L count 216 eligible False seconds 631.9
+INFERENCE 8A9L GPU 1 batch 4 seconds 3.3
+POSES module1 initial GPU 1 B074 8A9L count 217 eligible False seconds 637.6
+POSES module1 initial GPU 1 B076 8A9L count 218 eligible False seconds 639.1
+POSES module1 initial GPU 1 B078 8A9L count 219 eligible False seconds 640.5
+POSES module1 initial GPU 1 B080 8A9L count 220 eligible False seconds 642.1
+INFERENCE 8A9L GPU 1 batch 4 seconds 3.94
+POSES module1 initial GPU 1 B082 8A9L count 221 eligible False seconds 647.9
+POSES module1 initial GPU 1 B084 8A9L count 222 eligible False seconds 649.8
+POSES module1 initial GPU 1 B086 8A9L count 223 eligible False seconds 651.9
+POSES module1 initial GPU 1 B088 8A9L count 224 eligible False seconds 654.1
+INFERENCE 8A9L GPU 1 batch 4 seconds 3.11
+POSES module1 initial GPU 1 B090 8A9L count 225 eligible False seconds 659.7
+POSES module1 initial GPU 1 B092 8A9L count 226 eligible False seconds 661.1
+POSES module1 initial GPU 1 B094 8A9L count 227 eligible False seconds 662.8
+POSES module1 initial GPU 1 B096 8A9L count 228 eligible False seconds 664.5
+INFERENCE 8A9L GPU 1 batch 4 seconds 3.67
+POSES module1 initial GPU 1 B098 8A9L count 229 eligible False seconds 669.8
+POSES module1 initial GPU 1 B100 8A9L count 230 eligible False seconds 671.8
+POSES module1 initial GPU 1 B102 8A9L count 231 eligible False seconds 673.8
+POSES module1 initial GPU 1 B104 8A9L count 232 eligible False seconds 676.2
+INFERENCE 8A9L GPU 1 batch 4 seconds 2.87
+POSES module1 initial GPU 1 B106 8A9L count 233 eligible False seconds 680.4
+POSES module1 initial GPU 1 B108 8A9L count 234 eligible False seconds 682.0
+POSES module1 initial GPU 1 B110 8A9L count 235 eligible False seconds 683.6
+POSES module1 initial GPU 1 B112 8A9L count 236 eligible False seconds 685.3
+INFERENCE 8A9L GPU 1 batch 4 seconds 3.97
+POSES module1 initial GPU 1 B114 8A9L count 237 eligible False seconds 691.2
+POSES module1 initial GPU 1 B116 8A9L count 238 eligible False seconds 693.3
+POSES module1 initial GPU 1 B118 8A9L count 239 eligible False seconds 695.6
+POSES module1 initial GPU 1 B120 8A9L count 240 eligible False seconds 698.0
+INFERENCE 6CU7 GPU 1 batch 4 seconds 2.64
+POSES module1 initial GPU 1 B002 6CU7 count 241 eligible False seconds 702.7
+POSES module1 initial GPU 1 B004 6CU7 count 242 eligible False seconds 704.5
+POSES module1 initial GPU 1 B006 6CU7 count 243 eligible False seconds 706.5
+POSES module1 initial GPU 1 B008 6CU7 count 244 eligible False seconds 708.5
+INFERENCE 6CU7 GPU 1 batch 4 seconds 2.96
+POSES module1 initial GPU 1 B010 6CU7 count 245 eligible False seconds 713.9
+POSES module1 initial GPU 1 B012 6CU7 count 246 eligible False seconds 716.6
+POSES module1 initial GPU 1 B014 6CU7 count 247 eligible False seconds 719.2
+POSES module1 initial GPU 1 B016 6CU7 count 248 eligible False seconds 720.7
+INFERENCE 6CU7 GPU 1 batch 4 seconds 3.04
+POSES module1 initial GPU 1 B018 6CU7 count 249 eligible False seconds 725.6
+POSES module1 initial GPU 1 B020 6CU7 count 250 eligible False seconds 727.4
+POSES module1 initial GPU 1 B022 6CU7 count 251 eligible False seconds 729.4
+POSES module1 initial GPU 1 B024 6CU7 count 252 eligible False seconds 731.6
+INFERENCE 6CU7 GPU 1 batch 4 seconds 3.38
+POSES module1 initial GPU 1 B026 6CU7 count 253 eligible False seconds 737.2
+POSES module1 initial GPU 1 B028 6CU7 count 254 eligible False seconds 739.7
+POSES module1 initial GPU 1 B030 6CU7 count 255 eligible False seconds 742.3
+POSES module1 initial GPU 1 B032 6CU7 count 256 eligible False seconds 744.0
+INFERENCE 6CU7 GPU 1 batch 4 seconds 3.49
+POSES module1 initial GPU 1 B034 6CU7 count 257 eligible False seconds 749.4
+POSES module1 initial GPU 1 B036 6CU7 count 258 eligible False seconds 751.4
+POSES module1 initial GPU 1 B038 6CU7 count 259 eligible False seconds 753.4
+POSES module1 initial GPU 1 B040 6CU7 count 260 eligible False seconds 755.7
+INFERENCE 6CU7 GPU 1 batch 4 seconds 3.39
+POSES module1 initial GPU 1 B042 6CU7 count 261 eligible False seconds 761.4
+POSES module1 initial GPU 1 B044 6CU7 count 262 eligible False seconds 764.0
+POSES module1 initial GPU 1 B046 6CU7 count 263 eligible False seconds 765.6
+POSES module1 initial GPU 1 B048 6CU7 count 264 eligible False seconds 767.1
+INFERENCE 6CU7 GPU 1 batch 4 seconds 2.62
+POSES module1 initial GPU 1 B050 6CU7 count 265 eligible False seconds 771.7
+POSES module1 initial GPU 1 B052 6CU7 count 266 eligible False seconds 773.8
+POSES module1 initial GPU 1 B054 6CU7 count 267 eligible False seconds 775.8
+POSES module1 initial GPU 1 B056 6CU7 count 268 eligible False seconds 778.2
+INFERENCE 6CU7 GPU 1 batch 4 seconds 3.16
+POSES module1 initial GPU 1 B058 6CU7 count 269 eligible False seconds 783.8
+POSES module1 initial GPU 1 B060 6CU7 count 270 eligible False seconds 786.3
+POSES module1 initial GPU 1 B062 6CU7 count 271 eligible False seconds 788.0
+POSES module1 initial GPU 1 B064 6CU7 count 272 eligible False seconds 789.7
+INFERENCE 6CU7 GPU 1 batch 4 seconds 2.81
+POSES module1 initial GPU 1 B066 6CU7 count 273 eligible False seconds 794.5
+POSES module1 initial GPU 1 B068 6CU7 count 274 eligible False seconds 796.5
+POSES module1 initial GPU 1 B070 6CU7 count 275 eligible False seconds 798.6
+POSES module1 initial GPU 1 B072 6CU7 count 276 eligible False seconds 801.0
+INFERENCE 6CU7 GPU 1 batch 4 seconds 3.28
+POSES module1 initial GPU 1 B074 6CU7 count 277 eligible False seconds 806.9
+POSES module1 initial GPU 1 B076 6CU7 count 278 eligible False seconds 808.4
+POSES module1 initial GPU 1 B078 6CU7 count 279 eligible False seconds 810.2
+POSES module1 initial GPU 1 B080 6CU7 count 280 eligible False seconds 812.1
+INFERENCE 6CU7 GPU 1 batch 4 seconds 3.42
+POSES module1 initial GPU 1 B082 6CU7 count 281 eligible False seconds 817.6
+POSES module1 initial GPU 1 B084 6CU7 count 282 eligible False seconds 819.8
+POSES module1 initial GPU 1 B086 6CU7 count 283 eligible False seconds 822.0
+POSES module1 initial GPU 1 B088 6CU7 count 284 eligible False seconds 824.5
+INFERENCE 6CU7 GPU 1 batch 4 seconds 3.35
+POSES module1 initial GPU 1 B090 6CU7 count 285 eligible False seconds 830.5
+POSES module1 initial GPU 1 B092 6CU7 count 286 eligible False seconds 832.2
+POSES module1 initial GPU 1 B094 6CU7 count 287 eligible False seconds 833.9
+POSES module1 initial GPU 1 B096 6CU7 count 288 eligible False seconds 835.8
+INFERENCE 6CU7 GPU 1 batch 4 seconds 3.28
+POSES module1 initial GPU 1 B098 6CU7 count 289 eligible False seconds 841.1
+POSES module1 initial GPU 1 B100 6CU7 count 290 eligible False seconds 843.5
+POSES module1 initial GPU 1 B102 6CU7 count 291 eligible False seconds 845.9
+POSES module1 initial GPU 1 B104 6CU7 count 292 eligible False seconds 848.5
+INFERENCE 6CU7 GPU 1 batch 4 seconds 2.85
+POSES module1 initial GPU 1 B106 6CU7 count 293 eligible False seconds 852.9
+POSES module1 initial GPU 1 B108 6CU7 count 294 eligible False seconds 854.7
+POSES module1 initial GPU 1 B110 6CU7 count 295 eligible False seconds 856.4
+POSES module1 initial GPU 1 B112 6CU7 count 296 eligible False seconds 858.3
+INFERENCE 6CU7 GPU 1 batch 4 seconds 3.14
+POSES module1 initial GPU 1 B114 6CU7 count 297 eligible False seconds 863.7
+POSES module1 initial GPU 1 B116 6CU7 count 298 eligible False seconds 865.9
+POSES module1 initial GPU 1 B118 6CU7 count 299 eligible False seconds 868.4
+POSES module1 initial GPU 1 B120 6CU7 count 300 eligible False seconds 871.2
+/media/yjz/htr/synuclein/.venv/lib/python3.8/site-packages/Bio/PDB/vectors.py:358: RuntimeWarning: invalid value encountered in double_scalars
+  c = (self * other) / (n1 * n2)
+/media/yjz/htr/synuclein/.venv/lib/python3.8/site-packages/Bio/PDB/vectors.py:358: RuntimeWarning: invalid value encountered in double_scalars
+  c = (self * other) / (n1 * n2)
+/media/yjz/htr/synuclein/.venv/lib/python3.8/site-packages/Bio/PDB/vectors.py:358: RuntimeWarning: invalid value encountered in double_scalars
+  c = (self * other) / (n1 * n2)

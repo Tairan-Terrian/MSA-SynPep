@@ -1,0 +1,104 @@
+INFERENCE 9A1A_m1 GPU 0 batch 4 seconds 3.49
+POSES module1 monomer GPU 0 B064 9A1A_m1 count 1 eligible False seconds 5.0
+POSES module1 monomer GPU 0 B005 9A1A_m1 count 2 eligible False seconds 6.5
+POSES module1 monomer GPU 0 B061 9A1A_m1 count 3 eligible False seconds 7.6
+POSES module1 monomer GPU 0 B006 9A1A_m1 count 4 eligible False seconds 9.1
+INFERENCE 9A1A_m1 GPU 0 batch 4 seconds 2.86
+POSES module1 monomer GPU 0 B063 9A1A_m1 count 5 eligible False seconds 13.1
+POSES module1 monomer GPU 0 B062 9A1A_m1 count 6 eligible False seconds 14.3
+POSES module1 monomer GPU 0 B049 9A1A_m1 count 7 eligible False seconds 15.8
+POSES module1 monomer GPU 0 B068 9A1A_m1 count 8 eligible False seconds 17.4
+INFERENCE 9A1A_m1 GPU 0 batch 2 seconds 2.42
+POSES module1 monomer GPU 0 B053 9A1A_m1 count 9 eligible False seconds 21.4
+POSES module1 monomer GPU 0 B051 9A1A_m1 count 10 eligible False seconds 22.8
+INFERENCE 9A1A_m2 GPU 0 batch 4 seconds 2.88
+POSES module1 monomer GPU 0 B064 9A1A_m2 count 11 eligible False seconds 27.2
+POSES module1 monomer GPU 0 B005 9A1A_m2 count 12 eligible False seconds 28.6
+POSES module1 monomer GPU 0 B061 9A1A_m2 count 13 eligible False seconds 29.8
+POSES module1 monomer GPU 0 B006 9A1A_m2 count 14 eligible False seconds 31.2
+INFERENCE 9A1A_m2 GPU 0 batch 4 seconds 2.85
+POSES module1 monomer GPU 0 B063 9A1A_m2 count 15 eligible False seconds 35.4
+POSES module1 monomer GPU 0 B062 9A1A_m2 count 16 eligible False seconds 36.7
+POSES module1 monomer GPU 0 B049 9A1A_m2 count 17 eligible False seconds 38.2
+POSES module1 monomer GPU 0 B068 9A1A_m2 count 18 eligible False seconds 39.8
+INFERENCE 9A1A_m2 GPU 0 batch 2 seconds 2.53
+POSES module1 monomer GPU 0 B053 9A1A_m2 count 19 eligible False seconds 43.9
+POSES module1 monomer GPU 0 B051 9A1A_m2 count 20 eligible False seconds 45.4
+INFERENCE 9A1A_m3 GPU 0 batch 4 seconds 2.95
+POSES module1 monomer GPU 0 B064 9A1A_m3 count 21 eligible False seconds 49.9
+POSES module1 monomer GPU 0 B005 9A1A_m3 count 22 eligible False seconds 51.3
+POSES module1 monomer GPU 0 B061 9A1A_m3 count 23 eligible False seconds 52.4
+POSES module1 monomer GPU 0 B006 9A1A_m3 count 24 eligible False seconds 53.9
+INFERENCE 9A1A_m3 GPU 0 batch 4 seconds 3.12
+POSES module1 monomer GPU 0 B063 9A1A_m3 count 25 eligible False seconds 58.3
+POSES module1 monomer GPU 0 B062 9A1A_m3 count 26 eligible False seconds 59.6
+POSES module1 monomer GPU 0 B049 9A1A_m3 count 27 eligible False seconds 61.1
+POSES module1 monomer GPU 0 B068 9A1A_m3 count 28 eligible False seconds 62.7
+INFERENCE 9A1A_m3 GPU 0 batch 2 seconds 2.39
+POSES module1 monomer GPU 0 B053 9A1A_m3 count 29 eligible False seconds 66.6
+POSES module1 monomer GPU 0 B051 9A1A_m3 count 30 eligible False seconds 68.0
+INFERENCE 9A1A_m4 GPU 0 batch 4 seconds 2.23
+POSES module1 monomer GPU 0 B064 9A1A_m4 count 31 eligible False seconds 71.7
+POSES module1 monomer GPU 0 B005 9A1A_m4 count 32 eligible False seconds 73.1
+POSES module1 monomer GPU 0 B061 9A1A_m4 count 33 eligible False seconds 74.2
+POSES module1 monomer GPU 0 B006 9A1A_m4 count 34 eligible False seconds 75.7
+INFERENCE 9A1A_m4 GPU 0 batch 4 seconds 2.44
+POSES module1 monomer GPU 0 B063 9A1A_m4 count 35 eligible False seconds 79.4
+POSES module1 monomer GPU 0 B062 9A1A_m4 count 36 eligible False seconds 80.7
+POSES module1 monomer GPU 0 B049 9A1A_m4 count 37 eligible False seconds 82.0
+POSES module1 monomer GPU 0 B068 9A1A_m4 count 38 eligible False seconds 83.6
+INFERENCE 9A1A_m4 GPU 0 batch 2 seconds 2.43
+POSES module1 monomer GPU 0 B053 9A1A_m4 count 39 eligible False seconds 87.6
+POSES module1 monomer GPU 0 B051 9A1A_m4 count 40 eligible False seconds 89.0
+INFERENCE 9A1A_m5 GPU 0 batch 4 seconds 2.39
+POSES module1 monomer GPU 0 B064 9A1A_m5 count 41 eligible False seconds 92.8
+POSES module1 monomer GPU 0 B005 9A1A_m5 count 42 eligible True seconds 94.3
+POSES module1 monomer GPU 0 B061 9A1A_m5 count 43 eligible False seconds 95.4
+POSES module1 monomer GPU 0 B006 9A1A_m5 count 44 eligible False seconds 96.9
+INFERENCE 9A1A_m5 GPU 0 batch 4 seconds 2.56
+POSES module1 monomer GPU 0 B063 9A1A_m5 count 45 eligible False seconds 100.8
+POSES module1 monomer GPU 0 B062 9A1A_m5 count 46 eligible False seconds 102.0
+POSES module1 monomer GPU 0 B049 9A1A_m5 count 47 eligible False seconds 103.3
+POSES module1 monomer GPU 0 B068 9A1A_m5 count 48 eligible False seconds 104.8
+INFERENCE 9A1A_m5 GPU 0 batch 2 seconds 2.26
+POSES module1 monomer GPU 0 B053 9A1A_m5 count 49 eligible False seconds 108.7
+POSES module1 monomer GPU 0 B051 9A1A_m5 count 50 eligible False seconds 110.2
+INFERENCE 9A1A_m6 GPU 0 batch 4 seconds 2.55
+POSES module1 monomer GPU 0 B064 9A1A_m6 count 51 eligible False seconds 114.3
+POSES module1 monomer GPU 0 B005 9A1A_m6 count 52 eligible False seconds 115.6
+POSES module1 monomer GPU 0 B061 9A1A_m6 count 53 eligible False seconds 116.7
+POSES module1 monomer GPU 0 B006 9A1A_m6 count 54 eligible False seconds 118.2
+INFERENCE 9A1A_m6 GPU 0 batch 4 seconds 2.41
+POSES module1 monomer GPU 0 B063 9A1A_m6 count 55 eligible False seconds 121.9
+POSES module1 monomer GPU 0 B062 9A1A_m6 count 56 eligible False seconds 123.0
+POSES module1 monomer GPU 0 B049 9A1A_m6 count 57 eligible True seconds 124.6
+POSES module1 monomer GPU 0 B068 9A1A_m6 count 58 eligible False seconds 126.2
+INFERENCE 9A1A_m6 GPU 0 batch 2 seconds 2.21
+POSES module1 monomer GPU 0 B053 9A1A_m6 count 59 eligible False seconds 130.1
+POSES module1 monomer GPU 0 B051 9A1A_m6 count 60 eligible False seconds 131.6
+INFERENCE 9A1A_m7 GPU 0 batch 4 seconds 2.44
+POSES module1 monomer GPU 0 B064 9A1A_m7 count 61 eligible False seconds 135.5
+POSES module1 monomer GPU 0 B005 9A1A_m7 count 62 eligible False seconds 137.0
+POSES module1 monomer GPU 0 B061 9A1A_m7 count 63 eligible False seconds 138.1
+POSES module1 monomer GPU 0 B006 9A1A_m7 count 64 eligible False seconds 139.6
+INFERENCE 9A1A_m7 GPU 0 batch 4 seconds 2.64
+POSES module1 monomer GPU 0 B063 9A1A_m7 count 65 eligible False seconds 143.5
+POSES module1 monomer GPU 0 B062 9A1A_m7 count 66 eligible False seconds 144.8
+POSES module1 monomer GPU 0 B049 9A1A_m7 count 67 eligible False seconds 146.3
+POSES module1 monomer GPU 0 B068 9A1A_m7 count 68 eligible False seconds 147.9
+INFERENCE 9A1A_m7 GPU 0 batch 2 seconds 2.21
+POSES module1 monomer GPU 0 B053 9A1A_m7 count 69 eligible False seconds 151.7
+POSES module1 monomer GPU 0 B051 9A1A_m7 count 70 eligible False seconds 153.2
+INFERENCE 9A1A_m8 GPU 0 batch 4 seconds 2.25
+POSES module1 monomer GPU 0 B064 9A1A_m8 count 71 eligible False seconds 156.9
+POSES module1 monomer GPU 0 B005 9A1A_m8 count 72 eligible False seconds 158.3
+POSES module1 monomer GPU 0 B061 9A1A_m8 count 73 eligible False seconds 159.5
+POSES module1 monomer GPU 0 B006 9A1A_m8 count 74 eligible False seconds 161.0
+INFERENCE 9A1A_m8 GPU 0 batch 4 seconds 2.83
+POSES module1 monomer GPU 0 B063 9A1A_m8 count 75 eligible False seconds 165.1
+POSES module1 monomer GPU 0 B062 9A1A_m8 count 76 eligible False seconds 166.3
+POSES module1 monomer GPU 0 B049 9A1A_m8 count 77 eligible False seconds 167.8
+POSES module1 monomer GPU 0 B068 9A1A_m8 count 78 eligible False seconds 169.3
+INFERENCE 9A1A_m8 GPU 0 batch 2 seconds 2.61
+POSES module1 monomer GPU 0 B053 9A1A_m8 count 79 eligible False seconds 173.5
+POSES module1 monomer GPU 0 B051 9A1A_m8 count 80 eligible False seconds 174.9

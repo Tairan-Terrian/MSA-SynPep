@@ -1,0 +1,9 @@
+{
+  "stage": "complete",
+  "completed": true,
+  "elapsed_hours": 1.198,
+  "binder_top": 10,
+  "LIR_top": 10,
+  "complete_pairs": 100,
+  "fusion_top": 10
+}

@@ -1,0 +1,26 @@
+{
+  "rule": "Geometry-supported MSA coverage, then near-compatible proposal coverage (C-alpha RMSD <=3 A and <=40 fixed-atom overlaps), valid contacts, proposal fit, hydrophobic-run length. This schedules review; near-compatible proposals remain invalid for final rank until they pass geometry.",
+  "selected_ids": [
+    "B064",
+    "B004",
+    "B005",
+    "B065",
+    "B061",
+    "B002",
+    "B006",
+    "B008",
+    "B063",
+    "B067",
+    "B062",
+    "B001",
+    "B049",
+    "B066",
+    "B068",
+    "B052",
+    "B053",
+    "B116",
+    "B051",
+    "B003"
+  ],
+  "pool_size": 20
+}

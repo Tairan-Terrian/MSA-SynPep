@@ -1,0 +1,58 @@
+FUSION_PAIR F01_02 GPU 1 variant F01_02_4_binder_linker_lir seconds 26.5
+FUSION_PAIR F01_04 GPU 1 variant F01_04_4_lir_linker_binder seconds 52.9
+FUSION_PAIR F01_06 GPU 1 variant F01_06_4_binder_linker_lir seconds 78.9
+FUSION_PAIR F01_08 GPU 1 variant F01_08_4_binder_linker_lir seconds 105.2
+FUSION_PAIR F01_10 GPU 1 variant F01_10_4_binder_linker_lir seconds 131.6
+FUSION_PAIR F02_02 GPU 1 variant F02_02_12_lir_linker_binder seconds 154.0
+FUSION_PAIR F02_04 GPU 1 variant F02_04_4_lir_linker_binder seconds 176.1
+FUSION_PAIR F02_06 GPU 1 variant F02_06_12_lir_linker_binder seconds 198.3
+FUSION_PAIR F02_08 GPU 1 variant F02_08_12_lir_linker_binder seconds 220.8
+FUSION_PAIR F02_10 GPU 1 variant F02_10_12_binder_linker_lir seconds 243.2
+FUSION_PAIR F03_02 GPU 1 variant F03_02_4_binder_linker_lir seconds 266.2
+FUSION_PAIR F03_04 GPU 1 variant F03_04_12_binder_linker_lir seconds 289.0
+FUSION_PAIR F03_06 GPU 1 variant F03_06_4_binder_linker_lir seconds 311.8
+FUSION_PAIR F03_08 GPU 1 variant F03_08_8_binder_linker_lir seconds 334.7
+FUSION_PAIR F03_10 GPU 1 variant F03_10_4_binder_linker_lir seconds 357.7
+FUSION_PAIR F04_02 GPU 1 variant F04_02_8_lir_linker_binder seconds 381.7
+FUSION_PAIR F04_04 GPU 1 variant F04_04_4_lir_linker_binder seconds 405.6
+FUSION_PAIR F04_06 GPU 1 variant F04_06_12_lir_linker_binder seconds 429.0
+FUSION_PAIR F04_08 GPU 1 variant F04_08_4_lir_linker_binder seconds 452.8
+FUSION_PAIR F04_10 GPU 1 variant F04_10_4_lir_linker_binder seconds 476.4
+FUSION_PAIR F05_02 GPU 1 variant F05_02_8_lir_linker_binder seconds 497.0
+FUSION_PAIR F05_04 GPU 1 variant F05_04_4_lir_linker_binder seconds 517.4
+FUSION_PAIR F05_06 GPU 1 variant F05_06_8_lir_linker_binder seconds 537.8
+FUSION_PAIR F05_08 GPU 1 variant F05_08_4_lir_linker_binder seconds 558.3
+FUSION_PAIR F05_10 GPU 1 variant F05_10_4_lir_linker_binder seconds 578.6
+FUSION_PAIR F06_02 GPU 1 variant F06_02_4_binder_linker_lir seconds 598.5
+FUSION_PAIR F06_04 GPU 1 variant F06_04_4_binder_linker_lir seconds 618.8
+FUSION_PAIR F06_06 GPU 1 variant F06_06_4_binder_linker_lir seconds 638.7
+FUSION_PAIR F06_08 GPU 1 variant F06_08_4_binder_linker_lir seconds 658.6
+FUSION_PAIR F06_10 GPU 1 variant F06_10_4_binder_linker_lir seconds 678.9
+FUSION_PAIR F07_02 GPU 1 variant F07_02_8_lir_linker_binder seconds 699.3
+FUSION_PAIR F07_04 GPU 1 variant F07_04_8_lir_linker_binder seconds 719.6
+FUSION_PAIR F07_06 GPU 1 variant F07_06_8_binder_linker_lir seconds 739.7
+FUSION_PAIR F07_08 GPU 1 variant F07_08_12_binder_linker_lir seconds 760.0
+FUSION_PAIR F07_10 GPU 1 variant F07_10_8_lir_linker_binder seconds 780.3
+FUSION_PAIR F08_02 GPU 1 variant F08_02_12_binder_linker_lir seconds 801.6
+FUSION_PAIR F08_04 GPU 1 variant F08_04_8_binder_linker_lir seconds 822.7
+FUSION_PAIR F08_06 GPU 1 variant F08_06_12_binder_linker_lir seconds 844.0
+FUSION_PAIR F08_08 GPU 1 variant F08_08_12_binder_linker_lir seconds 865.2
+FUSION_PAIR F08_10 GPU 1 variant F08_10_8_binder_linker_lir seconds 886.4
+FUSION_PAIR F09_02 GPU 1 variant F09_02_4_binder_linker_lir seconds 907.0
+FUSION_PAIR F09_04 GPU 1 variant F09_04_12_binder_linker_lir seconds 927.3
+FUSION_PAIR F09_06 GPU 1 variant F09_06_12_binder_linker_lir seconds 947.8
+FUSION_PAIR F09_08 GPU 1 variant F09_08_8_binder_linker_lir seconds 968.2
+FUSION_PAIR F09_10 GPU 1 variant F09_10_12_binder_linker_lir seconds 988.6
+FUSION_PAIR F10_02 GPU 1 variant F10_02_8_binder_linker_lir seconds 1009.6
+FUSION_PAIR F10_04 GPU 1 variant F10_04_4_lir_linker_binder seconds 1030.4
+FUSION_PAIR F10_06 GPU 1 variant F10_06_4_binder_linker_lir seconds 1051.2
+FUSION_PAIR F10_08 GPU 1 variant F10_08_4_lir_linker_binder seconds 1072.1
+FUSION_PAIR F10_10 GPU 1 variant F10_10_4_lir_linker_binder seconds 1092.8
+/media/yjz/htr/synuclein/.venv/lib/python3.8/site-packages/Bio/PDB/vectors.py:358: RuntimeWarning: invalid value encountered in double_scalars
+  c = (self * other) / (n1 * n2)
+/media/yjz/htr/synuclein/.venv/lib/python3.8/site-packages/Bio/PDB/vectors.py:358: RuntimeWarning: invalid value encountered in double_scalars
+  c = (self * other) / (n1 * n2)
+/media/yjz/htr/synuclein/.venv/lib/python3.8/site-packages/Bio/PDB/vectors.py:358: RuntimeWarning: invalid value encountered in double_scalars
+  c = (self * other) / (n1 * n2)
+/media/yjz/htr/synuclein/.venv/lib/python3.8/site-packages/Bio/PDB/vectors.py:358: RuntimeWarning: invalid value encountered in double_scalars
+  c = (self * other) / (n1 * n2)

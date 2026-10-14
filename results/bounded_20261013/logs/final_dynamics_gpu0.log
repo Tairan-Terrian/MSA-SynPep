@@ -1,0 +1,5 @@
+DYNAMICS final F01_08 repeat 1 GPU 0 retention 0.909 seconds 17.6
+DYNAMICS final F01_05 repeat 1 GPU 0 retention 1.0 seconds 33.1
+DYNAMICS final F05_01 repeat 1 GPU 0 retention 0.182 seconds 51.5
+DYNAMICS final F02_03 repeat 1 GPU 0 retention 0.455 seconds 67.8
+DYNAMICS final F05_04 repeat 1 GPU 0 retention 0.182 seconds 83.3

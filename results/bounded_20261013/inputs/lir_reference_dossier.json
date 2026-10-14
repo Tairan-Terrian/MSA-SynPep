@@ -1,0 +1,211 @@
+{
+  "evidence_id": "human_p62_LIR",
+  "target_partner": "human LC3B",
+  "reference_seed": "SGGDDDWTHLSS",
+  "reference_uniprot": "Q13501",
+  "human_residue_range": [
+    332,
+    343
+  ],
+  "core_positions": [
+    7,
+    8,
+    9,
+    10
+  ],
+  "core_sequence": "WTHL",
+  "structural_reference": "2ZJD:human LC3B / murine p62 peptide",
+  "core_reference_ca": [
+    [
+      27.003999710083008,
+      13.13700008392334,
+      33.902000427246094
+    ],
+    [
+      24.930999755859375,
+      11.861000061035156,
+      36.79600143432617
+    ],
+    [
+      21.58099937438965,
+      13.57699966430664,
+      37.5359992980957
+    ],
+    [
+      20.829999923706055,
+      13.798999786376953,
+      41.266998291015625
+    ]
+  ],
+  "core_reference_sidechain_centroids": [
+    [
+      27.72439956665039,
+      16.768699645996094,
+      32.81909942626953
+    ],
+    [
+      23.17275047302246,
+      13.954999923706055,
+      42.46900177001953
+    ]
+  ],
+  "pocket": [
+    [
+      "R",
+      7
+    ],
+    [
+      "R",
+      11
+    ],
+    [
+      "R",
+      16
+    ],
+    [
+      "R",
+      18
+    ],
+    [
+      "R",
+      19
+    ],
+    [
+      "R",
+      20
+    ],
+    [
+      "R",
+      22
+    ],
+    [
+      "R",
+      23
+    ],
+    [
+      "R",
+      24
+    ],
+    [
+      "R",
+      26
+    ],
+    [
+      "R",
+      27
+    ],
+    [
+      "R",
+      30
+    ],
+    [
+      "R",
+      31
+    ],
+    [
+      "R",
+      32
+    ],
+    [
+      "R",
+      33
+    ],
+    [
+      "R",
+      34
+    ],
+    [
+      "R",
+      35
+    ],
+    [
+      "R",
+      48
+    ],
+    [
+      "R",
+      49
+    ],
+    [
+      "R",
+      50
+    ],
+    [
+      "R",
+      51
+    ],
+    [
+      "R",
+      52
+    ],
+    [
+      "R",
+      53
+    ],
+    [
+      "R",
+      54
+    ],
+    [
+      "R",
+      55
+    ],
+    [
+      "R",
+      58
+    ],
+    [
+      "R",
+      63
+    ],
+    [
+      "R",
+      66
+    ],
+    [
+      "R",
+      67
+    ],
+    [
+      "R",
+      69
+    ],
+    [
+      "R",
+      70
+    ],
+    [
+      "R",
+      108
+    ],
+    [
+      "R",
+      111
+    ]
+  ],
+  "target_pdb": "/media/yjz/htr/synuclein/results/bounded_20261013/inputs/targets/LC3B.pdb",
+  "capped_pdb": "/media/yjz/htr/synuclein/results/bounded_20261013/inputs/targets/LC3B_capped.pdb",
+  "evidence_notes": [
+    "Published structures support two hydrophobic anchors and adjacent peptide contacts.",
+    "Flanking-residue modifications have context-dependent effects on LC3B recognition.",
+    "Human 20-residue WT and L341V peptides were measured at approximately 3.2 and 10.9 micromolar in a matched study; these are measurements of the 20-mer constructs."
+  ],
+  "matched_literature_controls": [
+    {
+      "id": "p62_WT_20",
+      "sequence": "SGGDDDWTHLSSKEVDPSTG",
+      "measured_kd_um": 3.2
+    },
+    {
+      "id": "p62_L341V_20",
+      "sequence": "SGGDDDWTHVSSKEVDPSTG",
+      "measured_kd_um": 10.9
+    }
+  ],
+  "source_urls": [
+    "https://www.rcsb.org/structure/2ZJD",
+    "https://pubmed.ncbi.nlm.nih.gov/37530436/",
+    "https://pmc.ncbi.nlm.nih.gov/articles/PMC4990988/"
+  ],
+  "boundary": "soluble LC3B resolved domain through Gly120; missing N-terminal residues are boundary-capped; membrane PE and autophagosome dynamics are unmodeled"
+}

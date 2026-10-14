@@ -1,73 +1,48 @@
-# MSA-SynPep：LLM设计与正反向模型评价
+# MSA-SynPep 三模块候选设计
 
-当前设计用闭源LLM提出短肽，用PepGLAD预测固定序列的结合姿势，再用ProteinMPNN评价原序列与该姿势的匹配程度。LLM读取三种MSA构象和两种同蛋白对照的证据，给出实验优先级。MSA指多系统萎缩。
+模块一：LLM生成120条α-syn结合肽，PepGLAD五构象初筛，先复核20条，合格候选不足10条时扩至最多40条；入围序列计算8个有限单体对照，LLM输出Top10。
+模块二：LLM生成30条未修饰p62 LIR侧翼变体，实验模板集合、天然及弱结合参考评价，LLM Top10。
+模块三：10×10=100组，比较600种连接长度/方向方案，最多20组短模拟筛查，LLM Top10与独立短轨迹复核。
 
-## 当前流程
+## 本轮实验结果
 
-1. 用同源残基编号、局部形状、表面暴露及五构象差异构建四个表位的上下文。
-2. LLM分两轮各生成60条10–25 aa肽；生成模式的第二轮读取第一轮几何指标及逆折叠逐位置反馈。
-3. PepGLAD保持序列固定，分别在6XYO、6XYP、6XYQ、8A9L、6CU7的同源表位采样，GPU最小化并评价几何。
-4. ProteinMPNN在完整三层受体+短肽环境中评价原序列，再保留同一肽骨架、移除受体，评价肽单独环境。每个条件使用8种匹配的肽位置解码顺序。
-5. LLM读取完整证据两次，反转输入顺序，以平均名次选择Top24；一次去逆折叠信息排序用于比较决策变化。
-6. Top24在每种构象补足第二姿势，重新进行几何/逆折叠评价，LLM结合两个观察精排。
+本轮于2026-10-14完成，正式运行约72分钟。当前仓库保存`results/bounded_20261013/`这一轮完整结果。
 
-ProteinMPNN仅评价短肽链K；受体序列固定并先进入解码条件。complex_nll是原序列按肽长平均的负对数概率，越低表示序列与骨架更匹配。context_gain=peptide_only_nll−complex_nll，表达模型从靶标环境得到的支持。分数是计算证据，实际亲和力和选择性由结合实验确认。
+- [完整实验报告](results/bounded_20261013/REPORT.md)与[详细计算报告](results/bounded_20261013/DETAILED_REPORT.md)。
+- [α-syn结合肽Top10](results/bounded_20261013/module1/top10.csv)及[FASTA序列](results/bounded_20261013/module1/top10.fasta)。
+- [LIR Top10](results/bounded_20261013/module2/top10.csv)及[FASTA序列](results/bounded_20261013/module2/top10.fasta)。
+- [100条完整融合肽](results/bounded_20261013/module3/complete_pairs_100.csv)与[600种连接方案](results/bounded_20261013/module3/all_linker_variants.csv)。
+- [最终融合肽Top10](results/bounded_20261013/module3/top10.csv)、[FASTA序列](results/bounded_20261013/module3/top10.fasta)及[两次短模拟结果](results/bounded_20261013/module3/top10_stability_summary.csv)。
+- [汇报下载包](results/bounded_20261013/presentation_package.zip)、[本轮完成状态](results/bounded_20261013/status.json)及[过程核查说明](results/bounded_20261013/AUDIT_NOTES.md)。
 
-当前几何资格沿用宽松规则：中央链及组装体2Å冲突均为0，肽链C–N距离对近似1.33Å的最大偏离≤0.3Å。完整原始分数保留，资格不足姿势的逆折叠证据在排序卡片中标为未知。对照姿势未知时继续采样与实验测量。
+本轮生成120条结合肽和30条LIR变体，形成两组Top10与100对融合肽。12条完整模型完成10 ps筛查，最终10条各完成不同随机种子的10 ps复核。前4条在两次短观察中较一致，后段候选存在较大波动。序列文件均标注长度和完整融合位置。
 
-## 代码和目录
+## 完整英文提示词
 
-- `design.py`：表位上下文、LLM序列提案、LLM完整证据/去信息/最终排序。
-- `structure.py`：固定序列复合物采样、GPU最小化和几何指标。
-- `inverse.py`：ProteinMPNN多链原序列评分、肽单独评分、逐位置分数与解码顺序变化。
-- `evidence.py`：多姿势卡片与跨构象描述量。
-- `pipeline.py`：两块GPU调度、当前完整流程和续跑阶段。
-- `report.py`：Top24选择、消融比较、CSV/FASTA与Markdown报告。
-- `data/pdb/`：公开结构原始文件。
-- `data/epitopes/`：四个任务表位定义及其选择依据。
-- `data/inputs/`：固定输入序列、结构坐标及生成来源。`PROVENANCE.json`说明这些输入的产生方式。
-- `vendor/PepGLAD/`：固定序列姿势采样器及许可证。
-- `vendor/ProteinMPNN/`：官方模型实现、许可证、安全张量格式权重及`SOURCE.json`。
-- `results/current/`：当前版本正式结果；根目录保留当前六个模块。
+- 模块一：[结合肽生成](prompts/binder_generate.txt)、[结合肽排序](prompts/binder_rank.txt)。
+- 模块二：[LIR生成](prompts/lir_generate.txt)、[LIR排序](prompts/lir_rank.txt)。
+- 模块三：[完整融合肽排序](prompts/fusion_rank.txt)。
 
-## 运行环境
+生物学设计原则写入提示词；坐标计算得到的真实观察作为紧凑证据输入。详细说明见[提示词设计](docs/PROMPT_DESIGN.md)。实际API请求、响应和用量保存在本轮结果的`api/`目录，方法说明更正记录在过程核查文件中。
 
-服务器工程为`/media/yjz/htr/synuclein`，使用两块RTX3090。GPU环境为Python3.8.5、PyTorch1.13.0+cu117、NumPy1.23.5、SciPy1.10.1、Biopython1.80、FreeSASA2.2.1、torch-scatter2.1.2、OpenMM8.1.1、PDBFixer1.9.0。
+## 运行
 
-PepGLAD、ProteinMPNN及几何计算使用CUDA；OpenMM使用NVIDIA OpenCL。PDB读写和小规模输入整理使用CPU。结构采样批量为2，每块GPU安排1个最小化进程。
+服务器路径为/media/yjz/htr/synuclein，Python3.8虚拟环境和两块RTX3090。凭据通过SYNPep_API_KEY传入。
 
-ProteinMPNN使用[官方v_48_020模型](https://github.com/dauparas/ProteinMPNN)。原模型张量通过临时PyTorch2.4环境以`weights_only=True`转换为服务器兼容格式，浮点训练元数据保存于`SOURCE.json`；当前权重安全加载同样使用`weights_only=True`。模型参数固定，推理坐标扰动为0。
+    .venv/bin/python pipeline.py --name bounded_20261013
 
-## 运行方式
+入口清空本项目results，候选、处理结构、姿势、API记录与排名从头产生。原始公开结构与预训练模型作为固定研究输入。
 
-固定已有序列和初次坐标，重新评价并重新排序：
+每次新版本完整重跑的约定见[运行规则](docs/RUN_POLICY.md)。本次GitHub同步上传已完成实验的原始产物。
 
-```bash
-cd /media/yjz/htr/synuclein
-export SYNPep_API_KEY='<在运行环境配置密钥>'
-.venv/bin/python pipeline.py --run results/current --mode reuse
-```
+## 计算安排
 
-从序列提案开始运行当前完整设计：
+初筛每条结合肽在五纤维采样一次。基础几何处理是一次30步Cα扭转拟合；受体位置搜索仅用于入围池的一次20步有限调整。侧链最小化最多150步。GPU完成神经推理、几何、相容性与动力学。LLM三个排名均审查反转输入后的Top10交集。
 
-```bash
-.venv/bin/python pipeline.py --run results/new_experiment --mode generate
-```
+结构信息包括三层/五层中央SASA比较、侧链方向/电荷/疏水描述和跨链口袋；9A1A八模型是有限单体对照。单体与其他生理状态的整体保护仍需验证。LIR结构模板先验、文献20肽测量及新12肽变体保持各自的证据范围。
 
-`--start evaluate|inverse|rank|replicate|report`指定已完成边界后的阶段。已有API响应仅用于同一实验目录、相同命名阶段的续跑；修改输入或模型时使用新的实验目录。默认API地址为`https://api.chatanywhere.tech/v1`，模型为`gpt-6.1-sol`，凭据从环境变量读取。
+## 输出
 
-复用模式的输入序列原来采用几何反馈生成。本次固定这些序列，评价新增逆折叠证据对排序的影响；当前生成模式的第二轮已接入逆折叠反馈。生成模式按当前序列独立采样第二姿势。
+results/本次运行/module1与module2分别有top10.csv、top10.fasta、top10_evidence.csv、REPORT.md；module3有100组完整序列、600种方案、筛查及复核轨迹、完整融合肽Top10。根目录REPORT.md和presentation_package.zip用于独立汇报。完整英文提示词位于prompts，本次实际请求/响应在api。
 
-## 输出与解释
-
-当前正式报告为`results/current/REPORT.md`。`pose_scores.csv`和`residue_scores.csv`保存逐姿势/逐位置指标；`candidate_scores.csv`保存120条汇总；`shortlist_24.csv`及FASTA保存最终名单。`api/`保存本次请求、响应及token用量，原序列生成来源单独作为输入保存。
-
-去逆折叠信息对照和输入顺序比较反映计算决策及稳定性。检验准确性增益需要让推荐候选在同一条件下测量三种MSA与两种对照的结合，比较固定候选预算下的选择性命中率。
-
-## 来源
-
-- [ProteinMPNN，Science 2022](https://doi.org/10.1126/science.add2187)，[官方实现](https://github.com/dauparas/ProteinMPNN)。
-- [PepGLAD，NeurIPS 2024官方实现](https://github.com/THUNLP-MT/PepGLAD)。
-- [Wallace等，Chemical Science 2024](https://doi.org/10.1039/D3SC06245G)。
-
-本项目实现MSA场景的多构象证据整合及靶标环境对原序列的支持比较，来源和实验边界在报告中明确记录。
+Top10表示计算优先级。实测亲和力、选择性、递送和降解效果待验证。

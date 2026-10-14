@@ -1,263 +1,247 @@
-"""GPU fixed-sequence pose sampling on five conformers and independent geometry evidence."""
-
-import argparse
-import json
-import random
-import time
-import sys
-import multiprocessing
-from concurrent.futures import ProcessPoolExecutor
+"""GPU poses, one-pass chemical standardization, focused review."""
+import argparse,copy,json,sys,time
 from pathlib import Path
-
 import numpy as np
 import torch
-from Bio.PDB import PDBParser
-from Bio.SeqUtils.ProtParam import ProteinAnalysis
 import openmm
-from openmm import app, unit
-from pdbfixer import PDBFixer
-
-from design import ROOT, TARGETS, read_jsonl, write_jsonl
-
-VENDOR = ROOT / "vendor/PepGLAD"
-sys.path.insert(1, str(VENDOR))
+from openmm import app,unit
+from core import ROOT,read_json,read_jsonl,TARGETS
+from geometry import (AA,read_structure,save_structure,tensor,angles_from_chain,RamaReference,
+                      peptide,standardize,geometry_metrics,atom_data,interface_metrics,align,rotamers,dihedral,
+                      focused_adjustment,attachment_metrics)
+sys.path.insert(0,str(ROOT/'vendor/PepGLAD'))
 from data.codesign import calculate_covariance_matrix
-from data.converter.list_blocks_to_pdb import list_blocks_to_pdb
 from data.converter.pdb_to_list_blocks import pdb_to_list_blocks
-from data.format import Atom, Block, VOCAB
+from data.converter.list_blocks_to_pdb import list_blocks_to_pdb
+from data.format import Atom,Block,VOCAB
 from utils.const import sidechain_atoms
 
-FORCEFIELD = None
-
-
-def model_input(pocket, receptor, length, sequence):
-    lookup = {(chain, number, insert) for chain, (number, insert) in pocket}
-    selected, positions = [], []
-    for chain_id, blocks in receptor.items():
-        for index, block in enumerate(blocks):
-            if (chain_id, block.id[0], block.id[1]) in lookup:
-                selected.append(block)
-                positions.append(index + 1)
-    peptide = [Block(VOCAB.symbol_to_abrv(letter),
-                     [Atom(name, [0, 0, 0], name[0]) for name in VOCAB.backbone_atoms + sidechain_atoms[letter]])
-               for letter in sequence]
-    mask = torch.tensor([False] * len(selected) + [True] * length)
-    positions.extend(range(1, length + 1))
-    coordinates, symbols, atom_masks = [], [], []
-    for block in selected + peptide:
-        symbol = VOCAB.abrv_to_symbol(block.abrv)
-        atoms = {atom.name: atom.get_coord() for atom in block.units}
-        centroid = np.mean(list(atoms.values()), axis=0).tolist()
-        names = VOCAB.backbone_atoms + sidechain_atoms.get(symbol, [])
-        coordinates.append([atoms.get(name, centroid) for name in names] + [centroid] * (14 - len(names)))
-        atom_masks.append([name in atoms for name in names] + [False] * (14 - len(names)))
+def model_input(pocket,receptor,sequence):
+    lookup={tuple(row) for row in pocket};selected=[];positions=[]
+    for chain,blocks in receptor.items():
+        for index,block in enumerate(blocks):
+            if (chain,block.id[0]) in lookup:
+                selected.append(block);positions.append(index+1)
+    ligand=[Block(VOCAB.symbol_to_abrv(letter),[Atom(name,[0.,0.,0.],name[0])
+             for name in VOCAB.backbone_atoms+sidechain_atoms[letter]]) for letter in sequence]
+    mask=torch.tensor([False]*len(selected)+[True]*len(ligand));positions.extend(range(1,len(ligand)+1))
+    coordinates=[];symbols=[];atom_masks=[]
+    for block in selected+ligand:
+        symbol=VOCAB.abrv_to_symbol(block.abrv);atoms={a.name:a.get_coord() for a in block.units}
+        centroid=np.mean(list(atoms.values()),axis=0).tolist();names=VOCAB.backbone_atoms+sidechain_atoms.get(symbol,[])
+        coordinates.append([atoms.get(name,centroid) for name in names]+[centroid]*(14-len(names)))
+        atom_masks.append([name in atoms for name in names]+[False]*(14-len(names)))
         symbols.append(VOCAB.symbol_to_idx(symbol))
-    x = torch.tensor(coordinates, dtype=torch.float)
-    atom_mask = torch.tensor(atom_masks, dtype=torch.bool)
-    covariance = calculate_covariance_matrix(x[~mask][:, 1][atom_mask[~mask][:, 1]].numpy()) + 1e-4 * np.eye(3)
-    return {"X": x, "S": torch.tensor(symbols, dtype=torch.long), "position_ids": torch.tensor(positions),
-            "mask": mask, "atom_mask": atom_mask, "lengths": len(symbols),
-            "L": torch.from_numpy(np.linalg.cholesky(covariance)).float().unsqueeze(0)}
+    x=torch.tensor(coordinates,dtype=torch.float);atom_mask=torch.tensor(atom_masks,dtype=torch.bool)
+    covariance=calculate_covariance_matrix(x[~mask][:,1][atom_mask[~mask][:,1]].numpy())+1e-4*np.eye(3)
+    return {'X':x,'S':torch.tensor(symbols),'position_ids':torch.tensor(positions),'mask':mask,
+      'atom_mask':atom_mask,'lengths':torch.tensor([len(symbols)]),
+      'L':torch.from_numpy(np.linalg.cholesky(covariance)).float().unsqueeze(0)}
 
+def platform(gpu):
+    result=openmm.Platform.getPlatformByName('OpenCL')
+    result.setPropertyDefaultValue('DeviceIndex',str(gpu));result.setPropertyDefaultValue('Precision','mixed')
+    return result
 
-def batch_inputs(samples):
-    batch = {name: torch.cat([s[name] for s in samples]) for name in ("X", "S", "position_ids", "mask", "atom_mask", "L")}
-    batch["lengths"] = torch.tensor([s["lengths"] for s in samples], dtype=torch.long)
-    return batch
-
-
-def max_hydrophobic_run(sequence):
-    longest = current = 0
-    for letter in sequence:
-        current = current + 1 if letter in "IVLFWYM" else 0
-        longest = max(longest, current)
-    return longest
-
-
-def initialize_relaxation(gpu):
-    global FORCEFIELD
-    platform = openmm.Platform.getPlatformByName("OpenCL")
-    platform.setPropertyDefaultValue("DeviceIndex", str(gpu))
-    platform.setPropertyDefaultValue("Precision", "mixed")
-    FORCEFIELD = app.ForceField("charmm36.xml")
-
-
-def atom_data(chains, device):
-    coords, residues, polar, positive, negative = [], [], [], [], []
-    residue_index = 0
-    for chain in chains:
-        for residue in chain:
-            if residue.id[0] != " ":
-                continue
-            for atom in residue:
-                if atom.element == "H":
-                    continue
-                coords.append(atom.coord)
-                residues.append(residue_index)
-                polar.append(atom.element in ("N", "O"))
-                positive.append(residue.resname in ("LYS", "ARG") and atom.name in ("NZ", "NH1", "NH2", "NE"))
-                negative.append(residue.resname in ("ASP", "GLU") and atom.name in ("OD1", "OD2", "OE1", "OE2"))
-            residue_index += 1
-    return {"xyz": torch.tensor(np.asarray(coords), dtype=torch.float32, device=device),
-            "residue": torch.tensor(residues, device=device),
-            "polar": torch.tensor(polar, device=device),
-            "positive": torch.tensor(positive, device=device),
-            "negative": torch.tensor(negative, device=device)}
-
-
-def metrics(peptide, central, assembly, length):
-    distance = torch.cdist(peptide["xyz"], central["xyz"])
-    pairs = peptide["residue"][:, None] * (int(central["residue"].max()) + 1) + central["residue"][None, :]
-    contacts = torch.unique(pairs[distance < 4.5]).numel()
-    polar = ((distance < 3.5) & peptide["polar"][:, None] & central["polar"][None, :]).sum().item()
-    opposite = (((peptide["positive"][:, None] & central["negative"][None, :]) |
-                 (peptide["negative"][:, None] & central["positive"][None, :])) & (distance < 4.5)).sum().item()
-    assembly_distance = torch.cdist(peptide["xyz"], assembly["xyz"])
-    return {"contacts_per_residue": round(contacts / length, 3),
-            "clashes_per_residue": round((distance < 2).sum().item() / length, 3),
-            "assembly_clashes_per_residue": round((assembly_distance < 2).sum().item() / length, 3),
-            "polar_pairs_per_residue": round(polar / length, 3),
-            "opposite_charge_pairs_per_residue": round(opposite / length, 3)}
-
-
-def relax(raw, output, gpu):
-    fixer = PDBFixer(filename=str(raw))
-    fixer.findNonstandardResidues()
-    fixer.replaceNonstandardResidues()
-    fixer.findMissingResidues()
-    fixer.missingResidues = {}
-    fixer.findMissingAtoms()
-    fixer.addMissingAtoms()
-    fixer.addMissingHydrogens(pH=7.0)
-    system = FORCEFIELD.createSystem(fixer.topology, nonbondedMethod=app.CutoffNonPeriodic,
-                                     nonbondedCutoff=1.2 * unit.nanometer, constraints=app.HBonds)
-    force = openmm.CustomExternalForce("0.5*k*((x-x0)^2+(y-y0)^2+(z-z0)^2)")
-    for name in ("k", "x0", "y0", "z0"):
-        force.addPerParticleParameter(name)
-    for i, atom in enumerate(fixer.topology.atoms()):
-        if atom.element.symbol != "H":
-            force.addParticle(i, [20.0 if atom.residue.chain.id == "K" else 1000.0,
-                                  *fixer.positions[i].value_in_unit(unit.nanometer)])
+def chiral_force(system,topology,positions,gpu,chains):
+    """Intramolecular improper priors preserve canonical stereocenters."""
+    coordinates=tensor(positions.value_in_unit(unit.angstrom),'cuda:{}'.format(gpu))
+    force=openmm.CustomTorsionForce('stereo_k*(1-cos(theta-theta0))')
+    force.addGlobalParameter('stereo_k',1000.);force.addPerTorsionParameter('theta0');force.setForceGroup(1)
+    for residue in topology.residues():
+        if residue.chain.id not in chains or residue.name not in AA:continue
+        atoms={a.name:a.index for a in residue.atoms()};groups=[]
+        if residue.name!='GLY':groups.append(('N','C','CA','CB'))
+        if residue.name=='THR':groups.append(('CA','OG1','CB','CG2'))
+        if residue.name=='ILE':groups.append(('CA','CG1','CB','CG2'))
+        for group in groups:
+            indices=[atoms[n] for n in group]
+            theta=float(dihedral(*coordinates[indices]))*np.pi/180
+            force.addTorsion(*indices,[theta])
     system.addForce(force)
-    integrator = openmm.LangevinIntegrator(0 * unit.kelvin, 1 / unit.picosecond, 0.002 * unit.picoseconds)
-    simulation = app.Simulation(fixer.topology, system, integrator,
-                                openmm.Platform.getPlatformByName("OpenCL"),
-                                {"DeviceIndex": str(gpu), "Precision": "mixed"})
-    simulation.context.setPositions(fixer.positions)
-    simulation.minimizeEnergy(tolerance=10 * unit.kilojoule_per_mole / unit.nanometer, maxIterations=0)
-    state = simulation.context.getState(getPositions=True, getEnergy=True)
-    with output.open("w") as handle:
-        app.PDBFile.writeFile(simulation.topology, state.getPositions(), handle, keepIds=True)
-    return round(state.getPotentialEnergy().value_in_unit(unit.kilojoule_per_mole), 2)
 
+def isolated_energy(topology,positions,gpu,forcefield):
+    system=forcefield.createSystem(topology,nonbondedMethod=app.NoCutoff,constraints=None)
+    integrator=openmm.VerletIntegrator(.001*unit.picoseconds)
+    context=openmm.Context(system,integrator,platform(gpu),{'DeviceIndex':str(gpu),'Precision':'mixed'})
+    context.setPositions(positions)
+    energy=context.getState(getEnergy=True).getPotentialEnergy().value_in_unit(unit.kilojoule_per_mole)
+    del context,integrator
+    return energy
+
+def binding_energy(topology,positions,complex_energy,gpu,forcefield):
+    receptor=app.Modeller(topology,positions)
+    receptor.delete([c for c in receptor.topology.chains() if c.id=='K'])
+    peptide_only=app.Modeller(topology,positions)
+    peptide_only.delete([c for c in peptide_only.topology.chains() if c.id!='K'])
+    target_energy=isolated_energy(receptor.topology,receptor.positions,gpu,forcefield)
+    peptide_energy=isolated_energy(peptide_only.topology,peptide_only.positions,gpu,forcefield)
+    return (complex_energy-target_energy-peptide_energy)/4.184
+
+def relax_structure(complex_structure,path,gpu,forcefield,estimate_binding=False,max_iterations=150):
+    save_structure(complex_structure,path);pdb=app.PDBFile(str(path))
+    modeller=app.Modeller(pdb.topology,pdb.positions)
+    modeller.addHydrogens(pH=7.0,platform=platform(gpu))
+    system=forcefield.createSystem(modeller.topology,nonbondedMethod=app.NoCutoff,constraints=None)
+    chiral_force(system,modeller.topology,modeller.positions,gpu,('K',))
+    for i,atom in enumerate(modeller.topology.atoms()):
+        if atom.element.symbol!='H' and (atom.residue.chain.id!='K' or atom.name in ('N','CA','C','O','OXT','CB')):
+            system.setParticleMass(i,0*unit.dalton)
+    integrator=openmm.VerletIntegrator(.001*unit.picoseconds)
+    simulation=app.Simulation(modeller.topology,system,integrator,platform(gpu),{'DeviceIndex':str(gpu),'Precision':'mixed'})
+    simulation.context.setPositions(modeller.positions)
+    simulation.minimizeEnergy(tolerance=5*unit.kilojoule_per_mole/unit.nanometer,maxIterations=max_iterations)
+    state=simulation.context.getState(getPositions=True,getEnergy=True)
+    with path.open('w') as handle:
+        app.PDBFile.writeFile(simulation.topology,state.getPositions(),handle,keepIds=True)
+    energy=state.getPotentialEnergy().value_in_unit(unit.kilojoule_per_mole)
+    amber_energy=simulation.context.getState(getEnergy=True,groups=1).getPotentialEnergy().value_in_unit(unit.kilojoule_per_mole)
+    topology=simulation.topology;positions=state.getPositions()
+    del simulation,integrator
+    proxy=binding_energy(topology,positions,amber_energy,gpu,forcefield) if estimate_binding else None
+    return energy,proxy
+
+def lir_template(sequence,dossier,reference,device,raw_reference,flank_noise=0.):
+    original=[r for r in raw_reference[0]['K'] if r.resname in AA]
+    phi_ref,psi_ref=angles_from_chain(raw_reference[0]['K'],device)
+    w_index=next(i for i,r in enumerate(original) if r.resname=='TRP')
+    phi=torch.full((len(sequence),),-120.,device=device,dtype=torch.float64);psi=torch.full_like(phi,140.)
+    for i in range(len(sequence)):
+        j=i-6+w_index
+        if 0<=j<len(original):
+            phi[i]=phi_ref[j];psi[i]=psi_ref[j]
+    flank=torch.ones(len(sequence),device=device);flank[6:10]=0
+    phi=phi+torch.randn_like(phi)*flank*flank_noise;psi=psi+torch.randn_like(psi)*flank*flank_noise
+    phi,psi=reference.project(sequence,phi,psi)
+    source_rotamers=rotamers(raw_reference[0]['K'],device)
+    mapped_rotamers={i:source_rotamers[i-6+w_index] for i in range(len(sequence))
+                    if i-6+w_index in source_rotamers and AA[original[i-6+w_index].resname]==sequence[i]}
+    chain=peptide(sequence,phi,psi,device,sidechain_angles=mapped_rotamers)
+    source=tensor([list(chain)[i]['CA'].coord for i in range(6,10)],device)
+    rotation,translation=align(source,tensor(dossier['core_reference_ca'],device))
+    atoms=list(chain.get_atoms());coordinates=tensor([a.coord for a in atoms],device)@rotation+translation
+    for atom,coordinate in zip(atoms,coordinates.cpu().numpy()):
+        atom.coord=coordinate
+    return chain
+
+def evaluate(row,structure,dossier,reference,device):
+    chain=structure[0]['K'];metric=geometry_metrics(chain,reference,device)
+    metric.update(interface_metrics(atom_data([chain],device),atom_data([c for c in structure[0] if c.id!='K'],device),len(row['sequence'])))
+    if row['target']=='LC3B':
+        residues=[r for r in chain if r.resname in AA]
+        core=tensor([residues[i]['CA'].coord for i in range(6,10)],device)
+        metric['core_rmsd_a']=round(torch.sqrt((core-tensor(dossier['core_reference_ca'],device)).square().sum(-1).mean()).item(),3)
+        centers=tensor([np.mean([a.coord for a in residues[i] if a.element!='H' and a.name not in ('N','CA','C','O')],axis=0)
+                        for i in (6,9)],device)
+        metric['core_two_pocket']=bool((torch.linalg.vector_norm(centers-tensor(dossier['core_reference_sidechain_centroids'],device),dim=-1)<3).all())
+    metric.update(attachment_metrics(chain,structure[0],device))
+    metric['geometry_eligible']=metric['backbone_geometry_eligible'] and metric['severe_clashes']==0 and row['backbone_reconstruction_rmsd_a']<=3.0
+    ligand=atom_data([chain],device);receptor=atom_data([c for c in structure[0] if c.id!='K'],device)
+    target_residues=[r for c in structure[0] if c.id!='K' for r in c]
+    distance=torch.cdist(ligand['xyz'],receptor['xyz'])
+    native=ligand['native'][:,None]&receptor['native'][None,:]
+    ids=ligand['residue'][:,None]*len(target_residues)+receptor['residue'][None,:]
+    observed=[]
+    for code in torch.unique(ids[(distance<4.5)&native]).cpu().tolist():
+        i,j=divmod(code,len(target_residues));tr=target_residues[j]
+        observed.append([i+1,tr.get_parent().id,tr.id[1],AA[tr.resname]])
+    metric['observed_residue_contacts']=observed
+    return metric
+
+def batch_inputs(samples,device):
+    return {key:torch.cat([item[key] for item in samples]).to(device) for key in samples[0]}
+
+def fixed_geometry_collisions(structure,device):
+    residues=[r for r in structure[0]['K'] if r.resname in AA]
+    atoms=[(i,a) for i,r in enumerate(residues) for a in r if a.name in ('N','CA','C','O','OXT','CB')]
+    coordinates=tensor([a.coord for i,a in atoms],device)
+    indices=torch.tensor([i for i,a in atoms],device=device)
+    receptor=tensor([a.coord for c in structure[0] if c.id!='K' for a in c.get_atoms() if a.element!='H'],device)
+    external=int((torch.cdist(coordinates,receptor)<2).sum())
+    internal=int(((torch.cdist(coordinates,coordinates)<2)&((indices[:,None]-indices[None,:]).abs()>=2)).sum())//2
+    return external+internal
 
 def worker(args):
-    torch.cuda.set_device(args.gpu)
-    device = torch.device(f"cuda:{args.gpu}")
-    random.seed(args.seed + args.gpu)
-    np.random.seed(args.seed + args.gpu)
-    torch.manual_seed(args.seed + args.gpu)
-    parser = PDBParser(QUIET=True)
-    model = torch.load(VENDOR / "checkpoints/fixseq.ckpt", map_location="cpu").to(device).eval()
-    contexts = {x["site"]: x for x in json.loads((args.run / "epitope_context.json").read_text())}
-    assembly_context = json.loads((args.run / "assembly_context.json").read_text())
-    candidates = read_jsonl(args.candidates)[args.gpu::2]
-    output = args.run / "poses" / args.phase
-    output.mkdir(parents=True, exist_ok=True)
-    log = args.run / f"{args.phase}_gpu{args.gpu}_poses.jsonl"
-    completed = {(row["id"], row["target"]) for row in read_jsonl(log)} if args.resume_poses and log.exists() else set()
-    start_time = time.monotonic()
-    pending = []
-    with ProcessPoolExecutor(max_workers=1, mp_context=multiprocessing.get_context("spawn"),
-                             initializer=initialize_relaxation, initargs=(args.gpu,)) as pool, log.open("a" if args.resume_poses else "w") as handle:
-        for key in TARGETS:
-            central_id = assembly_context[key]["central_chain"]
-            model_chains = assembly_context[key]["model_chains"]
-            original = parser.get_structure(key, args.run / "targets" / f"{key}.pdb")[0]
-            receptor = pdb_to_list_blocks(str(args.run / "targets" / f"{key}.pdb"), model_chains, dict_form=True)
-            target_candidates = [c for c in candidates if (c["id"], key) not in completed]
-            for start in range(0, len(target_candidates), args.batch_size):
-                batch_candidates = target_candidates[start:start + args.batch_size]
-                samples = [model_input([[chain, [n, " "]] for chain in model_chains
-                                        for n in contexts[c["site"]]["common_anchor_residues"]],
-                                       receptor, len(c["sequence"]), c["sequence"]) for c in batch_candidates]
-                inputs = {k: v.to(device) for k, v in batch_inputs(samples).items()}
-                with torch.no_grad():
-                    xyzs, _, _ = model.sample(inputs["X"], inputs["S"], inputs["mask"],
-                                              inputs["position_ids"], inputs["lengths"], inputs["atom_mask"],
-                                              L=inputs["L"], sample_opt={"energy_func": "default", "energy_lambda": 0.5})
-                for candidate, xyz in zip(batch_candidates, xyzs):
-                    peptide = [Block(VOCAB.symbol_to_abrv(letter),
-                                     [Atom(name, coord, name[0]) for name, coord in
-                                      zip(VOCAB.backbone_atoms + sidechain_atoms[letter], coords)])
-                               for letter, coords in zip(candidate["sequence"], xyz)]
-                    name = f"{candidate['id']}_{key}_rep{args.repeat}"
-                    raw, relaxed = output / f"{name}_raw.pdb", output / f"{name}.pdb"
-                    list_blocks_to_pdb([receptor[chain] for chain in model_chains] + [peptide], model_chains + ["K"], str(raw))
-                    future = pool.submit(relax, raw, relaxed, args.gpu)
-                    pending.append((future, candidate, key, central_id, relaxed, name))
-                print(f"{args.phase} GPU{args.gpu} sampled {key} {start + len(batch_candidates)}/{len(candidates)} "
-                      f"elapsed={time.monotonic() - start_time:.1f}s", flush=True)
-        for index, (future, candidate, key, central_id, relaxed, name) in enumerate(pending, 1):
-            energy = future.result()
-            handle.write(json.dumps({"id": candidate["id"], "target": key, "repeat": args.repeat,
-                                     "pdb": str(relaxed), "energy_kj_mol": energy}) + "\n")
-            handle.flush()
-            if index % 10 == 0 or index == len(pending):
-                print(f"{args.phase} GPU{args.gpu} relaxed {index}/{len(pending)} "
-                      f"elapsed={time.monotonic() - start_time:.1f}s", flush=True)
+    torch.cuda.set_device(args.gpu);device=torch.device('cuda:{}'.format(args.gpu))
+    torch.manual_seed(20261013+args.gpu+100*int(args.phase=='review'))
+    reference=RamaReference(device);ff=app.ForceField('amber14-all.xml','implicit/obc2.xml')
+    candidates=read_jsonl(args.candidates)[args.gpu::2]
+    metadata=read_json(args.run/'inputs/target_metadata.json')
+    contexts={c['site_id']:c for c in read_json(args.run/'inputs/surface_contexts.json')}
+    dossier=read_json(args.run/'inputs/lir_reference_dossier.json')
+    target_names=([t for t in metadata if t.startswith('9A1A_')] if args.phase=='monomer' else list(TARGETS)) if args.module=='module1' else ['LC3B']
+    if args.module=='module1':model=torch.load(ROOT/'vendor/PepGLAD/checkpoints/fixseq.ckpt',map_location='cpu').to(device).eval()
+    folder=args.run/args.module/'poses'/args.phase;folder.mkdir(parents=True,exist_ok=True)
+    log=args.run/args.module/('{}_gpu{}.jsonl'.format(args.phase,args.gpu));started=time.monotonic();completed=0
+    initial=read_jsonl(args.run/'module1/initial_poses.jsonl') if args.module=='module1' and args.phase=='review' else []
+    with log.open('w') as handle:
+        for target in target_names:
+            info=metadata[target] if target!='LC3B' else dossier
+            raw_target=read_structure(info['target_pdb'])
+            chemical_target=read_structure(info['capped_pdb'])
+            blocks=pdb_to_list_blocks(info['target_pdb'],[c.id for c in raw_target[0]],dict_form=True)
+            for start in range(0,len(candidates),4):
+                batch_candidates=candidates[start:start+4];proposals=[]
+                if target=='LC3B':
+                    for candidate in batch_candidates:
+                        for repeat in range(3):
+                            torch.manual_seed(20261013+repeat)
+                            chain=lir_template(candidate['sequence'],dossier,reference,device,
+                                read_structure(args.run/'inputs/lc3_p62_reference.pdb'),flank_noise=0. if repeat==0 else 8.)
+                            proposals.append((candidate,repeat,chain,'experimental_motif_template'))
+                else:
+                    inputs=[model_input(contexts[c['site_id']]['conformers'][target]['pocket'],blocks,c['sequence']) for c in batch_candidates]
+                    batch=batch_inputs(inputs,device)
+                    sampling=time.monotonic()
+                    with torch.no_grad():
+                        xyzs,_,_=model.sample(batch['X'],batch['S'],batch['mask'],batch['position_ids'],batch['lengths'],batch['atom_mask'],
+                            L=batch['L'],sample_opt={'energy_func':'default','energy_lambda':.5})
+                    print('INFERENCE',target,'GPU',args.gpu,'batch',len(batch_candidates),'seconds',round(time.monotonic()-sampling,2),flush=True)
+                    for candidate,xyz in zip(batch_candidates,xyzs):
+                        repeat=2 if args.phase=='review' else 1
+                        ligand=[Block(VOCAB.symbol_to_abrv(letter),[Atom(name,coordinate,name[0])
+                            for name,coordinate in zip(VOCAB.backbone_atoms+sidechain_atoms[letter],coords)])
+                            for letter,coords in zip(candidate['sequence'],xyz)]
+                        raw_path=folder/('{}_{}_raw{}.pdb'.format(candidate['id'],target,repeat))
+                        list_blocks_to_pdb([ligand],['K'],str(raw_path))
+                        proposals.append((candidate,repeat,read_structure(raw_path)[0]['K'],'PepGLAD_fixed_sequence'))
+                        if args.phase=='review':
+                            first=next(r for r in initial if r['id']==candidate['id'] and r['target']==target)
+                            proposals.append((candidate,1,read_structure(first['raw_pdb'])[0]['K'],'PepGLAD_fixed_sequence'))
+                for candidate,repeat,raw_chain,source in proposals:
+                    stage_started=time.monotonic();sequence=candidate['sequence']
+                    name='{}_{}_rep{}'.format(candidate['id'],target,repeat)
+                    raw_path=folder/(name+'_proposal.pdb');proposal=copy.deepcopy(raw_target);proposal[0].add(copy.deepcopy(raw_chain));save_structure(proposal,raw_path)
+                    if target=='LC3B':chain=copy.deepcopy(raw_chain);rmsd=0.
+                    else:chain,rmsd=standardize(sequence,raw_chain,reference,device)
+                    local_displacement=0.
+                    pre=interface_metrics(atom_data([chain],device),atom_data(list(chemical_target[0]),device),len(sequence))
+                    if args.phase=='review' and 0<pre['severe_clashes']<=80 and rmsd<=3:
+                        local_displacement=focused_adjustment(chain,chemical_target,device,20)
+                    complex_structure=copy.deepcopy(chemical_target);complex_structure[0].add(chain)
+                    path=folder/(name+'.pdb');save_structure(complex_structure,path)
+                    final_ca=tensor([r['CA'].coord for r in chain if r.resname in AA],device)
+                    raw_ca=tensor([r['CA'].coord for r in raw_chain if r.resname in AA],device)
+                    rmsd=float((final_ca-raw_ca).square().sum(-1).mean().sqrt())
+                    row={'id':candidate['id'],'sequence':sequence,'target':target,'repeat':repeat,'phase':args.phase,
+                        'pose_source':source,'pdb':str(path),'raw_pdb':str(raw_path),
+                        'backbone_reconstruction_rmsd_a':round(rmsd,3),'local_adjustment_displacement_a':round(local_displacement,3),
+                        'before_relaxation':geometry_metrics(chain,reference,device),
+                        'potential_energy_kj_mol':None,'mm_gb_binding_proxy_kcal_mol':None}
+                    constant=fixed_geometry_collisions(complex_structure,device);row['fixed_geometry_collisions']=constant
+                    if (target=='LC3B' or args.phase=='review') and constant==0 and rmsd<=3:
+                        energy,proxy=relax_structure(complex_structure,path,args.gpu,ff,estimate_binding=target=='LC3B')
+                        row.update(potential_energy_kj_mol=round(energy,2),mm_gb_binding_proxy_kcal_mol=round(proxy,3) if proxy is not None else None,
+                            relaxation_status='bounded_sidechain_minimization')
+                    else:row['relaxation_status']='one_pass_standardization'
+                    row.update(evaluate(row,read_structure(path),dossier,reference,device))
+                    row['evaluation_seconds']=round(time.monotonic()-stage_started,3)
+                    handle.write(json.dumps(row)+'\n');handle.flush();completed+=1
+                    print('POSES',args.module,args.phase,'GPU',args.gpu,row['id'],target,'count',completed,
+                        'eligible',row['geometry_eligible'],'seconds',round(time.monotonic()-started,1),flush=True)
 
-
-def collect(args):
-    candidates = read_jsonl(args.candidates)
-    torch.cuda.set_device(args.gpu)
-    device = torch.device(f"cuda:{args.gpu}")
-    parser = PDBParser(QUIET=True)
-    models = {key: parser.get_structure(key, args.run / "targets" / f"{key}.pdb")[0] for key in TARGETS}
-    assembly_context = json.loads((args.run / "assembly_context.json").read_text())
-    candidate_map = {c["id"]: c for c in candidates}
-    records = []
-    for path in sorted(args.run.glob(f"{args.phase}_gpu*_poses.jsonl")):
-        updated = []
-        for row in read_jsonl(path):
-            key = row["target"]
-            candidate = candidate_map[row["id"]]
-            structure = parser.get_structure(row["id"], ROOT / row["pdb"])[0]
-            chains = assembly_context[key]["model_chains"]
-            # Assemble a single consistent coordinate state: relaxed modeled layers plus untouched other layers.
-            assembly = atom_data([structure[c] for c in chains] + [c for c in models[key] if c.id not in chains], device)
-            values = metrics(atom_data([structure["K"]], device), atom_data([structure["C"]], device),
-                             assembly, len(candidate["sequence"]))
-            reference_ca = [r["CA"].coord for c in chains for r in models[key][c] if r.id[0] == " " and "CA" in r]
-            relaxed_ca = [r["CA"].coord for c in chains for r in structure[c] if r.id[0] == " " and "CA" in r]
-            delta = torch.tensor(np.asarray(reference_ca), device=device) - torch.tensor(np.asarray(relaxed_ca), device=device)
-            values["receptor_backbone_rmsd_a"] = round(torch.sqrt((delta ** 2).sum(-1).mean()).item(), 3)
-            peptide_residues = list(structure["K"].get_residues())
-            peptide_c = torch.tensor(np.array([r["C"].coord for r in peptide_residues[:-1]]), device=device)
-            peptide_n = torch.tensor(np.array([r["N"].coord for r in peptide_residues[1:]]), device=device)
-            values["peptide_cn_max_deviation_a"] = round(
-                (torch.linalg.norm(peptide_c - peptide_n, dim=-1) - 1.33).abs().max().item(), 3)
-            updated.append({**row, **values})
-        write_jsonl(path, updated)
-        records.extend(updated)
-    write_jsonl(args.run / f"{args.phase}_geometry.jsonl", records)
-    print(f"Measured {len(records)} independent poses on CUDA", flush=True)
-
-
-def main():
-    parser = argparse.ArgumentParser()
-    parser.add_argument("command", choices=("worker", "collect"))
-    parser.add_argument("--run", type=Path, required=True)
-    parser.add_argument("--candidates", type=Path, required=True)
-    parser.add_argument("--phase", required=True)
-    parser.add_argument("--gpu", type=int, choices=(0, 1), default=0)
-    parser.add_argument("--batch-size", type=int, default=2)
-    parser.add_argument("--seed", type=int, default=20261009)
-    parser.add_argument("--repeat", type=int, default=1)
-    parser.add_argument("--resume-poses", action="store_true", help="Reuse completed poses from this named production stage")
-    args = parser.parse_args()
-    {"worker": worker, "collect": collect}[args.command](args)
-
-
-if __name__ == "__main__":
-    main()
+if __name__=='__main__':
+    p=argparse.ArgumentParser();p.add_argument('--run',type=Path,required=True)
+    p.add_argument('--module',choices=('module1','module2'),required=True);p.add_argument('--candidates',type=Path,required=True)
+    p.add_argument('--gpu',type=int,required=True);p.add_argument('--phase',choices=('initial','review','monomer'),default='initial')
+    worker(p.parse_args())

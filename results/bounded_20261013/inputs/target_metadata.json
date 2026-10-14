@@ -1,0 +1,276 @@
+{
+  "6XYO": {
+    "central_chain": "A",
+    "chains": [
+      "A",
+      "B",
+      "C",
+      "D",
+      "E",
+      "F",
+      "G",
+      "H",
+      "I",
+      "J"
+    ],
+    "target_pdb": "/media/yjz/htr/synuclein/results/bounded_20261013/inputs/targets/6XYO.pdb",
+    "capped_pdb": "/media/yjz/htr/synuclein/results/bounded_20261013/inputs/targets/6XYO_capped.pdb",
+    "label": "MSA target",
+    "source": "https://www.rcsb.org/structure/6XYO",
+    "protofilament_groups": [
+      [
+        "A",
+        "C",
+        "E",
+        "G",
+        "I"
+      ],
+      [
+        "B",
+        "D",
+        "F",
+        "H",
+        "J"
+      ]
+    ],
+    "central_selection": "Middle rung within the first longest-resolved protofilament stack; other protofilaments remain in the receptor context.",
+    "assembly": "all deposited protein layers and protofilaments",
+    "terminal_chemistry": "ACE/NME caps on internal resolved-core boundaries; unresolved full-length tails remain unmodeled"
+  },
+  "6XYP": {
+    "central_chain": "A",
+    "chains": [
+      "A",
+      "B",
+      "C",
+      "D",
+      "E",
+      "F",
+      "G",
+      "H",
+      "I",
+      "J"
+    ],
+    "target_pdb": "/media/yjz/htr/synuclein/results/bounded_20261013/inputs/targets/6XYP.pdb",
+    "capped_pdb": "/media/yjz/htr/synuclein/results/bounded_20261013/inputs/targets/6XYP_capped.pdb",
+    "label": "MSA target",
+    "source": "https://www.rcsb.org/structure/6XYP",
+    "protofilament_groups": [
+      [
+        "A",
+        "C",
+        "E",
+        "G",
+        "I"
+      ],
+      [
+        "B",
+        "D",
+        "F",
+        "H",
+        "J"
+      ]
+    ],
+    "central_selection": "Middle rung within the first longest-resolved protofilament stack; other protofilaments remain in the receptor context.",
+    "assembly": "all deposited protein layers and protofilaments",
+    "terminal_chemistry": "ACE/NME caps on internal resolved-core boundaries; unresolved full-length tails remain unmodeled"
+  },
+  "6XYQ": {
+    "central_chain": "A",
+    "chains": [
+      "A",
+      "B",
+      "C",
+      "D",
+      "E",
+      "F",
+      "G",
+      "H",
+      "I",
+      "J"
+    ],
+    "target_pdb": "/media/yjz/htr/synuclein/results/bounded_20261013/inputs/targets/6XYQ.pdb",
+    "capped_pdb": "/media/yjz/htr/synuclein/results/bounded_20261013/inputs/targets/6XYQ_capped.pdb",
+    "label": "MSA target",
+    "source": "https://www.rcsb.org/structure/6XYQ",
+    "protofilament_groups": [
+      [
+        "A",
+        "C",
+        "E",
+        "G",
+        "I"
+      ],
+      [
+        "B",
+        "D",
+        "F",
+        "H",
+        "J"
+      ]
+    ],
+    "central_selection": "Middle rung within the first longest-resolved protofilament stack; other protofilaments remain in the receptor context.",
+    "assembly": "all deposited protein layers and protofilaments",
+    "terminal_chemistry": "ACE/NME caps on internal resolved-core boundaries; unresolved full-length tails remain unmodeled"
+  },
+  "8A9L": {
+    "central_chain": "C",
+    "chains": [
+      "A",
+      "B",
+      "C",
+      "D",
+      "E"
+    ],
+    "target_pdb": "/media/yjz/htr/synuclein/results/bounded_20261013/inputs/targets/8A9L.pdb",
+    "capped_pdb": "/media/yjz/htr/synuclein/results/bounded_20261013/inputs/targets/8A9L_capped.pdb",
+    "label": "same-protein structural control",
+    "source": "https://www.rcsb.org/structure/8A9L",
+    "protofilament_groups": [
+      [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ]
+    ],
+    "central_selection": "Middle rung within the first longest-resolved protofilament stack; other protofilaments remain in the receptor context.",
+    "assembly": "five helical layers from deposited BIOMT transforms",
+    "terminal_chemistry": "ACE/NME caps on internal resolved-core boundaries; unresolved full-length tails remain unmodeled"
+  },
+  "6CU7": {
+    "central_chain": "E",
+    "chains": [
+      "E",
+      "A",
+      "B",
+      "C",
+      "D",
+      "F",
+      "G",
+      "H",
+      "I",
+      "J"
+    ],
+    "target_pdb": "/media/yjz/htr/synuclein/results/bounded_20261013/inputs/targets/6CU7.pdb",
+    "capped_pdb": "/media/yjz/htr/synuclein/results/bounded_20261013/inputs/targets/6CU7_capped.pdb",
+    "label": "same-protein structural control",
+    "source": "https://www.rcsb.org/structure/6CU7",
+    "protofilament_groups": [
+      [
+        "E",
+        "A",
+        "C",
+        "G",
+        "I"
+      ],
+      [
+        "B",
+        "D",
+        "F",
+        "H",
+        "J"
+      ]
+    ],
+    "central_selection": "Middle rung within the first longest-resolved protofilament stack; other protofilaments remain in the receptor context.",
+    "assembly": "all deposited protein layers and protofilaments",
+    "terminal_chemistry": "ACE/NME caps on internal resolved-core boundaries; unresolved full-length tails remain unmodeled"
+  },
+  "9A1A_m1": {
+    "central_chain": "A",
+    "chains": [
+      "A"
+    ],
+    "target_pdb": "/media/yjz/htr/synuclein/results/bounded_20261013/inputs/targets/9A1A_m1.pdb",
+    "capped_pdb": "/media/yjz/htr/synuclein/results/bounded_20261013/inputs/targets/9A1A_m1.pdb",
+    "label": "finite monomer ensemble control",
+    "source": "https://www.rcsb.org/structure/9A1A",
+    "terminal_chemistry": "unmodified full-length monomer reference",
+    "scope": "Eight integrative reference models; finite snapshots of a dynamic ensemble; physiological states and modifications are only partly represented."
+  },
+  "9A1A_m2": {
+    "central_chain": "A",
+    "chains": [
+      "A"
+    ],
+    "target_pdb": "/media/yjz/htr/synuclein/results/bounded_20261013/inputs/targets/9A1A_m2.pdb",
+    "capped_pdb": "/media/yjz/htr/synuclein/results/bounded_20261013/inputs/targets/9A1A_m2.pdb",
+    "label": "finite monomer ensemble control",
+    "source": "https://www.rcsb.org/structure/9A1A",
+    "terminal_chemistry": "unmodified full-length monomer reference",
+    "scope": "Eight integrative reference models; finite snapshots of a dynamic ensemble; physiological states and modifications are only partly represented."
+  },
+  "9A1A_m3": {
+    "central_chain": "A",
+    "chains": [
+      "A"
+    ],
+    "target_pdb": "/media/yjz/htr/synuclein/results/bounded_20261013/inputs/targets/9A1A_m3.pdb",
+    "capped_pdb": "/media/yjz/htr/synuclein/results/bounded_20261013/inputs/targets/9A1A_m3.pdb",
+    "label": "finite monomer ensemble control",
+    "source": "https://www.rcsb.org/structure/9A1A",
+    "terminal_chemistry": "unmodified full-length monomer reference",
+    "scope": "Eight integrative reference models; finite snapshots of a dynamic ensemble; physiological states and modifications are only partly represented."
+  },
+  "9A1A_m4": {
+    "central_chain": "A",
+    "chains": [
+      "A"
+    ],
+    "target_pdb": "/media/yjz/htr/synuclein/results/bounded_20261013/inputs/targets/9A1A_m4.pdb",
+    "capped_pdb": "/media/yjz/htr/synuclein/results/bounded_20261013/inputs/targets/9A1A_m4.pdb",
+    "label": "finite monomer ensemble control",
+    "source": "https://www.rcsb.org/structure/9A1A",
+    "terminal_chemistry": "unmodified full-length monomer reference",
+    "scope": "Eight integrative reference models; finite snapshots of a dynamic ensemble; physiological states and modifications are only partly represented."
+  },
+  "9A1A_m5": {
+    "central_chain": "A",
+    "chains": [
+      "A"
+    ],
+    "target_pdb": "/media/yjz/htr/synuclein/results/bounded_20261013/inputs/targets/9A1A_m5.pdb",
+    "capped_pdb": "/media/yjz/htr/synuclein/results/bounded_20261013/inputs/targets/9A1A_m5.pdb",
+    "label": "finite monomer ensemble control",
+    "source": "https://www.rcsb.org/structure/9A1A",
+    "terminal_chemistry": "unmodified full-length monomer reference",
+    "scope": "Eight integrative reference models; finite snapshots of a dynamic ensemble; physiological states and modifications are only partly represented."
+  },
+  "9A1A_m6": {
+    "central_chain": "A",
+    "chains": [
+      "A"
+    ],
+    "target_pdb": "/media/yjz/htr/synuclein/results/bounded_20261013/inputs/targets/9A1A_m6.pdb",
+    "capped_pdb": "/media/yjz/htr/synuclein/results/bounded_20261013/inputs/targets/9A1A_m6.pdb",
+    "label": "finite monomer ensemble control",
+    "source": "https://www.rcsb.org/structure/9A1A",
+    "terminal_chemistry": "unmodified full-length monomer reference",
+    "scope": "Eight integrative reference models; finite snapshots of a dynamic ensemble; physiological states and modifications are only partly represented."
+  },
+  "9A1A_m7": {
+    "central_chain": "A",
+    "chains": [
+      "A"
+    ],
+    "target_pdb": "/media/yjz/htr/synuclein/results/bounded_20261013/inputs/targets/9A1A_m7.pdb",
+    "capped_pdb": "/media/yjz/htr/synuclein/results/bounded_20261013/inputs/targets/9A1A_m7.pdb",
+    "label": "finite monomer ensemble control",
+    "source": "https://www.rcsb.org/structure/9A1A",
+    "terminal_chemistry": "unmodified full-length monomer reference",
+    "scope": "Eight integrative reference models; finite snapshots of a dynamic ensemble; physiological states and modifications are only partly represented."
+  },
+  "9A1A_m8": {
+    "central_chain": "A",
+    "chains": [
+      "A"
+    ],
+    "target_pdb": "/media/yjz/htr/synuclein/results/bounded_20261013/inputs/targets/9A1A_m8.pdb",
+    "capped_pdb": "/media/yjz/htr/synuclein/results/bounded_20261013/inputs/targets/9A1A_m8.pdb",
+    "label": "finite monomer ensemble control",
+    "source": "https://www.rcsb.org/structure/9A1A",
+    "terminal_chemistry": "unmodified full-length monomer reference",
+    "scope": "Eight integrative reference models; finite snapshots of a dynamic ensemble; physiological states and modifications are only partly represented."
+  }
+}

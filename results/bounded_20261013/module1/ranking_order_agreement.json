@@ -1,0 +1,28 @@
+{
+  "primary_order": [
+    "B067",
+    "B002",
+    "B006",
+    "B064",
+    "B004",
+    "B062",
+    "B001",
+    "B116",
+    "B049",
+    "B068"
+  ],
+  "reversed_input_order": [
+    "B067",
+    "B002",
+    "B006",
+    "B004",
+    "B064",
+    "B062",
+    "B068",
+    "B008",
+    "B049",
+    "B001"
+  ],
+  "top10_overlap": 9,
+  "interpretation": "Input-order sensitivity audit on the same candidate pool; rank remains a computational priority."
+}

@@ -1,9 +1,0 @@
-{
-  "repository": "https://github.com/dauparas/ProteinMPNN",
-  "weight_file": "vanilla_model_weights/v_48_020.pt",
-  "model": "v_48_020",
-  "training_noise_level": 0.2,
-  "runtime_coordinate_noise": 0,
-  "format": "original model tensors, unused floating metadata moved to JSON for PyTorch 1.13 weights_only compatibility",
-  "paper": "https://doi.org/10.1126/science.add2187"
-}

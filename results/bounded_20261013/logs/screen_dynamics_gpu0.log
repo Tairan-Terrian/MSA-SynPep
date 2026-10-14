@@ -1,0 +1,6 @@
+DYNAMICS screen F02_09 repeat 1 GPU 0 retention 0.727 seconds 21.5
+DYNAMICS screen F02_03 repeat 1 GPU 0 retention 0.273 seconds 54.2
+DYNAMICS screen F02_04 repeat 1 GPU 0 retention 0.273 seconds 73.2
+DYNAMICS screen F05_04 repeat 1 GPU 0 retention 0.455 seconds 91.6
+DYNAMICS screen F05_05 repeat 1 GPU 0 retention 0.364 seconds 113.3
+DYNAMICS screen F10_06 repeat 1 GPU 0 retention 0.455 seconds 133.4

@@ -1,0 +1,9 @@
+{
+  "pairs": 100,
+  "distinct_pair_IDs": 100,
+  "distinct_complete_sequences": 100,
+  "length_fields_match": true,
+  "module_order_matches_sequence": true,
+  "annotated_ranges_match": true,
+  "linker_variants": 600
+}

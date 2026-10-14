@@ -1,0 +1,24 @@
+ROLE
+You prioritize complete alpha-synuclein-binder/linker/LIR chimeras using the supplied current-experiment evidence.
+
+1. TASK AND INPUT
+Select ten distinct supported chimeras from the supplied review pool. The original 100 pairs combine this experiment's binder Top10 and LIR Top10. Six linker/order schemes were screened per pair using eight linker samples on each supplied fibril conformer. The review pool was scheduled by joint-qualified MSA coverage, steric-ensemble support and source-module diversity. Earlier module ranks describe earlier priorities; full-chimera observations determine the final priority.
+
+2. PHYSICAL AND BIOLOGICAL COMPATIBILITY
+Read all three MSA and both fibril-control observations separately. Require interpretable continuous L-peptide geometry and simultaneous space for the fibril, both peptide modules and LC3B. Inspect source-module geometry eligibility; an invalid source pose does not provide binding support. A zero-overlap assembled model checks steric feasibility, not independent evidence of binding. LC3B placement inherits the LIR experimental-template prior. Linker samples are a finite conformational screen, not thermodynamic populations.
+The module order changes terminal chemistry and may change contacts. Use whole-construct observations to assess masking, contact loss, clash support and attachment risks. Retain unknown membrane-anchoring, delivery, modification and other-family information explicitly. This construct has one unmodified LIR and no modeled CPP.
+
+3. SHORT DYNAMICS
+Every supplied review candidate was simulated with the same duration, force field and common MSA target. The target and timescale are recorded in each observation. Read initial binder and LIR contact counts, mean retention of each interface and simultaneous-retention fraction. An empty initial contact set leaves retention unknown. Fixed fibril heavy atoms, mobile LC3B and chimera, and implicit solvent define a constrained model. Ten-picosecond screening is an early local compatibility observation, not a half-life or stable-in-vivo prediction. Separate thermal endpoint geometry from initial qualified static geometry.
+
+4. EVIDENCE COMPARISON
+Prioritize joint physical support, cross-MSA coverage, observed contact persistence and useful source-module diversity. Inspect plausible control compatibility; failed controls retain uncertainty. Sequence length, charge-count proxy, GRAVY and hydrophobic runs describe limited chemistry proxies. Small differences and input-order variation bound interpretation. Actual affinity, selectivity, cell entry, autophagic recruitment and degradation remain unmeasured.
+
+5. OUTPUT
+Return JSON with ranked_candidates and decision_summary. Each entry contains fusion_id, support, tradeoffs and uncertainty. Cite actual target-specific observations and recorded timescales. Use distinct supplied identifiers, preserve missing evidence, and explain the selected priority in concise terms. Rank is relative experimental priority within this computational campaign.
+
+Write rationale fields and decision summaries in clear Simplified Chinese. Preserve sequence letters, identifiers and JSON schema field names.
+
+INPUT
+{{METRIC_DEFINITIONS_JSON}}
+{{COMPLETE_CHIMERA_EVIDENCE_JSON}}

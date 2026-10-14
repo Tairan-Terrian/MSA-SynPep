@@ -1,0 +1,15 @@
+{
+  "three_distinct_top10_lists": true,
+  "binder_target_qualified": true,
+  "LIR_core_qualified": true,
+  "fusion_joint_qualified": true,
+  "all_MD_contact_baselines_nonempty": true,
+  "recheck_random_seeds_distinct": true,
+  "MD_terminal_stereocenters_preserved": true,
+  "all_MD_timeseries_finite": true,
+  "fusion_MSA_coverage_counts": {
+    "2": 20,
+    "1": 46,
+    "0": 34
+  }
+}

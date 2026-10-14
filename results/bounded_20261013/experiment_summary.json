@@ -1,0 +1,105 @@
+{
+  "binder_candidates": 120,
+  "binder_initial_poses": 600,
+  "binder_current_poses": 860,
+  "binder_top10": 10,
+  "LIR_candidates": 30,
+  "LIR_poses_including_controls": 99,
+  "LIR_top10": 10,
+  "fusion_pairs": 100,
+  "linker_schemes": 600,
+  "screen_trajectories": 12,
+  "fusion_top10": 10,
+  "recheck_trajectories": 10,
+  "order_agreement": {
+    "module1": {
+      "primary_order": [
+        "B067",
+        "B002",
+        "B006",
+        "B064",
+        "B004",
+        "B062",
+        "B001",
+        "B116",
+        "B049",
+        "B068"
+      ],
+      "reversed_input_order": [
+        "B067",
+        "B002",
+        "B006",
+        "B004",
+        "B064",
+        "B062",
+        "B068",
+        "B008",
+        "B049",
+        "B001"
+      ],
+      "top10_overlap": 9,
+      "interpretation": "Input-order sensitivity audit on the same candidate pool; rank remains a computational priority."
+    },
+    "module2": {
+      "primary_order": [
+        "L015",
+        "L012",
+        "L010",
+        "L021",
+        "L014",
+        "L011",
+        "L022",
+        "L005",
+        "L004",
+        "L028"
+      ],
+      "reversed_input_order": [
+        "L012",
+        "L021",
+        "L015",
+        "L014",
+        "L010",
+        "L028",
+        "L011",
+        "L004",
+        "L005",
+        "L019"
+      ],
+      "top10_overlap": 9,
+      "interpretation": "Input-order sensitivity audit on the same candidate pool; rank remains a computational priority."
+    },
+    "module3": {
+      "primary_order": [
+        "F01_08",
+        "F01_02",
+        "F01_05",
+        "F02_09",
+        "F05_01",
+        "F02_04",
+        "F02_03",
+        "F10_06",
+        "F05_04",
+        "F05_05"
+      ],
+      "reversed_input_order": [
+        "F01_08",
+        "F01_02",
+        "F01_05",
+        "F02_09",
+        "F05_01",
+        "F02_04",
+        "F02_03",
+        "F05_04",
+        "F10_06",
+        "F05_05"
+      ],
+      "top10_overlap": 10
+    }
+  },
+  "api_usage": {
+    "calls": 9,
+    "input_tokens": 154857,
+    "output_tokens": 54341,
+    "total_tokens": 209198
+  }
+}

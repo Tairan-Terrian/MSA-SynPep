@@ -1,0 +1,116 @@
+{
+  "model": "gpt-6.1-sol",
+  "messages": [
+    {
+      "role": "system",
+      "content": "Use supplied scientific observations to propose and compare peptide hypotheses. Return the required JSON object. Keep scientific rationales concise."
+    },
+    {
+      "role": "user",
+      "content": "ROLE\nYou propose reference-constrained LIR peptide variants for computational evaluation of human LC3B recruitment. The LIR module supplies the LC3B-facing interface of a modular alpha-synuclein-targeting chimera.\n\n1. TASK\nDesign thirty distinct variants of the human p62 fragment SGGDDDWTHLSS, corresponding to residues 332-343 of UniProt Q13501. Retain the natural fragment as a separate baseline record. This initial campaign studies local sequence optimization around a known LIR family.\n\n2. ESTABLISH THE EVIDENCE\nRead the curated reference dossier and LC3B interface observations. Preserve species, partner identity, residue mapping, construct length, modification state, and evidence identifiers. Record the actual fragment used in each published measurement. A measurement on a longer peptide or a full protein remains associated with that measured construct. References supported by another ATG8-family partner retain that partner identity. Binding of each new variant starts as unknown.\n\n3. DEFINE THE DESIGN SPACE\nEach variant has twelve residues with unchanged WTHL at peptide positions 7-10. Introduce one to three substitutions among positions 1-6 and 11-12. Use the twenty standard amino-acid letters and unmodified L-peptide chemistry. Allocate ten variants to the N-terminal flank, ten to the C-terminal flank, and ten to changes in both flanks. Candidate sequences must be distinct within this experiment.\n\n4. CONNECT EVIDENCE TO A DESIGN HYPOTHESIS\nFor each variant, identify the reference observation, the proposed sequence change, the hypothesized consequence, and the structural observation that would test it. Consider the surrounding charge environment, plausible polar contacts, exposed hydrophobicity, core accessibility, and terminal accessibility. Treat charge enrichment as a context-dependent hypothesis. Keep the core's two recognition anchors and the neighboring environment in the same design explanation.\n\nUse existing LC3B-LIR complexes as recognition references with explicit species and sequence mapping. Design intentions concern pocket engagement and surrounding contacts, while actual poses will be generated and assessed separately. Complete-chimera modeling will later evaluate linker attachment and simultaneous binding to alpha-synuclein and LC3B.\n\n5. USE CURRENT-EXPERIMENT FEEDBACK\nWhen feedback is supplied, revise a specific observed failure or trade-off while retaining the configured core and mutation limits. Compare with the current experiment's natural baseline and preserve alternatives. Use feedback only from the current experiment.\n\n6. OUTPUT\nReturn one JSON object with a concise batch_plan, reference_baseline, and designed_variants. reference_baseline contains the supplied natural sequence and the role natural_reference_outside_designed_variants. Each of the thirty designed_variants differs from the natural sequence at one to three permitted flank positions. Each variant includes sequence, design_group, evidence_ids, design_specification, testable_structural_expectation, and uncertainty. Use one-based peptide positions in your descriptions. Keep each field within 25 words and preserve supplied reference identifiers. Recruitment improvement and degradation behavior remain hypotheses pending appropriate evidence.\n\nBIOLOGICAL DESIGN CONTRACT\nUse the entire configured p62 structural fragment and retain its required flanks. The twelve-residue seed is a structural-template design choice. Experimental affinity measurements on twenty-residue p62 constructs retain those twenty-residue boundaries. Preserve human sequence and murine structural-template mapping.\nInclude preferred_attachment_end, attachment_hypothesis and modification_dependence in every output. Every variant in this campaign is unmodified; ordinary S/T represent unphosphorylated residues. D/E substitutions are amino-acid changes, not an assumed equivalent of phosphorylation. Modification-dependent designs remain outside this campaign's modeled chemistry.\nThis campaign uses a single LIR to recruit human LC3B directly. Other LC3/GABARAP members are uncomputed; their compatibility is unknown. Tandem LIRs and delivery/CPP modules are separate future design spaces. p62 supplies the template sequence; the receptor here is LC3B. Mechanistic claims remain conditional on full-construct recruitment and experimental autophagy.\n\nWrite rationale fields and decision summaries in clear Simplified Chinese. Preserve sequence letters, identifiers and JSON schema field names.\n\nINPUT\n{\"evidence_id\":\"human_p62_LIR\",\"target_partner\":\"human LC3B\",\"reference_seed\":\"SGGDDDWTHLSS\",\"reference_uniprot\":\"Q13501\",\"human_residue_range\":[332,343],\"core_positions\":[7,8,9,10],\"core_sequence\":\"WTHL\",\"structural_reference\":\"2ZJD:human LC3B / murine p62 peptide\",\"core_reference_ca\":[[27.003999710083008,13.13700008392334,33.902000427246094],[24.930999755859375,11.861000061035156,36.79600143432617],[21.58099937438965,13.57699966430664,37.5359992980957],[20.829999923706055,13.798999786376953,41.266998291015625]],\"core_reference_sidechain_centroids\":[[27.72439956665039,16.768699645996094,32.81909942626953],[23.17275047302246,13.954999923706055,42.46900177001953]],\"pocket\":[[\"R\",7],[\"R\",11],[\"R\",16],[\"R\",18],[\"R\",19],[\"R\",20],[\"R\",22],[\"R\",23],[\"R\",24],[\"R\",26],[\"R\",27],[\"R\",30],[\"R\",31],[\"R\",32],[\"R\",33],[\"R\",34],[\"R\",35],[\"R\",48],[\"R\",49],[\"R\",50],[\"R\",51],[\"R\",52],[\"R\",53],[\"R\",54],[\"R\",55],[\"R\",58],[\"R\",63],[\"R\",66],[\"R\",67],[\"R\",69],[\"R\",70],[\"R\",108],[\"R\",111]],\"target_pdb\":\"/media/yjz/htr/synuclein/results/bounded_20261013/inputs/targets/LC3B.pdb\",\"capped_pdb\":\"/media/yjz/htr/synuclein/results/bounded_20261013/inputs/targets/LC3B_capped.pdb\",\"evidence_notes\":[\"Published structures support two hydrophobic anchors and adjacent peptide contacts.\",\"Flanking-residue modifications have context-dependent effects on LC3B recognition.\",\"Human 20-residue WT and L341V peptides were measured at approximately 3.2 and 10.9 micromolar in a matched study; these are measurements of the 20-mer constructs.\"],\"matched_literature_controls\":[{\"id\":\"p62_WT_20\",\"sequence\":\"SGGDDDWTHLSSKEVDPSTG\",\"measured_kd_um\":3.2},{\"id\":\"p62_L341V_20\",\"sequence\":\"SGGDDDWTHVSSKEVDPSTG\",\"measured_kd_um\":10.9}],\"source_urls\":[\"https://www.rcsb.org/structure/2ZJD\",\"https://pubmed.ncbi.nlm.nih.gov/37530436/\",\"https://pmc.ncbi.nlm.nih.gov/articles/PMC4990988/\"],\"boundary\":\"soluble LC3B resolved domain through Gly120; missing N-terminal residues are boundary-capped; membrane PE and autophagosome dynamics are unmodeled\"}\n{\"core\":\"WTHL\",\"pocket\":[[\"R\",7],[\"R\",11],[\"R\",16],[\"R\",18],[\"R\",19],[\"R\",20],[\"R\",22],[\"R\",23],[\"R\",24],[\"R\",26],[\"R\",27],[\"R\",30],[\"R\",31],[\"R\",32],[\"R\",33],[\"R\",34],[\"R\",35],[\"R\",48],[\"R\",49],[\"R\",50],[\"R\",51],[\"R\",52],[\"R\",53],[\"R\",54],[\"R\",55],[\"R\",58],[\"R\",63],[\"R\",66],[\"R\",67],[\"R\",69],[\"R\",70],[\"R\",108],[\"R\",111]]}\n{\"candidate_count\":30,\"length\":12,\"core_positions\":[7,8,9,10],\"mutable_positions\":[1,2,3,4,5,6,11,12],\"mutations_per_variant\":[1,3],\"shortlist_size\":10}\n{}\n"
+    }
+  ],
+  "reasoning_effort": "low",
+  "max_completion_tokens": 24000,
+  "response_format": {
+    "type": "json_schema",
+    "json_schema": {
+      "name": "lir_generation",
+      "strict": true,
+      "schema": {
+        "type": "object",
+        "properties": {
+          "batch_plan": {
+            "type": "string"
+          },
+          "reference_baseline": {
+            "type": "object",
+            "properties": {
+              "sequence": {
+                "type": "string",
+                "enum": [
+                  "SGGDDDWTHLSS"
+                ]
+              },
+              "role": {
+                "type": "string",
+                "enum": [
+                  "natural_reference_outside_designed_variants"
+                ]
+              }
+            },
+            "required": [
+              "sequence",
+              "role"
+            ],
+            "additionalProperties": false
+          },
+          "designed_variants": {
+            "type": "array",
+            "minItems": 30,
+            "maxItems": 30,
+            "items": {
+              "type": "object",
+              "properties": {
+                "sequence": {
+                  "type": "string",
+                  "pattern": "^[ACDEFGHIKLMNPQRSTVWY]{6}WTHL[ACDEFGHIKLMNPQRSTVWY]{2}$"
+                },
+                "design_group": {
+                  "type": "string"
+                },
+                "evidence_ids": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                },
+                "design_specification": {
+                  "type": "string"
+                },
+                "testable_structural_expectation": {
+                  "type": "string"
+                },
+                "preferred_attachment_end": {
+                  "type": "string",
+                  "enum": [
+                    "N",
+                    "C",
+                    "either"
+                  ]
+                },
+                "attachment_hypothesis": {
+                  "type": "string"
+                },
+                "modification_dependence": {
+                  "type": "string"
+                },
+                "uncertainty": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "sequence",
+                "design_group",
+                "evidence_ids",
+                "design_specification",
+                "testable_structural_expectation",
+                "preferred_attachment_end",
+                "attachment_hypothesis",
+                "modification_dependence",
+                "uncertainty"
+              ],
+              "additionalProperties": false
+            }
+          }
+        },
+        "required": [
+          "batch_plan",
+          "reference_baseline",
+          "designed_variants"
+        ],
+        "additionalProperties": false
+      }
+    }
+  }
+}

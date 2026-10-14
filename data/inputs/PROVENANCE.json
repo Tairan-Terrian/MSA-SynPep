@@ -1,9 +1,0 @@
-{
-  "candidate_source": "120 unique closed-LLM proposals originally generated on 2026-10-06",
-  "pose_source": "720 existing PepGLAD fixed-sequence poses, reevaluated by current code",
-  "initial_pool": 120,
-  "initial_poses": 600,
-  "available_second_poses": 120,
-  "generation_feedback": "The supplied second round used geometry feedback; future generate mode uses geometry plus inverse-folding feedback.",
-  "repeat_selection": "Existing second poses were available for a previous 24-candidate subset; current ranking is computed anew, then missing finalist second poses are sampled."
-}

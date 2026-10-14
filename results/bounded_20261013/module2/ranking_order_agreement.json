@@ -1,0 +1,28 @@
+{
+  "primary_order": [
+    "L015",
+    "L012",
+    "L010",
+    "L021",
+    "L014",
+    "L011",
+    "L022",
+    "L005",
+    "L004",
+    "L028"
+  ],
+  "reversed_input_order": [
+    "L012",
+    "L021",
+    "L015",
+    "L014",
+    "L010",
+    "L028",
+    "L011",
+    "L004",
+    "L005",
+    "L019"
+  ],
+  "top10_overlap": 9,
+  "interpretation": "Input-order sensitivity audit on the same candidate pool; rank remains a computational priority."
+}
